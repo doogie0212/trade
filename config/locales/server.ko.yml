@@ -824,6 +824,7 @@ ko:
         vol: 24시간 거래수량
         high: 최고
         low: 최저
+        change: 전일대비
       settings:
         sound: 소리 효과
         notification: 바탕화면 실시간 통지
@@ -860,6 +861,7 @@ ko:
         safety_instruction: 개인정보 및 자산 보호를 위해 구글 이중인증을 꼭 설정하십시오
         reset_password: 비밀번호 재설정
         reauthenticate: 이중인증
+        activated: 이메일 인증을 위한 이메일이 전송되었습니다. 인증을 위하여 메일함을 확인해주세요. 혹시 받지 못하셨다면, 아래의 '재전송'버튼을 눌러주세요.
         auth-activated: 이메일 인증 받으세요
         auth-verified: 실명인증 받으세요
         email:
@@ -1000,6 +1002,7 @@ ko:
           amount: 최저금액 1000원
       session:
         email: 이메일주소
+        password: 비밀번호
       identity:
         email: 예:abcd@example.com
         password: 로그인 비밀번호를 설정하세요

@@ -721,7 +721,7 @@ ko:
         cny_format: '0.00'
         btc_format: '0.00000000'
         reason:
-          cny:
+          krw:
             strike_add: 판매완료
             strike_sub: 구매완료
             deposit: 입금
@@ -735,12 +735,12 @@ ko:
             fix: 픽스
         ref:
           system: 시스템
-          default: Default
+          default: 디폴트
     id_documents:
       edit:
         state: 인증상태
         state_unverified: 미인증
-        state_verifying: 인증 중
+        state_verifying: 인증중
         state_verified: 인증완료
         name: 이름
         birth_date: 생일
@@ -754,7 +754,7 @@ ko:
         id_bill_type: 영수증 종류
         id_bill_file: 영수증 사진
       update:
-        notice: 실명 인증 정보 체출 완료
+        notice: 실명 인증정보 접수완료
     markets:
       show:
         error: 주문 오류
@@ -763,7 +763,7 @@ ko:
         help_panel: 도움말
         done: 체결
         cancel: 취소
-        cancel_confirm: 취소 하시겠습니까?
+        cancel_confirm: 취소하시겠습니까?
         confirm: 확인
         ask_order: '판매 ##sn#'
         bid_order: '구매 ##sn#'
@@ -1194,7 +1194,7 @@ ko:
         index:
           one: 출금신청 대기 리스트
           all: 24시간내에 신청 리스트
-          empty: 데이트가 없습니다.
+          empty: 데이터가 없습니다
         show:
           process: 처리된
           succeed: 출금
@@ -1202,12 +1202,12 @@ ko:
           succeed_confirm: 출금신청을 처리하시겠습니까?
           reject_confirm: 출금신청을 거부하시겠습니까?
           withdraw: 은행계좌 출금신청
-          empty: 데이트가 없습니다.
+          empty: 데이터가 없습니다
       satoshis:
         index:
           one: 출금신청 대기 리스트
           all: 24시간내에 처리된 출금신청 리스트
-          empty: 데이트가 없습니다.
+          empty: 데이터가 없습니다
         show:
           process: 처리된
           succeed: 출금

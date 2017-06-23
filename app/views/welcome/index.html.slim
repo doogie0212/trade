@@ -1,19 +1,57 @@
-header.text-center
+nav.navbar.navbar-inverse.navbar-fixed-top
   .container
-    section
-      - Rails.configuration.i18n.available_locales.each do |locale|
-        h3 = t(:slogan, locale: locale)
-    #getstart.row
-      - unless current_user
-        .col-xs-4.col-xs-offset-8
-          a href="#{signin_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signin")
-        - if ENV['WEIBO_AUTH'] == "true"
+    .navbar-header
+      button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"]
+        span.sr-only
+          | Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand[href="#"]
+        | PLAYBTC
+.jumbotron
+  .container
+    h1
+      | 가상화폐 거래소
+    p
+      | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+      #getstart.row
+        - unless current_user
+          .col-xs-4.col-xs-offset-8
+            a href="#{signin_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signin")
+          - if ENV['WEIBO_AUTH'] == "true"
+            .col-xs-4
+              a href="/auth/weibo" class="btn btn-primary btn-lg btn-block" role="button" = t("header.login_via_weibo")
           .col-xs-4
-            a href="/auth/weibo" class="btn btn-primary btn-lg btn-block" role="button" = t("header.login_via_weibo")
-        .col-xs-4
-          a href="#{signup_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signup")
-      - else
-        .col-xs-6.col-xs-offset-9.text-center
-          a href="#{market_path(current_market)}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.getstart")
-          a href="#{funds_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.funds")
-          a href="#{settings_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.settings")
+            a href="#{signup_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signup")
+        - else
+          .col-xs-6.col-xs-offset-9.text-center
+            a href="#{market_path(current_market)}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.getstart")
+            a href="#{funds_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.funds")
+            a href="#{settings_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.settings")
+.container
+  .row
+    .col-xs-4
+      h2
+        | Heading
+      p
+        | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      p
+        a.btn.btn-default[href="#" role="button"]
+          | View details »
+    .col-xs-4
+      h2
+        | Heading
+      p
+        | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      p
+        a.btn.btn-default[href="#" role="button"]
+          | View details »
+    .col-xs-4
+      h2
+        | Heading
+      p
+        | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+      p
+        a.btn.btn-default[href="#" role="button"]
+          | View details »

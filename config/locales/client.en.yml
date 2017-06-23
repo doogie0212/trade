@@ -1,6 +1,6 @@
 en:
   js:
-    brand: Peatio
+    brand: PLAYBTC
     submit: Submit
     cancel: Cancel
     confirm: Confirm
@@ -169,4 +169,3 @@ en:
         all: All Market
         cny: CNY Market
         btc: BTC Market
-

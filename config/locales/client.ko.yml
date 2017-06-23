@@ -5,13 +5,14 @@
 
 ko:
   js:
-    brand: CNY
+    brand: PLAYBTC
     submit: 확인
     funds:
       deposit: 입금
       withdraw: 출금
       currency_name:
         cny: CNY
+        krw: KRW
         btc: BTC
       deposit_cny:
         title: Chinese Yuan Deposit
@@ -49,7 +50,7 @@ ko:
         identification: '일련번호 '
         time: 시간
         txid: 전송해쉬
-        confirmations: Confirmation 수량
+        confirmations: 확인 수량
         from: 입금계좌
         amount: 입금금액
         state_and_action: "상태/확인"

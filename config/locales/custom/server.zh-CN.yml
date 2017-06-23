@@ -1,3 +1,5 @@
 # Put your customized locale translations here.
 
-zh-CN:
+en:
+  js:
+    brand: PLAYBTC

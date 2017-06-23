@@ -28,10 +28,10 @@ ko:
       withdraws/satoshi: 입금
     attributes:
       api_token:
-        access_key: Access Key
+        access_key: 액세스키
         trusted_ip_list: 허용된 IP 주소
         ip_whitelist: 허용된 IP 주소
-        label: 표기
+        label: 라벨
         actions: 확인
       identity:
         email: 이메일
@@ -131,16 +131,16 @@ ko:
         state_wait: 대기
       member:
         id: 일련번호
-        name: '이름 '
-        display_name: 카페 닉넥임
-        email: 이메일 주소
+        name: 이름
+        display_name: 별명
+        email: 이메일
         created_at: 등록 시간
         sn: 개인 일련번호
         id_document_number: 주민등록증 번호(삭제)
         tag_list: 표기
         activated: 완료
         activated?: "이메일 인증 완료"
-        id_document_verified?: "실명 인증"
+        id_document_verified?: "실명인증"
         two_factor_activated?: "이중인증"
         phone_number: 핸드폰 번호
       two_factor/sms:
@@ -288,6 +288,7 @@ ko:
     currency:
       btc: BTC
       cny: CNY
+      krw: KRW
       doge: DOGE
       pts: PTS
       ltc: LTC
@@ -307,10 +308,15 @@ ko:
       code: CNY
       name: WON
       format: '0,0.00'
+    won:
+      key: KRW
+      code: KRW
+      name: KRW
+      format: '0,0'
     dogecoin:
       key: DOG
       code: DOGE
-      name: 도기코인
+      name: 도지코인
       format: '0,0.0000'
     protoshare:
       key: PTS
@@ -318,7 +324,7 @@ ko:
       name: Protoshare
       format: '0,0.0000'
   datagrid:
-    empty: '검색할 데이트가 없습니다. '
+    empty: '검색할 날짜가 없습니다. '
     filters:
       date:
         range_separator: "~"
@@ -458,7 +464,7 @@ ko:
     satoshi:
       key: 블록 첸
       title: 비트코인 입금
-      intro: 고객님 코인주소에서 PEATIO거래소 주소로 입금
+      intro: 고객님 코인주소에서 거래소 주소로 입금
       latency: 1 confirmation
       transfer: 수동
       go: 바로입금
@@ -583,7 +589,7 @@ ko:
         total: 합계
         withdraw_history: 출금내역
       create:
-        two_factors_error: 이종인증 오류
+        two_factors_error: 2FA 인증 오류
       banks:
         update:
           notice: 출금신청이 완료되었습니다, 빠른 시간내에 처리하겠습니다.
@@ -612,25 +618,25 @@ ko:
           notice: 회원님 출금신청이 완료되었습니다, 지시에 따라 출금 작업을 완료하세요.
     tickets:
       index:
-        new_ticket: New Ticket
+        new_ticket: 새 티켓
       new:
-        intro: 거래소 이용에 불편사항이나 개선할 사항 있으시면 메모를 남기시면 최대한 빠른시간내에 처리해드리며 위에 내용은 회원님과 관리자만 볼수있습니다.
-      ticket_create_succ: Ticket를 성공적으로 만들어졌습니다.
-      ticket_create_fail: Ticket등록실패 하였습니다, 다시 시도하세요.
-      comment_succ: Comment successfully.
-      cooment_fail: Comment failed, please try again latter
+        intro: 거래소 이용에 불편 사항이나 개선할 사항 있으시면 메세지를 남겨주세요. 최대한 빠른시간내에 처리해 드리겠습니다.
+      ticket_create_succ: 티켓이 성공적으로 만들어졌습니다.
+      ticket_create_fail: 티켓 등록이 실패했습니다. 다시 시도해주세요.
+      comment_succ: 커맨트가 등록되었습니다
+      cooment_fail: 커맨트 등록이 실패했습니다. 다시 시도해주세요.
       me: 나
       supporter: 고객센터
-      close: Close Ticket
-      close_succ: Ticket closed successfully
-      close_confirm: Are you sure to close this ticket?
+      close: 티켓닫기
+      close_succ: 티켓을 성공적으로 닫았습니다
+      close_confirm: 티켓을 닫으시겠습니까?
       title_content_both_blank: 제목과 내용은 꼭 기재 해주세요.
       from: from
       view_closed_tickets: 완료된  Ticket를 검색하기
       view_open_tickets: 처리중인 Ticket를 검색하기
     account_versions:
       index:
-        description: PEATIO거래소의 모든 거래내역와 입출금내역을 검색할수있습니다.
+        description: PlayBTC 거래소의 모든 거래내역와 입출금내역을 검색할수있습니다.
     api_tokens:
       user_tokens:
         no_token: You have no API token.
@@ -676,18 +682,20 @@ ko:
     assets:
       index:
         liability-proof: 자산 증명
-        btc-assets: BTC자산
-        cny-assets: CNY자산
+        btc-assets: BTC 자산
+        cny-assets: CNY 자산
       liability_tabs:
-        verify-btc: 나의 BTC자산 확인
-        verify-cny: 나의 CNY자산 확인
+        verify-btc: 나의 BTC 자산 확인
+        verify-cny: 나의 CNY 자산 확인
+        verify-krw: 나의 KRW 자산 확인
         btc-assets-total: '거래소 BTC 총자산'
-        cny-assets-total: '거래소 CNY총자산'
+        cny-assets-total: '거래소 CNY 총자산'
+        krw-assets-total: '거래소 KRW 총자산'
       liability_proof:
         title: 자산 증명
         intro: 우리는 은행계좌,코인주소 등 모든 자산정보를 100%공개합니다. 회원님들은 실시간으로 우리 거래소의 자산 정보를 볼수있습니다.디지털 인증 방식으로 우리가 제공하는 모든 자산정보를 증명할수있습니다. 최고의 기술로 고객님의 자산을 안전하게 보장합니다.
         how-to-verify: 어떤 방식으로 거래소 지불능력을 확인 합니까?
-        how-to-verify-uri: https://peatio.com/documents/liability_proof
+        how-to-verify-uri: https://PlayBTC.com/documents/liability_proof
       liability_data:
         liability-proof-generating: 나의 자산정보 전송중,30분있다 다시 확인하세요
         root-json: 거래소 총 자산 인증코드
@@ -846,7 +854,7 @@ ko:
         volume: 주문수량
         time: 주문시간
       mask:
-        warning: ' <a class=text-up href=''/signin''>로그인</a> 또는  <a class=text-up href=''/signup''>가입</a>후 작업을 진행하세요'
+        warning: ' <a class=text-up href=''/signin''>로그인</a> 또는  <a class=text-up href=''/signup''>회원가입</a>후 진행하세요'
       klime_chart:
         title: 차트
       global:
@@ -858,7 +866,7 @@ ko:
       success: 설정완료
       failure: 비밀번호 오류, 설정 실패. 다시 시도하세요
       index:
-        safety_instruction: 개인정보 및 자산 보호를 위해 구글 이중인증을 꼭 설정하십시오
+        safety_instruction: 개인정보 및 자산 보호를 위해 구글 이중인증을 권장합니다
         reset_password: 비밀번호 재설정
         reauthenticate: 이중인증
         activated: 이메일 인증을 위한 이메일이 전송되었습니다. 인증을 위하여 메일함을 확인해주세요. 혹시 받지 못하셨다면, 아래의 '재전송'버튼을 눌러주세요.
@@ -873,7 +881,7 @@ ko:
           go: 설정
         phone_number:
           title: 핸드폰 번호
-          description: 핸드폰인증을 받으세요.개인정보 보호와 비밀번호 재설정 출금요청시 필요합니다.
+          description: SMS인증을 받으세요. 개인정보 보호와 비밀번호 재설정, 출금요청시 필요합니다.
           go: 설정
           verified: 확인 완료
         two_factor_auth:
@@ -888,7 +896,7 @@ ko:
           verified: 확인
         asset_passwords:
           title: 자산 비밀번호
-          description: 출금 신청시 자산비밀번호가 필요합니다. 로그인 비밀번호와 동일하게 사용할수없습니다.
+          description: 출금 신청시 출금 비밀번호가 필요합니다. 로그인 비밀번호와 동일하게 사용할 수 없습니다.
           go: 설정
         passwords:
           title: 로그인 비밀번호
@@ -896,7 +904,7 @@ ko:
           go: 수정
           set: 설정
         api_tokens:
-          title: API Tokens
+          title: API 토큰
           description: 관리 및 새 API Token만들기
           go: 설정
         weibo:
@@ -989,7 +997,7 @@ ko:
       panel: 계정 만들기
       new:
         title: 회원가입하기
-        intro: 이 계정는 PEATIO거래소에서 제공하는 모든 서비스 사용할 계정입니다, 안전하게 관리하세요.
+        intro: 이 계정는 PlayBTC거래소에서 제공하는 모든 서비스 사용할 계정입니다, 안전하게 관리하세요.
       edit:
         panel: 나의 계정
         title: 비밀번호 수정
@@ -1217,10 +1225,10 @@ ko:
     scopes:
       profile: 고객님 기본정보(예:이름,이메일주소)와 계정잔액을  읽습니다.
       history: 거래내역을 보고있습니다.
-      trade: PEATIO거래소 이용하고있는것을 표시합니다
+      trade: PlayBTC거래소 이용하고있는것을 표시합니다
     authorizations:
       new:
-        title: PEATIO Application Authorization
+        title: PlayBTC Application Authorization
         authorize_html: Authorize <strong class='text-info'>%{name}</strong> to use your account?
         scopes: 'This application will be able to:'
         authorize: Authorize
@@ -1323,7 +1331,7 @@ ko:
     fund_source:
       category:
         satoshi: 비트코인 인터넷 전송
-        bank: CYN  은행송금
+        bank: KRW 은행송금
     id_document:
       id_document_type:
         id_card: 신분증
@@ -1341,37 +1349,37 @@ ko:
       truncate: "..."
   mailer:
     dear_user: 안녕하세요
-    signature: 감사합니다. The PEATIO Team
+    signature: 감사합니다. PlayBTC
     please_contact: '본인이 직접 로그인하시지 않은경우 <a href=''mailto:%{contact_mail}''>바로 고객센터로 연락하세요.</a> '
     footer: 자동으로 전송된 이메일 입니다, 회신하지마세요.문의사항 있을경우<a href="mailto:%{contact_mail}"> 연락하세요.
   comment_mailer:
     admin_notification:
-      subject: "[PEATIO] User reply a ticket"
+      subject: "[PlayBTC] User reply a ticket"
       notification_content: User %{email} reply a ticket, please follow the link below to see the detail
     user_notification:
-      subject: "[PEATIO] Your ticket got a new reply"
+      subject: "[PlayBTC] Your ticket got a new reply"
       notification_content: 'Your ticket got a new reply, please follow the link below to see the detail:'
   member_mailer:
     notify_signin:
-      subject: "[PEATIO] 거래소를 성공적으로 로그인 하였습니다"
+      subject: "[PlayBTC] 거래소를 성공적으로 로그인 하였습니다"
       just_signed_in: 거래소를 성공적으로 로그인 하였습니다.
     google_auth_activated:
-      subject: "[PEATIO] 구글 이중인증"
+      subject: "[PlayBTC] 구글 이중인증"
       google_auth_activated: 구글 이중인증이 성공적으로 받아습니다.
     google_auth_deactivated:
-      subject: "[PEATIO] 구글 인중인증 재설정"
+      subject: "[PlayBTC] 구글 인중인증 재설정"
       google_auth_deactivated: 구글 인중인증 재설정이 완료되었습니다.
     sms_auth_activated:
-      subject: "[PEATIO]핸드폰SMS 인증"
+      subject: "[PlayBTC]핸드폰SMS 인증"
       sms_auth_activated: 핸드폰SMS인증이 완료되었습니다.
     sms_auth_deactivated:
-      subject: "[PEATIO] 핸드폰SMS인증을 재설정"
+      subject: "[PlayBTC] 핸드폰SMS인증을 재설정"
       sms_auth_deactivated: 핸드폰SMS인증이 완료되었습니다.
     reset_password_done:
-      subject: "[PEATIO] 비밀번호 수정 완료"
+      subject: "[PlayBTC] 비밀번호 수정 완료"
       successful: 회원님이 비밀번호가 성공적으로 수정되었습니다.
     phone_number_verified:
-      subject: "[PEATIO] 핸드폰 인증 완료"
+      subject: "[PlayBTC] 핸드폰 인증 완료"
       verified: '핸드폰 인증 완료 되었습니다. 핸드폰 번호:%{phone_number}'
   system_mailer:
     daily_stats:
@@ -1384,27 +1392,27 @@ ko:
       trades_change_total: 거래수량 변동 합계
   ticket_mailer:
     admin_notification:
-      subject: "[PEATIO] User created a new ticket"
+      subject: "[PlayBTC] User created a new ticket"
       admin_notification_content: User %{email} created a new ticket, please follow the link below to see the detail
     author_notification:
-      subject: "[PEATIO] Thank you for submit ticket"
-      thanks_for_submit_ticket: 소중한의견을 주셔서 감사합니다. 빠른시간에 처리하고 연락을 드리겠습니다.
+      subject: "[PlayBTC] Thank you for submit ticket"
+      thanks_for_submit_ticket: 소중한 의견을 주셔서 감사합니다. 빠른 시간 안에 연락드리겠습니다.
   token_mailer:
     activation:
-      subject: "[PEATIO]계정 활성화"
-      click_to_verify: 'PEATIO가입하신것을 환영합니다. 아래 링크 클릭하신후 이메일 인증 받으세요'
+      subject: "[PlayBTC]계정 활성화"
+      click_to_verify: 'PlayBTC에 가입하신것을 환영합니다. 아래 링크 클릭하신후 이메일 인증 받으세요'
       unable_to_click: 링크가 클릭이 안될경우 브라우저 주소창에 주소를 복사해서 방문하세요.
       link_expire: 링크 유효기간 30분 입니다.
     reset_password:
-      subject: "[PEATIO]비밀번호를 재설정"
+      subject: "[PlayBTC]비밀번호를 재설정"
       hi: 안녕하세요.
       follow_the_link: '아래 링크 클릭하신후, 30분안에 비밀번호를 재설정하세요.'
   withdraw_mailer:
     withdraw_state:
-      subject: "[PEATIO]출금 처리 상황"
+      subject: "[PlayBTC]출금 처리 상황"
       your_state: '출금 처리 상황 보기'
   view_on_github: View on Github
-  slogan: PEATIO는 세계에서 최고의 안정적인 거래소 기술을 제공합니다.
+  slogan: PlayBTC는 세계 최고의 안정적인 거래소 기술을 제공합니다.
   tags:
     vip: VIP
     hero: 히어로 맴버
@@ -1418,9 +1426,9 @@ ko:
   gon:
     ask: 매도
     bid: 매수
-    brand: PEATIO거래소
+    brand: PlayBTC거래소
     notification:
-      title: PEATIO거래소
+      title: PlayBTC거래소
       enabled: 알림기능
       new_trade: "%{kind} order#%{id} executed at %{price} %{quote_unit} for %{volume} %{base_unit}。"
   back: 뒤로
@@ -1437,20 +1445,20 @@ ko:
       short: "%m-%d %H:%M"
       default: "%m/%d/%Y %H:%M"
   sms:
-    verification_code: '인증번호:%{code}.유효 기간 30분 입니다. (인증번호를 안전하게 관리하세요.)[PEATIO]'
+    verification_code: '인증번호:%{code}.유효 기간 30분 입니다. (인증번호를 안전하게 관리하세요.)[PlayBTC]'
     password_changed: Hi %{email}, 회원님 비밀번호가 성공적으로 수정 되었습니다.
     deposit_done: Hi %{email}, 회원님이 입금신청 처리 되여습니다.
     withdraw_done: Hi %{email}, 회원님 출금신청이 처리되었습니다.
   header:
     home: 홈
-    dashboard: 계기판
-    admin: 관리자 판넬
+    dashboard: 대시보드
+    admin: 관리자
     market: 거래하기
     settings: 설정
     signin: 로그인
     signout: 로그아웃
     signup: 회원가입
-    login_via_weibo: Weibo로그인
+    login_via_weibo: Weibo 로그인
     funds: 나의 자산
     getstart: 거래하기
     assets: 자산 공개
@@ -1459,20 +1467,21 @@ ko:
     trade_history: 거래내역
     account_history: 계정내역
     my_profile: 나의 설정
-    tickets: Tickets
+    tickets: 티켓
     account_balance: 총자산
     back: 뒤로
     total: 합계
     deposit: 입금
     withdraw: 출금
   admin_header:
-    deposits: 입금
+    deposits: 입금관리
     withdraws: 출금관리
-    statistics: 데이트 통계
-    id_documents: 실명인증 상황
+    statistics: 통계
+    id_documents: 인증관리
   footer:
     about: About
-    privacy: 개인정보
+    privacy: 개인정보처리방침
+    terms: 이용약관및규정
     contact: '문의 '
     price: 가격
     liability_proof: 제출
@@ -1584,7 +1593,7 @@ ko:
         save: 저장하기
     weibo:
       destroy:
-        last_auth_alert: 사랑하는 회원님, Weibo는 고객님이 마지막 등록 방식입니다. 삭제하시면 다시 등록할수 없습니다
+        last_auth_alert: Weibo는 고객님이 마지막 등록 방식입니다. 삭제하시면 다시 등록할수 없습니다
         unbind_success: Weibo인증 해지
     identities:
       new:
@@ -1595,14 +1604,14 @@ ko:
   forum:
     index:
       notice:
-        display_name: 카페에서 사용할 닉네임 만들세요.
+        display_name: 포럼에서 사용할 닉네임 만들세요.
   identities:
     new:
       title: 가입하기
       signin: 로그인바로가기
       password: 비밀번호는 6자리이상,영문 대/소문자 ,숫자를 포함해야합니다
     update:
-      auth-error: 현재비밀번호가 일치하지 않습니다, 다시 입력하세요
+      auth-error: 비밀번호가 일치하지 않습니다, 다시 입력하세요
       auth-same: 입력하신 새비밀번호가 이전비밀번호와 같습니다. 다시 입력하세요.
       notice: 비밀번호 수정 완료, 다시 로그인 하세요
   layouts:
@@ -1611,23 +1620,23 @@ ko:
         sections:
           members: 사용자관리
           deposits: 입금방식
-          sites_statistics: 데이트통계
+          sites_statistics: 사이트통계
           operating: 운영관리
         items:
           operating:
             proofs: 자산증명
             deposits: 입금관리
-            documents: 문장 관리
-            withdraws: 출금 관리
-            tickets: Tickets
+            documents: 문서관리
+            withdraws: 출금관리
+            tickets: 티켓
           deposits:
             currency: 입금
     application:
       close: 닫기
     meta:
-      page_title: Peatio - The Opensource Cryptocurrency Exchange
-      page_description: Peatio- The Opensource Cryptocurrency Exchange
-      page_keywords: Peatio,오펀소스, 거래소 , 암호화 화폐
+      page_title: 플레이비티씨 - PlayBTC
+      page_description: PlayBTC 전자화폐 거래소
+      page_keywords: PlayBTC, 비트코인, 거래소, 플레이비티씨, 마이비티씨
   members:
     edit:
       name: 자산을 안전하게 관리하기위해 이름과 개인정보를 정확히 입력하세요.
@@ -1669,7 +1678,7 @@ ko:
         payment_address: 입금주소
     alert:
       modern: <a target='_blank' href='https://www.google.com/#q=google+chrome'>Google Chrome</a> 추천합니다.
-      pusher_unavailable: 서버통신상태이상.<a href='#' class='alert-link'>다시 시도하세요
+      pusher_unavailable: 서버통신에러.<a href='#' class='alert-link'>다시 시도하세요
     header:
       balance: 잔액
     header_account_balance:
@@ -1710,7 +1719,7 @@ ko:
         step-2: Step 2
         step-3: Step 3
         or: 또는
-        download-app: 핸드폰 운영체계를 선택하신후,Google Authenticator를 다운받으세요
+        download-app: 핸드폰 운영체계를 선택하신후, Google Authenticator를 다운받으세요
         guide-link: "구체적인 사용방법은 <a href='https://support.google.com/accounts/answer/1066447' target='_blank'> 클릭 후 참고하세요"
         scan-qr-code: Google Authenticator다운받으시고 아래 QR코드를 스캔하세요.스캔이 되지않으면 아래 문자정보를 입력하시기 바랍니다.
         enter-passcode: 구글 Authenticator 인증코드를 입력하세요.
@@ -1760,7 +1769,7 @@ ko:
       transfer: 수동 처리
       go: 출금
   withdraws:
-    invalid_address: 오류 발생하였습니다, 출금할수 없습니다.
+    invalid_address: 오류 발생하였습니다, 출금할 수 없습니다.
   withdraws/bank:
     aasm_state:
       submitting: 확인 대기

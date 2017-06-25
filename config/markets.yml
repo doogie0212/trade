@@ -1,0 +1,10 @@
+- id: btckrw
+  code: 3
+  name: BTC/KRW
+  base_unit: btc
+  quote_unit: krw
+  #price_group_fixed: 1 # aggregate price levels in orderbook
+  bid: {fee: 0, currency: krw, fixed: 2}
+  ask: {fee: 0, currency: btc, fixed: 4}
+  sort_order: 1
+  #visible: false     # default to true

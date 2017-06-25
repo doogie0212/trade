@@ -124,7 +124,8 @@ class ApplicationController < ActionController::Base
       wsHost:    ENV['PUSHER_HOST']      || 'ws.pusherapp.com',
       wsPort:    ENV['PUSHER_WS_PORT']   || '80',
       wssPort:   ENV['PUSHER_WSS_PORT']  || '443',
-      encrypted: ENV['PUSHER_ENCRYPTED'] == 'true'
+      encrypted: ENV['PUSHER_ENCRYPTED'] == 'true',
+      cluster:   ENV['PUSHER_CLUSTER']   || 'ap1'
     }
 
     gon.clipboard = {

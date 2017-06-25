@@ -1,9 +1,15 @@
-en:
+# encoding: utf-8
+#
+# Never edit this file. It will be overwritten when translations are pulled from Transifex.
+#
+
+ko:
   js:
     brand: PLAYBTC
-    submit: Submit
-    cancel: Cancel
-    confirm: Confirm
+    submit: 확인
+    funds:
+      deposit: 입금
+      withdraw: 출금
     banks:
       icbc: Industryand Commercial Bank of China
       cbc: Construction Bank of China
@@ -42,6 +48,7 @@ en:
       currency_name:
         cny: CNY
         btc: BTC
+        krw: KRW
       deposit_cny:
         title: Chinese Yuan Deposit
         desc: "To deposit via Bank transfer, please follow these steps:"
@@ -52,6 +59,27 @@ en:
         from: From
         to: To
         deposit_name: Your Name
+        deposit_account: Deposit Account
+        add: Add
+        manage: Manage
+        amount: Deposit Amount
+        min_amount: At least 10 yuan
+        to_account: Account
+        to_name: Name
+        to_bank_name: Bank Name
+        opening_bank_name: Account where created
+        remark: 'Referral Code (Transfer identification code)'
+
+      deposit_krw:
+        title: KRW 입금
+        desc: "아래와 같은 방법으로 입금"
+        desc_item_1: "1. 이렇게."
+        desc_item_2: "2. 조롷게."
+        desc_item_3: "3. 요룧게."
+        attention: "입금자명이랑 사용자명이 다를 시 입금처리 노노"
+        from: From
+        to: To
+        deposit_name: 이름
         deposit_account: Deposit Account
         add: Add
         manage: Manage

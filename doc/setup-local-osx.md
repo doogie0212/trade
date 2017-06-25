@@ -11,7 +11,7 @@ Setup local development environment on OS X
 6. Install [Bitcoind](https://en.bitcoin.it/wiki/Bitcoind)
 7. Install [PhantomJS](http://phantomjs.org/)
 8. Install ImageMagick
-9. Configure Peatio
+9. Configure XC
 
 ### 1. Install Homebrew
 
@@ -95,20 +95,20 @@ and then start Bitcoind with
 
 ### 7. Install PhantomJS
 
-Peatio uses Capybara with PhantomJS to do the feature tests, so if you want to run the tests. Install the PhantomJS is neccessary.
+XC uses Capybara with PhantomJS to do the feature tests, so if you want to run the tests. Install the PhantomJS is neccessary.
 
     brew install phantomjs
 
-### 8. Configure Peatio
+### 8. Configure XC
 
     brew install imagemagick
 
-### 9. Configure Peatio
+### 9. Configure XC
 
 **Clone the project**
 
-    git clone git://github.com/peatio/peatio.git
-    cd peatio
+    git clone git://git.playbtc.com/playbtc/xc.git
+    cd xc
     bundle install
 
 **Prepare configure files**
@@ -117,7 +117,7 @@ Peatio uses Capybara with PhantomJS to do the feature tests, so if you want to r
 
 **Setup Pusher**
 
-* Peatio depends on [Pusher](http://pusher.com). A development key/secret pair for development/test is provided in `config/application.yml` (uncomment to use). PLEASE USE IT IN DEVELOPMENT/TEST ENVIRONMENT ONLY!
+* XC depends on [Pusher](http://pusher.com). A development key/secret pair for development/test is provided in `config/application.yml` (uncomment to use). PLEASE USE IT IN DEVELOPMENT/TEST ENVIRONMENT ONLY!
 
 More details to visit [pusher official website](http://pusher.com)
 
@@ -157,10 +157,13 @@ More details to visit [pusher official website](http://pusher.com)
 
 When daemons don't work, check `log/#{daemon name}.rb.output` or `log/peatio:amqp:#{daemon name}.output` for more information (suffix is '.output', not '.log').
 
-**Run Peatio**
+**Run XC**
 
     # start server
-    bundle exec rails server
+    rails s
+
+    # stop server
+    kill -INT $(cat tmp/pids/server.pid)
 
 **Visit [http://localhost:3000](http://localhost:3000)**
 

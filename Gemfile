@@ -37,7 +37,7 @@ gem 'rails-observers'
 gem 'country_select', '~> 2.1.0'
 
 gem 'gon', '~> 5.2.0'
-gem 'pusher'
+gem 'pusher', '~> 1.3.1'
 gem 'eventmachine', '~> 1.0.4'
 gem 'em-websocket', '~> 0.5.1'
 

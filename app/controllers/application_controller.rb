@@ -121,7 +121,6 @@ class ApplicationController < ActionController::Base
 
     gon.pusher = {
       key:       ENV['PUSHER_KEY'],
-      wsHost:    ENV['PUSHER_HOST']      || 'ws.pusherapp.com',
       wsPort:    ENV['PUSHER_WS_PORT']   || '80',
       wssPort:   ENV['PUSHER_WSS_PORT']  || '443',
       encrypted: ENV['PUSHER_ENCRYPTED'] == 'true',

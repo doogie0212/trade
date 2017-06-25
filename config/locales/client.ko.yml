@@ -7,6 +7,40 @@ ko:
   js:
     brand: PLAYBTC
     submit: 확인
+    cancel: 취소
+    confirm: 확인
+    banks:
+      icbc: Industryand Commercial Bank of China
+      cbc: Construction Bank of China
+      bc: Bank of China
+      bcm: Bank of Communications
+      abc: Agriculture Bank of China
+      cmb: China Merchants Bank Ltd
+      cmbc: China Minsheng Banking Co., Ltd
+      cncb: China CITIC Bank
+      hxb: Hua Xia Bank Co., Ltd.
+      cib: Industrial Bank Co., Ltd
+      spdb: Shanghai Pudong Development Bank
+      bob: Bank of Beijing
+      ceb: China Everbright Bank CO.LTD
+      sdb: Shenzhen Development Bank
+      pab: Ping An Bank Co., Ltd.
+      gdb: Guangdong Development Bank
+      psbc: Postal Savings Bank of China
+      bos: Bank of Shanghai
+    fund_sources:
+      manage_bank_account: 계좌 관리
+      manage_bank_account_desc: 은행 출금주소 선택을 위해 계좌를 입력해 주세요.
+      manage_coin_address: 코인 지갑 관리
+      manage_coin_address_desc: 코인 출금주소 선택을 위해 계좌를 입력해 주세요.
+      bank: 은행
+      account: 은행계좌
+      label: 라벨
+      address: 주소
+      action: 실행
+      add: 추가
+      remove: 제거
+      default: 기본
     funds:
       deposit: 입금
       withdraw: 출금

@@ -28,9 +28,10 @@ namespace :install do
 
     config 'config/application.yml' do |content|
       lines = content.split /\n/
-      lines = customize 'PUSHER_APP',    pusher_app,    lines
-      lines = customize 'PUSHER_KEY',    pusher_key,    lines
-      lines = customize 'PUSHER_SECRET', pusher_secret, lines
+      lines = customize 'PUSHER_APP',     pusher_app,     lines
+      lines = customize 'PUSHER_KEY',     pusher_key,     lines
+      lines = customize 'PUSHER_SECRET',  pusher_secret,  lines
+      lines = customize 'PUSHER_CLUSTER', pusher_cluster, lines
       if smtp_address
         lines = customize 'SMTP_DOMAIN',   smtp_domain, lines
         lines = customize 'SMTP_ADDRESS',  smtp_address, lines

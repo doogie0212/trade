@@ -10,24 +10,29 @@ ko:
     cancel: 취소
     confirm: 확인
     banks:
-      icbc: Industryand Commercial Bank of China
-      cbc: Construction Bank of China
-      bc: Bank of China
-      bcm: Bank of Communications
-      abc: Agriculture Bank of China
-      cmb: China Merchants Bank Ltd
-      cmbc: China Minsheng Banking Co., Ltd
-      cncb: China CITIC Bank
-      hxb: Hua Xia Bank Co., Ltd.
-      cib: Industrial Bank Co., Ltd
-      spdb: Shanghai Pudong Development Bank
-      bob: Bank of Beijing
-      ceb: China Everbright Bank CO.LTD
-      sdb: Shenzhen Development Bank
-      pab: Ping An Bank Co., Ltd.
-      gdb: Guangdong Development Bank
-      psbc: Postal Savings Bank of China
-      bos: Bank of Shanghai
+      002: 산업은행
+      003: 기업은행
+      004: 국민은행
+      007: 수협중앙회
+      011: 농협은행
+      012: 지역농축협
+      020: 우리은행
+      023: SC제일은행
+      027: 씨티은행
+      031: 대구은행
+      032: 부산은행
+      034: 광주은행
+      035: 제주은행
+      037: 전북은행
+      039: 경남은행
+      045: 새마을금고
+      048: 신협중앙회
+      050: 상호저축은행
+      071: 우체국
+      081: KEB하나은행
+      088: 신한은행
+      089: 케이뱅크
+      090: 카카오뱅크
     fund_sources:
       manage_bank_account: 계좌 관리
       manage_bank_account_desc: 은행 출금주소 선택을 위해 계좌를 입력해 주세요.
@@ -93,10 +98,10 @@ ko:
       deposit_coin:
         address: BTC지갑주소
         new_address: 새 BTC지갑주소
-        open-wallet: 익숙한 지갑을 이용하여 입출금 서비스를 이용하세요
-        detail: '아래 지갑주소로 입금하세요. '
-        scan-qr: 모바일 지갑은  QR코드 스캔을 이용해서 입금하세요.
-        after_deposit: 입금후 아래 입금내역을 통해 입금상태를 확인할수 있습니다.
+        open-wallet: 사용 하시는 지갑을 이용해 입출금 하실 수 있습니다
+        detail: 아래의 주소로 입금하세요
+        scan-qr: 모바일 지갑은  QR코드를 스캔 한 후 입금하세요
+        after_deposit: 입금후 아래 입금내역을 통해 상태를 확인할수 있습니다
         generate-new: 새 주소
       deposit_history:
         title: 입금내역
@@ -122,7 +127,7 @@ ko:
         title: CNY출금
         intro: 계좌정보를 작성후 출금금액을 입력하시고 출금신청하세요
         intro_2: 예금주와 회원이름이 동일해야합니다.
-        attention: "업무시간: 9:00 - 18:00"
+        attention: "업무시간: 09:00 - 18:00"
         account_name: 예금주
         withdraw_address: 계좌번호
         balance: 잔액

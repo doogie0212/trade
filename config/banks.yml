@@ -1,80 +1,115 @@
 - id: 1
-  code: icbc
+  code: 002
   currency: krw
   deposit: true
   withdraw: true
 - id: 2
-  code: cbc
+  code: 003
   currency: krw
   deposit: true
   withdraw: true
 - id: 3
-  code: bc
+  code: 004
   currency: krw
   deposit: true
   withdraw: true
 - id: 4
-  code: bcm
+  code: 007
   currency: krw
   deposit: true
   withdraw: true
 - id: 5
-  code: abc
+  code: 011
   currency: krw
   deposit: true
   withdraw: true
 - id: 6
-  code: cmb
+  code: 012
   currency: krw
   deposit: true
   withdraw: true
 - id: 7
-  code: cmbc
+  code: 020
   currency: krw
   deposit: true
   withdraw: true
 - id: 8
-  code: cncb
+  code: 023
   currency: krw
   deposit: true
   withdraw: true
 - id: 9
-  code: hxb
+  code: 027
   currency: krw
   deposit: true
   withdraw: true
 - id: 10
-  code: cib
+  code: 031
   currency: krw
   deposit: true
   withdraw: true
 - id: 11
-  code: spdb
+  code: 032
   currency: krw
   deposit: true
   withdraw: true
 - id: 12
-  code: bob
+  code: 034
   currency: krw
   deposit: true
   withdraw: true
 - id: 13
-  code: ceb
+  code: 035
   currency: krw
   deposit: true
   withdraw: true
 - id: 14
-  code: sdb
+  code: 037
   currency: krw
   deposit: true
   withdraw: true
 - id: 15
-  code: pab
+  code: 039
   currency: krw
   deposit: true
   withdraw: true
 - id: 16
-  code: gdb
+  code: 045
+  currency: krw
+  deposit: true
+  withdraw: true
+- id: 17
+  code: 048
+  currency: krw
+  deposit: true
+  withdraw: true
+- id: 18
+  code: 050
+  currency: krw
+  deposit: true
+  withdraw: true
+- id: 19
+  code: 071
+  currency: krw
+  deposit: true
+  withdraw: true
+- id: 20
+  code: 081
+  currency: krw
+  deposit: true
+  withdraw: true
+- id: 21
+  code: 088
+  currency: krw
+  deposit: true
+  withdraw: true
+- id: 22
+  code: 089
+  currency: krw
+  deposit: true
+  withdraw: true
+- id: 23
+  code: 090
   currency: krw
   deposit: true
   withdraw: true

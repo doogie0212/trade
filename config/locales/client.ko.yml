@@ -96,8 +96,9 @@ ko:
       deposit_btc:
         title: BTC입금
       deposit_coin:
-        address: BTC지갑주소
-        new_address: 새 BTC지갑주소
+        address: 지갑주소
+        new_address: 새 지갑주소
+        confirm_gen_new_address: 새 입금 주소를 만드시겠습니까?
         open-wallet: 사용 하시는 지갑을 이용해 입출금 하실 수 있습니다
         detail: 아래의 주소로 입금하세요
         scan-qr: 모바일 지갑은  QR코드를 스캔 한 후 입금하세요

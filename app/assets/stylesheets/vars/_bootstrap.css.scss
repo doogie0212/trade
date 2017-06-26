@@ -3,24 +3,35 @@
 $grid-columns: 24;
 $grid-gutter-width: 10px;
 
+$white: #ffffff;
 
-$body-bg: #f5f5f5;
+$body-bg: $white;
 
-$brand-primary: #364450;
+$brand-bg: #d0e4e7;
+
+$brand-primary: #24356e;
+$brand-success: #36d495;
+$brand-info: #009fb8;
+$brand-warning: #fffcc6;
+$brand-danger: #e84855;
 
 $up-text: rgb(77, 215, 16);
 $down-text: rgb(208, 0, 23);
 
-$navbar-default-bg: $brand-primary;
-$navbar-default-link-color: #DCDCDC;
-$navbar-default-link-hover-color: #EFEFEF;
-$navbar-default-link-active-color: #EFEFEF;
+$text-color: $brand-primary;
 
-$btn-default-bg: #428bca;
-$btn-default-color: #fff;
+$navbar-default-bg: $brand-bg;
+$navbar-default-link-color: $text-color;
+$navbar-default-link-hover-color: $text-color;
+$navbar-default-link-active-color: $text-color;
 
-$btn-info-bg: #fff;
-$btn-info-color: #333;
+$btn-default-color: $text-color;
+$btn-default-bg: $white;
+$btn-default-border: $brand-primary;
+
+$border-radius-base: 1px;
+$border-radius-large: 1px;
+$border-radius-small: 1px;
 
 $font-family-sans-serif: 'Helvetica Neue', Arial, 'Hiragino Sans GB', sans-serif;
 
@@ -38,3 +49,22 @@ $screen-desktop:             $screen-md-min;
 $screen-lg:                  4px;
 $screen-lg-min:              $screen-lg;
 $screen-lg-desktop:          $screen-lg-min;
+
+/* Customized CSS
+--------------------------------------------------*/
+.label-warning {
+  color: $text-color !important;
+}
+
+.btn-warning {
+  color: $text-color !important;
+}
+
+
+/* Font
+--------------------------------------------------*/
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+body {
+  font-family: "Helvetica Neue", "Spoqa Han Sans", sans-serif !important;
+}

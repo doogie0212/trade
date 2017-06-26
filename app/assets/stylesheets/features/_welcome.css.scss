@@ -1,47 +1,140 @@
 #welcome-index {
-  header {
-    overflow: hidden;
-    position: relative;
-    color: rgba(83,102,120, 1.0);
+  padding-top: 50px;
 
-    .container {
-      padding-top: 60px;
+  #wrap > .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .container.first {
+    height: 580px;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    width: 100%;
+    background-image: url("/images/background-top.png");
+    background-repeat: repeat-x;
+    background-position: bottom;
+
+    .title-group {
+      padding: 20px 30px;
+      padding-right: 100px;
     }
 
-    .ribbon a:hover {
-      background: $btn-primary-bg;
-      text-decoration: none;
+    .title {
+      font-weight: 700;
+      line-height: 1.5;
     }
 
-    .ribbon a {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      background: rgba(83,102,120, 1.0);
-      position: absolute;
-      top: 75px;
-      right: -71px;
-      display: block;
-      font-weight: 100;
-      font-size: 20px;
-      color: white;
-      height: 45px;
-      width: 330px;
-      padding: 8px;
+    .subtitle {
+      margin-top: 30px;
+      font-weight: 300;
+      line-height: 1.5;
     }
 
-    section {
+    .button-group {
+      width: 400px;
+      height: 280px;
+      border-radius: 1px;
+      background-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4.5px 8px 0 rgba(28, 37, 104, 0.3);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
       padding: 30px;
-      padding-top: 14px;
-      margin: 30px;
-      border-top: 1px dashed lighten($brand-primary, 20%);
-      border-bottom: 1px dashed lighten($brand-primary, 20%);
+
+      .btn {
+        width: 270px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 24px;
+        padding: 0;
+      }
+    }
+  }
+
+  .container.second {
+    .chart {
+      width: 100%;
+      max-width: 1200px;
+    }
+  }
+
+  .container.third {
+    padding-top: 80px;
+    text-align: center;
+    .logo-big {
+      height: 40px;
+    }
+    .subtitle {
+      font-size: 20px;
+      margin-top: 30px;
+      color: #9698a5;
+      letter-spacing: 1.7px;
+      font-weight: 300;
     }
 
-    #getstart {
-      margin-bottom: 50px;
+    .row.features {
+      padding: 50px 50px;
+      text-align: left;
+
+      .feature {
+        padding: 0 25px;
+      }
+
+      .icon {
+        height: 100px;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 20px 0;
+      }
+
+      .description {
+        font-size: 16px;
+        letter-spacing: 0.7px;
+        color: #9698a5;
+        margin-top: 0;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .container.forth {
+    margin: 0;
+    width: 100%;
+    background-color: #f7f8fb;
+    background-image: url("/images/coin-background.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    .row {
+      padding: 80px;
+      padding-bottom: 0;
+    }
+
+    .left {
+      padding-top: 30px;
+      h1 {
+        font-size: 40px;
+        line-height: 1.5;
+      }
+
+      .btn-signup {
+        margin-top: 50px;
+        width: 270px;
+        font-size: 24px;
+        height: 70px;
+        line-height: 70px;
+        padding: 0;
+        font-weight: 300;
+      }
     }
   }
 }

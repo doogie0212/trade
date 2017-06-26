@@ -1,57 +1,53 @@
-nav.navbar.navbar-inverse.navbar-fixed-top
+.container.first
   .container
-    .navbar-header
-      button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"]
-        span.sr-only
-          | Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand[href="#"]
-        | PLAYBTC
-.jumbotron
+    .row
+      .col-sm-12
+        div.title-group
+          h1.title
+            | 가장 신뢰할 수있는 <br /> 디지털 자산 거래소
+          h4.subtitle
+            | PLAYBTC에서 비트코인, 이더리움 등과 같은 다양한 디지털 통화를 거래할 수 있습니다.
+      .col-sm-12
+        div.button-group
+          - unless current_user
+              a href="#{signin_path}" class="btn btn-info btn-lg btn-block" role="button" = t("header.signin")
+              a href="#{signup_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signup")
+          - else
+              a href="#{market_path(current_market)}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.getstart")
+              a href="#{funds_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.funds")
+              a href="#{settings_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.settings")
+.container.second
+  img.chart src="/images/chart.png"
+.container.third
+  img.logo-big src="/icons/logo.svg"
+  .subtitle
+    | 비즈니스 및 투자자를 위해 제작 된 차세대 디지털 자산 플랫폼. <br /> 탁월한 거래 기능으로 비트 코인과 이더리움을 구매, 판매 및 저장합니다.
+  div.row.features
+    div.col-sm-8.feature
+      img.icon src="/icons/exchange.svg"
+      div.title
+        | 빠른 거래
+      div.description
+        | PLAYBTC에서의 거래는 눈 깜짝할 새에 일어납니다. 차트에서 눈을 떼지 마세요.
+    div.col-sm-8.feature
+      img.icon src="/icons/secure-wallet.svg"
+      div.title
+        | 안전한 거래
+      div.description
+        | PLAYBTC는 안전합니다. 고객의 자산보호를 위해 세계적인 수준의 기술로 보안 시스템을 구축했습니다.
+    div.col-sm-8.feature
+      img.icon src="/icons/payment-gateway.svg"
+      div.title
+        | Payment Gateway
+      div.description
+        | PLAYBTC가 제공하는 Payment Gateway서비스를 이용하여, 비트코인으로 비용을 지불하고 거래소에서 현금으로 교환할 수 있습니다.
+
+.container.forth
   .container
-    h1
-      | 가상화폐 거래소
-    p
-      | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
-      #getstart.row
-        - unless current_user
-          .col-xs-4.col-xs-offset-8
-            a href="#{signin_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signin")
-          - if ENV['WEIBO_AUTH'] == "true"
-            .col-xs-4
-              a href="/auth/weibo" class="btn btn-primary btn-lg btn-block" role="button" = t("header.login_via_weibo")
-          .col-xs-4
-            a href="#{signup_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signup")
-        - else
-          .col-xs-6.col-xs-offset-9.text-center
-            a href="#{market_path(current_market)}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.getstart")
-            a href="#{funds_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.funds")
-            a href="#{settings_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.settings")
-.container
-  .row
-    .col-xs-4
-      h2
-        | Heading
-      p
-        | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default[href="#" role="button"]
-          | View details »
-    .col-xs-4
-      h2
-        | Heading
-      p
-        | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default[href="#" role="button"]
-          | View details »
-    .col-xs-4
-      h2
-        | Heading
-      p
-        | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-      p
-        a.btn.btn-default[href="#" role="button"]
-          | View details »
+    .row
+      .col-sm-12.left
+        h1
+          | 지금바로 빠르고 안전하게 비트코인을 거래하세요.
+        a href="#{signup_path}" class="btn btn-primary btn-lg btn-signup" role="button" = t("header.signup")
+      .col-sm-12
+        img.mackbook src="/images/macbook.png"

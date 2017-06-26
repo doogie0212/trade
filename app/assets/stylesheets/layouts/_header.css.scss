@@ -40,6 +40,10 @@ header {
       top: 11px;
       left: -6px;
   }
+
+  &.navbar .logo {
+    width: 100%;
+  }
 }
 
 /* account balance summary with header
@@ -52,7 +56,7 @@ header .account-balance {
   .account-wrap {
     width: 360px;
     padding: 8px;
-    border-bottom: 1px solid $gray-light; 
+    border-bottom: 1px solid $gray-light;
   }
 
   hr {

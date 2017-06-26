@@ -65,6 +65,7 @@
 
   .container.third {
     padding-top: 80px;
+    padding-bottom: 80px;
     text-align: center;
     .logo-big {
       height: 40px;
@@ -78,11 +79,17 @@
     }
 
     .row.features {
-      padding: 50px 50px;
+      padding: 50px 20px;
       text-align: left;
 
       .feature {
-        padding: 0 25px;
+        padding: 0 50px;
+        height: 300px;
+        border-right: 1px solid #e1e2ea;
+      }
+
+      .feature:last-child {
+        border-right: none;
       }
 
       .icon {

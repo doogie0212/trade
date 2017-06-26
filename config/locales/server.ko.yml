@@ -688,9 +688,9 @@ ko:
         verify-btc: 나의 BTC 자산 확인
         verify-cny: 나의 CNY 자산 확인
         verify-krw: 나의 KRW 자산 확인
-        btc-assets-total: '거래소 BTC 총자산'
-        cny-assets-total: '거래소 CNY 총자산'
-        krw-assets-total: '거래소 KRW 총자산'
+        btc-assets-total: '거래소 BTC 총자산: '
+        cny-assets-total: '거래소 CNY 총자산: '
+        krw-assets-total: '거래소 KRW 총자산: '
       liability_proof:
         title: 자산 증명
         intro: 우리는 은행계좌,코인주소 등 모든 자산정보를 100%공개합니다. 회원님들은 실시간으로 우리 거래소의 자산 정보를 볼수있습니다.디지털 인증 방식으로 우리가 제공하는 모든 자산정보를 증명할수있습니다. 최고의 기술로 고객님의 자산을 안전하게 보장합니다.
@@ -699,22 +699,23 @@ ko:
       liability_data:
         liability-proof-generating: 나의 자산정보 전송중,30분있다 다시 확인하세요
         root-json: 거래소 총 자산 인증코드
-        partial-tree: '나의 %{currency} 자산:'
+        partial-tree: '나의 %{currency} 자산: '
         get-partial-tree: 나의 자산 확인코드 받기
-        timestamp: 회원님의  %{time}에 자산 데이트를  확인 할수있습니다.
+        timestamp: 회원님의  %{time}에 자산 데이터를  확인 할수있습니다.
         go-verify: 확인하기
       btc_assets:
         title: BTC자산
         intro: 거래소 모든 BTC 내역 확인하기
-        total: BTC 총액
+        total: 'BTC 총액: '
         address: 비트코인 주소
+        balance: 잔액
       cny_assets:
         title: CNY자산 확인
         intro: 거래소 모든 CNY내역 확인하기
         total: CNY총액
         description: "<p>계좌 잔액을 통해 감시할수있습니다:</p> <p>은행: %{bank}</p> <p>계좌:%{address}</p> <p>문의 비밀번호:%{password}</p> <p>문의 전화:  %{tel}</p>"
       partial_tree:
-        success: '완료!데이트 확인 시간은:%{timestamp}'
+        success: '완료!데이터 확인 시간은:%{timestamp}'
     funds:
       show:
         account_history: 계좌 내역

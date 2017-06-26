@@ -1,10 +1,12 @@
 #welcome-index {
-  padding-top: 50px;
-
   #wrap > .container {
     margin: 0;
     padding: 0;
     width: 100%;
+  }
+
+  .navbar {
+    margin-bottom: 0;
   }
 
   .container.first {
@@ -48,8 +50,8 @@
 
       .btn {
         width: 270px;
-        height: 70px;
-        line-height: 70px;
+        height: 60px;
+        line-height: 60px;
         font-size: 24px;
         padding: 0;
       }
@@ -116,6 +118,7 @@
   .container.forth {
     margin: 0;
     width: 100%;
+    overflow-x: hidden;
     background-color: #f7f8fb;
     background-image: url("/images/coin-background.png");
     background-repeat: no-repeat;
@@ -143,5 +146,9 @@
         font-weight: 300;
       }
     }
+  }
+
+  footer {
+    background-color: #f7f8fb !important;
   }
 }

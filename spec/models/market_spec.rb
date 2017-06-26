@@ -16,10 +16,10 @@ describe Market do
   context 'market attributes' do
     subject { Market.find('btccny') }
 
-    its(:id)         { should == 'btccny' }
-    its(:name)       { should == 'BTC/CNY' }
+    its(:id)         { should == 'btckrw' }
+    its(:name)       { should == 'BTC/KRW' }
     its(:base_unit)  { should == 'btc' }
-    its(:quote_unit) { should == 'cny' }
+    its(:quote_unit) { should == 'krw' }
     its(:visible)    { should be_true }
   end
 

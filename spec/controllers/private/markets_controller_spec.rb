@@ -27,10 +27,10 @@ describe Private::MarketsController do
 
   def data
     {
-      id: 'btccny',
-      market: 'btccny',
+      id: 'btckrw',
+      market: 'btckrw',
       ask: 'btc',
-      bid: 'cny'
+      bid: 'krw'
     }
   end
 

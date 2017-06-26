@@ -3,11 +3,11 @@ defaults: &defaults
   # sites hosts
   # session expire seconds
   # admin role account
-  URL_HOST: peatio.dev:3000
+  URL_HOST: dev.playbtc.com
   URL_SCHEMA: http
   SESSION_EXPIRE: 60
-  ADMIN: 'admin@peatio.dev,admin@example.com'
-  TIMEZONE: 'Beijing'
+  ADMIN: 'admin@peatio.dev, dev@foreceer.co'
+  TIMEZONE: 'Seoul'
 
   REDIS_URL: redis://127.0.0.1:6379
 
@@ -21,10 +21,10 @@ defaults: &defaults
   SMTP_PASSWORD: YOUR_SMTP_PASSWORD
   SMTP_AUTHENTICATION: plain # could be plain, login or cram_md5
 
-  SUPPORT_MAIL: support@peatio.dev
-  SYSTEM_MAIL_FROM: system@peatio.dev
-  SYSTEM_MAIL_TO: group@peatio.dev
-  OPERATE_MAIL_TO: support@peatio.dev
+  SUPPORT_MAIL: support@playbtc.com
+  SYSTEM_MAIL_FROM: system@playbtc.com
+  SYSTEM_MAIL_TO: group@playbtc.com
+  OPERATE_MAIL_TO: support@playbtc.com
 
   # WebSocket Streaming API settings
   # --------------------------------------------------------------

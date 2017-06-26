@@ -1,5 +1,5 @@
-ADMIN_EMAIL = 'admin@peatio.dev'
-ADMIN_PASSWORD = 'Pass@word8'
+ADMIN_EMAIL = 'dev@foreseer.co'
+ADMIN_PASSWORD = 'p1ayBtc$$'
 
 admin_identity = Identity.find_or_create_by(email: ADMIN_EMAIL)
 admin_identity.password = admin_identity.password_confirmation = ADMIN_PASSWORD

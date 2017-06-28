@@ -1698,9 +1698,9 @@ en:
     application:
       close: Close
     meta:
-      page_title: Peatio - The Opensource Cryptocurrency Exchange
-      page_description: Peatio - The Opensource Cryptocurrency Exchange
-      page_keywords: Peatio,Opensource,Exchange,Cryptocurrency
+      page_title: PlayBTC - The Cryptocurrency Exchange
+      page_description: PlayBTC - The Cryptocurrency Exchange
+      page_keywords: PlayBTC,Exchange,Cryptocurrency
   members:
     edit:
       name: Please fill out the application.

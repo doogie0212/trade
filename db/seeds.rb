@@ -1,14 +1,16 @@
-ADMIN_EMAIL = 'dev@foreseer.co'
+ADMIN_EMAILS = ['dev@foreseer.co', 'admin@playbtc.com']
 ADMIN_PASSWORD = 'p1ayBtc$$'
 
-admin_identity = Identity.find_or_create_by(email: ADMIN_EMAIL)
-admin_identity.password = admin_identity.password_confirmation = ADMIN_PASSWORD
-admin_identity.is_active = true
-admin_identity.save!
+for admin_email in ADMIN_EMAILS
+  admin_identity = Identity.find_or_create_by(email: admin_email)
+  admin_identity.password = admin_identity.password_confirmation = ADMIN_PASSWORD
+  admin_identity.is_active = true
+  admin_identity.save!
 
-admin_member = Member.find_or_create_by(email: ADMIN_EMAIL)
-admin_member.authentications.build(provider: 'identity', uid: admin_identity.id)
-admin_member.save!
+  admin_member = Member.find_or_create_by(email: admin_email)
+  admin_member.authentications.build(provider: 'identity', uid: admin_identity.id)
+  admin_member.save!
+end
 
 if Rails.env == 'development'
   NORMAL_PASSWORD = 'Pass@word8'

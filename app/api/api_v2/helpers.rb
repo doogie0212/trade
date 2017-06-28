@@ -81,6 +81,9 @@ module APIv2
     end
 
     def get_k_json
+      puts params[:market]
+      puts params[:period]
+
       key = "peatio:#{params[:market]}:k:#{params[:period]}"
 
       if params[:timestamp]
@@ -91,6 +94,7 @@ module APIv2
         JSON.parse('[%s]' % redis.lrange(key, offset, offset + params[:limit] - 1).join(','))
       else
         length = redis.llen(key)
+        puts length
         offset = [length - params[:limit], 0].max
         JSON.parse('[%s]' % redis.lrange(key, offset, -1).join(','))
       end

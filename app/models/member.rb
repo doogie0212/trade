@@ -50,7 +50,7 @@ class Member < ActiveRecord::Base
     end
 
     def admins
-      Figaro.env.admin.split(',')
+      JSON.parse(Figaro.env.admin)
     end
 
     def search(field: nil, term: nil)
@@ -116,6 +116,7 @@ class Member < ActiveRecord::Base
   end
 
   def admin?
+    puts self.class.admins
     @is_admin ||= self.class.admins.include?(self.email)
   end
 

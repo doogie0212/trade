@@ -62,6 +62,7 @@ class ApplicationController < ActionController::Base
   end
 
   def is_admin?
+    puts current_user
     current_user && current_user.admin?
   end
 

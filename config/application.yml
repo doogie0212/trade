@@ -6,7 +6,9 @@ defaults: &defaults
   URL_HOST: dev.playbtc.com
   URL_SCHEMA: http
   SESSION_EXPIRE: 60
-  ADMIN: 'dev@foreseer.co, dev@foreceer.co'
+  ADMIN:
+    - 'dev@foreseer.co'
+    - 'admin@playbtc.com'
   TIMEZONE: 'Seoul'
 
   REDIS_URL: redis://127.0.0.1:6379

@@ -62,7 +62,25 @@
     .chart {
       width: 100%;
       max-width: 1200px;
+      padding: 18px;
+
+      .market-conditions {
+        height: 50%
+      }
+
+      .recent {
+        height: 50%
+      }
     }
+
+    .subtitle {
+      font-family: SpoqaHanSans;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+      color: #24356e;
+    }
+
   }
 
   .container.third {

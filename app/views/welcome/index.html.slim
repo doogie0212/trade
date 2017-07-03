@@ -17,7 +17,28 @@
               a href="#{funds_path}" class="btn btn-info btn-lg btn-block" role="button" = t("header.funds")
               a href="#{settings_path}" class="btn btn-info btn-lg btn-block" role="button" = t("header.settings")
 .container.second
-  img.chart src="/images/chart.png"
+  div.chart.container-fluid
+    .col-md-16
+      h1 콜엠디8
+      img.chart src="/images/chart.png"
+    .col-md-8
+      .row.market-conditions
+        h4.subtitle
+          | 시장현황(매수/매도)
+        = render partial: 'market_conditions'
+      .row.recent
+        h4.subtitle
+          | 최근 체결 내역
+        table
+        - for item in 0..10
+          td id="just-testing" 
+    
+        / = render partial: 'recent'
+      table
+        tr hi
+      
+
+
 .container.third
   img.logo-big src="/icons/logo.svg"
   .subtitle

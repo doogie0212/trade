@@ -68,7 +68,9 @@
     .chart {
       width: 100%;
       max-width: 1200px;
+      height: 948px;
       padding: 18px;
+      border: solid 1px #e1e2ea;
 
       .right {
         max-height: 918px;
@@ -130,6 +132,11 @@
       }
 
       .left {
+
+        .row {
+          padding-right: 18px
+        }
+
         .subtitle {
           font-family: SpoqaHanSans;
           font-size: 18px;
@@ -142,14 +149,28 @@
           padding-top: 32px
         }
 
+        .little-padd {
+          padding-top: 12px
+        }
+
         .instant {
           height: 100px;
+          padding-right: 9px;
 
 
 
           .price-box {
             height: 100px;
             border: solid 1px #e1e2ea;
+
+            .temp-green {
+              color: #36d495;
+            }
+
+            .temp-red {
+              color: #e84855;
+            }
+
 
             .title-region {
               width: max;
@@ -168,7 +189,12 @@
             }
 
             .price-region {
-              margin: 0 auto;
+              margin-left: 60px;
+              maring-right: 60px;
+              margin-top: 10px;
+              width: 112px;
+              height: 24px;
+              position: absolute;
             }
 
             .price {
@@ -176,15 +202,17 @@
               font-size: 24px;
               font-weight: bold;
               line-height: 1;
-              color: #e84855;
+              text-align: center;
             }
 
             .unit {
-              margin-right: 14px;
               font-family: SpoqaHanSans;
               font-size: 12px;
               text-align: right;
               color: #9698a5;
+              margin-right: 10px !important;
+              padding-top: 20px !important;
+              z-index: -1;
             }
 
           }

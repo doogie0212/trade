@@ -17,25 +17,80 @@
               a href="#{funds_path}" class="btn btn-info btn-lg btn-block" role="button" = t("header.funds")
               a href="#{settings_path}" class="btn btn-info btn-lg btn-block" role="button" = t("header.settings")
 .container.second
-  div.chart.container-fluid
-    .col-md-16
-      h1 콜엠디8
-      img.chart src="/images/chart.png"
-    .col-md-8
+  .chart
+    .col-md-16.left
+      .instant
+        .col-xs-8
+          .price-box
+            .title-region
+              .title-label
+                | 최고가
+            .price-region
+              .price
+                | 3,000,000
+            .unit
+              | KRW <br />거래소 기준
+        .col-xs-8
+          .price-box
+            .title-region
+              .title-label
+                | 최저가 
+        .col-xs-8
+          .price-box
+            .title-region
+              .title-label
+                | 거래소 최종
+      .row
+        .h4.subtitle.top-padd
+          | 시세 차트
+        .candle-stick
+      .h4.subtitle
+        | 거래 차트
+      .volume
+    .col-md-8.right
       .row.market-conditions
         h4.subtitle
           | 시장현황(매수/매도)
-        = render partial: 'market_conditions'
+        .table-responsive
+          table.table.table-striped.table-size
+            thead.header-label
+              tr
+                th 매수/매도
+                th.mid-align 1 BTC 기갹[KRW]
+                th.mid-align 잔여수량[BTC]
+            tbody
+              - for item in 1..5
+                tr.green-label
+                  td 매도(#{item})
+                  td.krw-bold.mid-align 3,000,000
+                  td.mid-align 0.0943
+              - for item in 1..5
+                tr.red-label
+                  td 매수(#{item})
+                  td.krw-bold.mid-align 5,123,453
+                  td.mid-align 0.0943
+        / = render partial: 'market_conditions'
       .row.recent
         h4.subtitle
           | 최근 체결 내역
-        table
-        - for item in 0..10
-          td id="just-testing" 
-    
+        .table-responsive
+          table.table.table-striped.table-size
+            thead.header-label
+              tr
+                th 체결시각
+                th.mid-align 체결총액[KRW]
+                th.mid-align 거래량[BTC]
+            tbody
+              - for item in 1..10
+                tr
+                  td 16:03:45
+                  td.krw-bold.mid-align 3,234,000
+                  - if item % 2 == 0
+                    td.mid-align.red-label 0.0943
+                  - else
+                    td.mid-align.green-label 0.0123
         / = render partial: 'recent'
-      table
-        tr hi
+
       
 
 

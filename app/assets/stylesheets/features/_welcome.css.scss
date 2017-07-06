@@ -59,28 +59,160 @@
   }
 
   .container.second {
+
+    .shadow {
+      box-shadow: -60px 0px 100px -90px #000000,
+        60px 0px 100px -90px #000000;
+    }
+
     .chart {
       width: 100%;
       max-width: 1200px;
       padding: 18px;
 
-      .market-conditions {
-        height: 50%
+      .right {
+        max-height: 918px;
+
+        .table-size {
+          width: 380px;
+          height: 395px;
+          border: solid 1px #e1e2ea;
+        }
+
+        .market-conditions {
+          height: 50%;
+        }
+
+
+        .subtitle {
+          width: 154px;
+          height: 27px;
+          font-family: SpoqaHanSans;
+          font-size: 18px;
+          font-weight: bold;
+          text-align: left;
+          color: #24356e;
+        }
+
+        .header-label {
+          font-family: SpoqaHanSans;
+          font-size: 14px;
+          font-weight: bold;
+          text-align: left;
+          color: #24356e;
+        }
+
+        .krw-bold {
+          font-weight: bold;
+        }
+
+        .mid-align {
+          text-align: center;
+        }
+
+        .right-align {
+          text-align: right;
+        }
+
+        .green-label {
+          font-size: 12px;
+          color: #36d495;
+        }
+
+        .red-label {
+          font-size: 12px;
+          color: #e84855;
+        }
+
+        .recent {
+          height: 50%;
+        }
       }
 
-      .recent {
-        height: 50%
+      .left {
+        .subtitle {
+          font-family: SpoqaHanSans;
+          font-size: 18px;
+          font-weight: bold;
+          color: #24356e;
+          padding-bottom: 12px;
+        }
+
+        .top-padd {
+          padding-top: 32px
+        }
+
+        .instant {
+          height: 100px;
+
+
+
+          .price-box {
+            height: 100px;
+            border: solid 1px #e1e2ea;
+
+            .title-region {
+              width: max;
+              height: 36px;
+              background-color: #f7f8fb;
+
+              .title-label {
+                padding-top: 8px;
+                padding-left: 14px;
+                font-family: SpoqaHanSans;
+                font-weight: bold;
+                font-size: 14px;
+                text-align: left;
+                color: #24356e;
+              }
+            }
+
+            .price-region {
+              margin: 0 auto;
+            }
+
+            .price {
+              font-family: SpoqaHanSans;
+              font-size: 24px;
+              font-weight: bold;
+              line-height: 1;
+              color: #e84855;
+            }
+
+            .unit {
+              margin-right: 14px;
+              font-family: SpoqaHanSans;
+              font-size: 12px;
+              text-align: right;
+              color: #9698a5;
+            }
+
+          }
+        }
+
+
+
+
+
+
+
+
+        .candle-stick {
+          height: 440px;
+          border: solid 1px #e1e2ea;
+        }
+
+        .volume {
+          height: 220px;
+          border: solid 1px #e1e2ea;
+        }
       }
-    }
 
-    .subtitle {
-      font-family: SpoqaHanSans;
-      font-size: 18px;
-      font-weight: bold;
-      text-align: left;
-      color: #24356e;
-    }
 
+
+
+
+    }
   }
 
   .container.third {

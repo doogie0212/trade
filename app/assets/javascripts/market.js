@@ -31,6 +31,8 @@
 //= require_self
 
 $(function() {
+  //test-case
+  console.log("(test)market.js jquery loaded");
   window.notifier = new Notifier();
   BigNumber.config({
     ERRORS: false

@@ -19,37 +19,7 @@
 .container.second
   .chart
     .col-md-16.left
-      .instant
-        .col-xs-8
-          .price-box
-            .title-region
-              .title-label
-                | 최고가
-            .price-region
-              .price.temp-red
-                | 3,311,290
-            .unit
-              | KRW <br />거래소 기준
-        .col-xs-8
-          .price-box
-            .title-region
-              .title-label
-                | 최저가 
-            .price-region
-              .price.temp-green
-                | 3,242,750
-            .unit
-              | KRW <br />거래소 기준
-        .col-xs-8
-          .price-box
-            .title-region
-              .title-label
-                | 거래소 최종
-            .price-region
-              .price
-                | 0
-            .unit
-              | KRW <br />거래소 기준
+      = render partial: 'price'
       .row
         .h4.subtitle.top-padd
           | 시세 차트

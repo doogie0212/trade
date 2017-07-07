@@ -1,27 +1,9 @@
-.table-responsive
-  .table.table-striped
-  thead
-    tr
-      th 매수/매도
-      th 1 BTC 기갹[KRW]
-      th 잔여수량[BTC]
-  tbody
-    - for item in 0..10
+#welcome_order.table-responsive
+  table.table.table-striped.table-size
+    thead.header-label
       tr
-        td 매수건
-        td 매도건
-      
-
-
-/ 
-/ table-striped
-/   tr
-/     th price
-/     th 1 BTC
-/     - for item in 0..10
-/         td item
-/         td item*40
-/         / tr
-/         /   td.hi = items*10
-/         /   td.sth = items
-/ 
+        th 매수/매도
+        th.mid-align 1 BTC 기갹[KRW]
+        th.mid-align 잔여수량[BTC]
+    tbody.welcome-bids
+    tbody.welcome-asks

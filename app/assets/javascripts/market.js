@@ -35,6 +35,7 @@ $(function() {
   BigNumber.config({
     ERRORS: false
   });
+  WelcomeOrderUI.attachTo('#welcome_order');
   HeaderUI.attachTo('header');
   AccountSummaryUI.attachTo('#account_summary');
   FloatUI.attachTo('.float');

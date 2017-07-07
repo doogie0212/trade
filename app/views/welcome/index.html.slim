@@ -62,25 +62,25 @@
       .row.market-conditions
         h4.subtitle
           | 시장현황(매수/매도)
-        .table-responsive
-          table.table.table-striped.table-size
-            thead.header-label
-              tr
-                th 매수/매도
-                th.mid-align 1 BTC 기갹[KRW]
-                th.mid-align 잔여수량[BTC]
-            tbody
-              - for item in 1..5
-                tr.green-label
-                  td 매도(#{item})
-                  td.krw-bold.mid-align 3,000,000
-                  td.mid-align 0.0943
-              - for item in 1..5
-                tr.red-label
-                  td 매수(#{item})
-                  td.krw-bold.mid-align 5,123,453
-                  td.mid-align 0.0943
-        / = render partial: 'market_conditions'
+        = render partial: 'market_conditions'
+        / .table-responsive
+        /   table.table.table-striped.table-size
+        /     thead.header-label
+        /       tr
+        /         th 매수/매도
+        /         th.mid-align 1 BTC 기갹[KRW]
+        /         th.mid-align 잔여수량[BTC]
+        /     tbody
+        /       - for item in 1..5
+        /         tr.green-label
+        /           td 매도(#{item})
+        /           td.krw-bold.mid-align 3,000,000
+        /           td.mid-align 0.0943
+        /       - for item in 1..5
+        /         tr.red-label
+        /           td 매수(#{item})
+        /           td.krw-bold.mid-align 5,123,453
+        /           td.mid-align 0.0943
       .row.recent
         h4.subtitle
           | 최근 체결 내역

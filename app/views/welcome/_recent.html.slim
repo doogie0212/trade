@@ -1,56 +1,8 @@
-/ .present_market
-/   tr
-/     th 매수/매도
-/     th 1BTC 가격[KRW]
-/     th 잔여수량[BTC]
-/     -unless data.empty?
-/         table
-/           - data.each do |a|
-/           
-/   
-/   
-/   
-/   <table width="80%">
-/   <% @products.each_slice(6) do |row| %>
-/     <tr> 
-/        <% row.each do |product| %>
-/          <td><%= product.price %>"> <%= image_tag(product.image_url) %> </td>
-/        <% end %>
-/     </tr>
-/   <% end %>
-/ </table>
-/ 
-/ h1 Listing Books
-/ table
-/   tr
-/     th Title
-/     th Summary
-/     th
-/     th
-/     th
-/   | <% @books.each do |book| %
-/   tr
-/     td <%= book.title %
-/     td <%= book.content %
-/     td <%= link_to "Show", book %
-/     td <%= link_to "Edit", edit_book_path(book) %
-/     td <%= link_to "Remove", book, method: :delete, data:   confirm: "Are you sure?"   %
-/   | <% end %
-/ br/
-/ | <%= link_to "New book", new_book_path %
-/ 
-/ 
-/ 
-/ table
-/   tr
-/     th Skills &nbsp; &nbsp; &nbsp;
-/     th Expected-qualifications
-/     th Current-qualifications
-/   | <% @employee.position.skills.each do |skill| %
-/   | <% @employee.position.expected_qualifications.each do |expected_qualification| %
-/   | <% @employee.current_qualifications.each do |current_qualification| %
-/   tr
-/     td <%= skill.kategorien %
-/     td <%= expected_qualification.sollqualifikation %
-/     td <%= current_qualification.istqualifikation %
-/   | <% end %><% end %><% end %
+#welcome_trades.table-responsive
+  table.table.table-striped.table-size
+    thead.header-label
+      tr
+        th 체결시각
+        th.mid-align 체결총액[KRW]
+        th.mid-align 거래량[BTC]
+    tbody

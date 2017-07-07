@@ -5,6 +5,7 @@ window.MarketSwitchUI = flight.component(function() {
     marketGroupItem: '.dropdown-wrapper .dropdown-menu li a',
     marketsTable: '.table.markets'
   });
+
   this.switchMarketGroup = function(event, item) {
     var name;
     item = $(event.target).closest('a');
@@ -14,6 +15,7 @@ window.MarketSwitchUI = flight.component(function() {
     this.select('marketGroupName').text(item.find('span').text());
     return this.select('marketsTable').attr("class", "table table-hover markets " + name);
   };
+
   this.updateMarket = function(select, ticker) {
     var p1, p2, trend;
     trend = formatter.trend(ticker.last_trend);
@@ -23,6 +25,7 @@ window.MarketSwitchUI = flight.component(function() {
     trend = formatter.trend(p1 <= p2);
     return select.find('td.change').html("<span class='" + trend + "'>" + (formatter.price_change(p1, p2)) + "%</span>");
   };
+
   this.refresh = function(event, data) {
     var i, len, ref, table, ticker;
     table = this.select('table');
@@ -33,6 +36,7 @@ window.MarketSwitchUI = flight.component(function() {
     }
     return table.find("tr#market-list-" + gon.market.id).addClass('highlight');
   };
+
   return this.after('initialize', function() {
     this.on(document, 'market::tickers', this.refresh);
     this.on(this.select('marketGroupItem'), 'click', this.switchMarketGroup);

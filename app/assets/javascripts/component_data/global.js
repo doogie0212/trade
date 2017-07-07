@@ -1,4 +1,6 @@
 window.GlobalData = flight.component(function() {
+
+
   this.refreshDocumentTitle = function(event, data) {
     var brand, market, price, symbol;
     symbol = gon.currencies[gon.market.bid.currency].symbol;
@@ -7,11 +9,14 @@ window.GlobalData = flight.component(function() {
     brand = "Peatio Exchange";
     return document.title = "" + symbol + price + " " + market + " - " + brand;
   };
+
+
   this.refreshDepth = function(data) {
     var asks, asks_sum, bids, bids_sum, la, lb, mid, offset, ref;
     asks = [];
     bids = [];
     ref = [0, 0], bids_sum = ref[0], asks_sum = ref[1];
+
     _.each(data.asks, function(arg) {
       var price, volume;
       price = arg[0], volume = arg[1];
@@ -19,6 +24,7 @@ window.GlobalData = flight.component(function() {
         return asks.push([parseFloat(price), asks_sum += parseFloat(volume)]);
       }
     });
+
     _.each(data.bids, function(arg) {
       var price, volume;
       price = arg[0], volume = arg[1];
@@ -26,6 +32,7 @@ window.GlobalData = flight.component(function() {
         return bids.push([parseFloat(price), bids_sum += parseFloat(volume)]);
       }
     });
+
     la = _.last(asks);
     lb = _.last(bids);
     if (la && lb) {
@@ -38,6 +45,7 @@ window.GlobalData = flight.component(function() {
       mid = _.first(asks)[0];
       offset = Math.min.apply(Math, [Math.max(mid * 0.1, 1), (la[0] - mid) * 0.8]);
     }
+
     return this.trigger('market::depth::response', {
       asks: asks,
       bids: bids,
@@ -45,6 +53,8 @@ window.GlobalData = flight.component(function() {
       low: mid - offset
     });
   };
+
+
   this.refreshTicker = function(data) {
     var buy, last, last_buy, last_last, last_sell, market, sell, ticker, tickers;
     if (!this.last_tickers) {
@@ -96,7 +106,10 @@ window.GlobalData = flight.component(function() {
     });
     return this.last_tickers = data;
   };
+
   return this.after('initialize', function() {
+    //test-case
+    console.log("(test)globalData is sucessfully loaded");
     var global_channel, market_channel;
     this.on(document, 'market::ticker', this.refreshDocumentTitle);
     global_channel = this.attr.pusher.subscribe("market-global");

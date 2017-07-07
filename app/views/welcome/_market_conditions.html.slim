@@ -5,5 +5,15 @@
         th 매수/매도
         th.mid-align 1 BTC 기갹[KRW]
         th.mid-align 잔여수량[BTC]
-    tbody.welcome-bids
-    tbody.welcome-asks
+        tbody.welcome-bids
+          - for item in 1..5
+            tr.green-label
+              td 매도(#{item})
+              td.krw-bold.mid-align 3,000,000
+              td.mid-align 0.0943
+        tbody.welcome-asks
+          - for item in 1..5
+            tr.red-label
+              td 매수(#{item})
+              td.krw-bold.mid-align 5,123,453
+              td.mid-align 0.0943

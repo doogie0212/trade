@@ -161,6 +161,7 @@ this.MarketData = flight.component(function() {
     return this.tradesCache = Array.prototype.concat(this.tradesCache, data.trades);
   };
   return this.after('initialize', function() {
+    console.log('(test)MarketData component is successfully loaded');
     this.tradesCache = [];
     this.on(document, 'market::trades', this.cacheTrades);
     this.on(document, 'switch::range_switch', this.load);

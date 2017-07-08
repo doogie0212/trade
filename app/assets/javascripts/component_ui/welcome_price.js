@@ -15,6 +15,8 @@ this.WelcomePriceUI = flight.component(function() {
     this.select('last').text(ticker.last);
   };
   return this.after('initialize', function() {
+    console.log("(test)welcomePriceUI component is sucessfully loaded");
+
     var ref, state;
     this.on(document, 'market::ticker', this.refresh);
   });

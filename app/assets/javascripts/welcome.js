@@ -39,6 +39,7 @@ $(function() {
   });
   WelcomePriceUI.attachTo('#welcome_price');
   WelcomeOrderUI.attachTo('#welcome_order');
+  MarketData.attachTo(document);
   GlobalData.attachTo(document, {
     pusher: window.pusher
   });
@@ -47,7 +48,8 @@ $(function() {
       pusher: window.pusher
     });
   }
-  WelcomeCandlestickUI.attachTo('#welcome_candlestick');
+  WelcomeCandlestickUI.attachTo('#candlestick');
+  SwitchUI.attachTo('#range_switch, #indicator_switch, #main_indicator_switch, #type_switch');
   return $('.panel-body-content').niceScroll({
     autohidemode: true,
     cursorborder: "none"

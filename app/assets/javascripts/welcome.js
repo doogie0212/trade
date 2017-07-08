@@ -32,25 +32,13 @@
 
 $(function() {
   //test-case
-  console.log("(test)market.js jquery loaded");
+  console.log("(test)welcome.js jquery loaded");
   window.notifier = new Notifier();
   BigNumber.config({
     ERRORS: false
   });
-  HeaderUI.attachTo('header');
-  AccountSummaryUI.attachTo('#account_summary');
-  FloatUI.attachTo('.float');
-  KeyBindUI.attachTo(document);
-  AutoWindowUI.attachTo(window);
-  PlaceOrderUI.attachTo('#bid_entry');
-  PlaceOrderUI.attachTo('#ask_entry');
-  OrderBookUI.attachTo('#order_book');
-  DepthUI.attachTo('#depths_wrapper');
-  MyOrdersUI.attachTo('#my_orders');
-  MarketTickerUI.attachTo('#ticker');
-  MarketSwitchUI.attachTo('#market_list_wrapper');
-  MarketTradesUI.attachTo('#market_trades_wrapper');
-  MarketData.attachTo(document);
+  WelcomePriceUI.attachTo('#welcome_price');
+  WelcomeOrderUI.attachTo('#welcome_order');
   GlobalData.attachTo(document, {
     pusher: window.pusher
   });
@@ -59,8 +47,7 @@ $(function() {
       pusher: window.pusher
     });
   }
-  CandlestickUI.attachTo('#candlestick');
-  SwitchUI.attachTo('#range_switch, #indicator_switch, #main_indicator_switch, #type_switch');
+  WelcomeCandlestickUI.attachTo('#welcome_candlestick');
   return $('.panel-body-content').niceScroll({
     autohidemode: true,
     cursorborder: "none"

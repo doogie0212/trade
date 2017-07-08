@@ -138,31 +138,6 @@ this.WelcomeOrderUI = flight.component(function() {
         return _this.trigger('market::depth::fade_toggle');
       };
     })(this));
-    $('.asks').on('click', 'tr', (function(_this) {
-      return function(e) {
-        var i;
-        i = $(e.target).closest('tr').data('order');
-        _this.placeOrder($('#bid_entry'), _.extend(_this.computeDeep(e, gon.asks), {
-          type: 'ask'
-        }));
-        return _this.placeOrder($('#ask_entry'), {
-          price: BigNumber(gon.asks[i][0]),
-          volume: BigNumber(gon.asks[i][1])
-        });
-      };
-    })(this));
-    return $('.bids').on('click', 'tr', (function(_this) {
-      return function(e) {
-        var i;
-        i = $(e.target).closest('tr').data('order');
-        _this.placeOrder($('#ask_entry'), _.extend(_this.computeDeep(e, gon.bids), {
-          type: 'bid'
-        }));
-        return _this.placeOrder($('#bid_entry'), {
-          price: BigNumber(gon.bids[i][0]),
-          volume: BigNumber(gon.bids[i][1])
-        });
-      };
-    })(this));
+
   });
 });

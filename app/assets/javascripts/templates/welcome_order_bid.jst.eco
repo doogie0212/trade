@@ -2,10 +2,10 @@
   <td><div>
     매도 <%= @index %>
   </div></td>
-  <td class='krw-bold mid-align volume col-xs-7'><div>
+  <td class='krw-bold mid-align volume'><div>
     <%- formatter.mask_fixed_price @price %>
   </div></td>
-  <td class='mid-align price col-xs-7 text-up'><div>
+  <td class='mid-align price text-up'><div>
     <%- formatter.mask_fixed_volume @volume %>
   </div></td>
 </tr>

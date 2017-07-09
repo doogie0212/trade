@@ -3,7 +3,7 @@
   code: krw
   symbol: "₩"
   coin: false
-  precision: 2
+  precision: 0
   assets:
     accounts:
       -

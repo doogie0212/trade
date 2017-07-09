@@ -189,7 +189,8 @@ class ApplicationController < ActionController::Base
       memo[currency.code] = {
         code: currency[:code],
         symbol: currency[:symbol],
-        isCoin: currency[:coin]
+        isCoin: currency[:coin],
+        precision: currency[:precision]
       }
       memo
     end

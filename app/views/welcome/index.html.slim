@@ -23,13 +23,9 @@
       .row
         .h4.subtitle.top-padd
           | 시세 차트
-        = render partial: 'candlestick'
         = render partial: 'range_switch'
         = render partial: 'indicator_switch'
-      .row  
-        .h4.subtitle.little-padd
-          | 거래 차트
-        .volume
+        = render partial: 'candlestick'
     .col-md-8.right
       .row.market-conditions
         h4.subtitle

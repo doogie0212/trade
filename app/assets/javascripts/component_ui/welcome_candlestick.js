@@ -94,7 +94,6 @@ this.WelcomeCandlestickUI = flight.component(function() {
   this.init = function(event, data) {
     var ref;
     this.running = true;
-    console.log(1);
     if ((ref = this.$node.find('#candlestick_chart').highcharts()) != null) {
       ref.destroy();
     }

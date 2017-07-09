@@ -17,7 +17,46 @@
               a href="#{funds_path}" class="btn btn-info btn-lg btn-block" role="button" = t("header.funds")
               a href="#{settings_path}" class="btn btn-info btn-lg btn-block" role="button" = t("header.settings")
 .container.second
-  img.chart src="/images/chart.png"
+  .chart
+    .col-md-16.left
+      = render partial: 'price'
+      .row
+        .h4.subtitle.top-padd
+          | 시세 차트
+        = render partial: 'range_switch'
+        = render partial: 'indicator_switch'
+        = render partial: 'candlestick'
+    .col-md-8.right
+      .row.market-conditions
+        h4.subtitle
+          | 시장현황(매수/매도)
+        = render partial: 'market_conditions'
+        / .table-responsive
+        /   table.table.table-striped.table-size
+        /     thead.header-label
+        /       tr
+        /         th 매수/매도
+        /         th.mid-align 1 BTC 기갹[KRW]
+        /         th.mid-align 잔여수량[BTC]
+        /     tbody
+        /       - for item in 1..5
+        /         tr.green-label
+        /           td 매도(#{item})
+        /           td.krw-bold.mid-align 3,000,000
+        /           td.mid-align 0.0943
+        /       - for item in 1..5
+        /         tr.red-label
+        /           td 매수(#{item})
+        /           td.krw-bold.mid-align 5,123,453
+        /           td.mid-align 0.0943
+      .row.recent
+        h4.subtitle
+          | 최근 체결 내역
+        = render partial: 'recent'
+
+      
+
+
 .container.third
   img.logo-big src="/icons/logo.svg"
   .subtitle

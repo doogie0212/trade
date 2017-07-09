@@ -1795,3 +1795,110 @@ ko:
       almost_done: 전송중
       canceled: 이미 취소됨
       failed: 출금 오류
+  welcome:
+    show:
+      error: 주문 오류
+      success: 주문 완료
+      analysis_panel: 분석
+      help_panel: 도움말
+      done: 체결
+      cancel: 취소
+      cancel_confirm: 취소하시겠습니까?
+      confirm: 확인
+      ask_order: '판매 ##sn#'
+      bid_order: '구매 ##sn#'
+      my_active_order: 주문내역
+      my_done_order: 체결내역
+      trades: 최근 체결내역
+      chat: 채팅 채널
+    range_switch:
+      switch_1: 1m
+      switch_5: 5m
+      switch_15: 15m
+      switch_30: 30m
+      switch_60: 1h
+      switch_120: 2h
+      switch_240: 4h
+      switch_360: 6h
+      switch_720: 12h
+      switch_1440: 1d
+      switch_4320: 3d
+      switch_10080: 1w
+    depths:
+      price: 가격
+      amount: 수량
+      buy: 구매
+      sell: 판매
+      ask_orders: 판매
+      bid_orders: 구매
+    ticker:
+      last: 최근 체결가
+      ask: 매도호가
+      bid: 매수호가
+    account_balance:
+      title: 잔액
+      available: 사용가능한 금액 %{currency}
+    bid_entry:
+      action: "[구매] 주문"
+      price: 가격
+      last_price: 최근가격
+      amount: 수량
+      total: 금액
+    ask_entry:
+      action: "[판매] 주문"
+      price: 가격
+      last_price: 최근가격
+      amount: 수량
+      total: 금액
+    place_order:
+      price_high: 높다
+      price_low: 낮다
+      full_bid: 초과
+      full_ask: 비어있다
+    order_book:
+      title: 시장 실시간 주문내역
+      volume: 수량
+      price: 가격
+      amount: 합계
+      ask: 매도
+      bid: 매수
+      fade_toggle_depth: 시장깊이
+    market_trades:
+      time: 체결시간
+      price: 체결가격
+      volume: 체결수량
+    header:
+      network: 연결상태
+      vol: 24시간 거래수량
+      high: 최고
+      low: 최저
+      change: 전일대비
+    settings:
+      sound: 소리 효과
+      notification: 바탕화면 실시간 통지
+    account_summary:
+      title: 총자산
+      account: 계정
+      amount: 합계
+      locked: 동결
+      view_all_accounts: "[모든 계정 보기]"
+      hide_all_accounts: "[기타 계정 숨기기]"
+    my_orders:
+      orders_wait: 주문내역
+      orders_done: 체결내역
+      orders_cancel: 최근 취소된 주문
+      confirm_clear_all: 모든 【주문】취소 하시겠습니까?
+      confirm_clear_bids: 【구매주문】취소 하시겠습니까?
+      confirm_clear_asks: 【판매주문】취소 하시겠습니까?
+      price: 주문가격
+      volume: 주문수량
+      time: 주문시간
+    mask:
+      warning: ' <a class=text-up href=''/signin''>로그인</a> 또는  <a class=text-up href=''/signup''>회원가입</a>후 진행하세요'
+    klime_chart:
+      title: 차트
+    global:
+      global_orders_title: 주문
+      global_trades_title: 체결내역
+    chat:
+      title: 채팅 채널

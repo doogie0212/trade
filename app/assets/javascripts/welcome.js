@@ -39,6 +39,7 @@ $(function() {
   });
   WelcomePriceUI.attachTo('#welcome_price');
   WelcomeOrderUI.attachTo('#welcome_order');
+  WelcomeMarketTradesUI.attachTo('#market_trades_wrapper');
   MarketData.attachTo(document);
   GlobalData.attachTo(document, {
     pusher: window.pusher

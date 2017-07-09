@@ -52,23 +52,7 @@
       .row.recent
         h4.subtitle
           | 최근 체결 내역
-        .table-responsive
-          table.table.table-striped.table-size
-            thead.header-label
-              tr
-                th 체결시각
-                th.mid-align 체결총액[KRW]
-                th.mid-align 거래량[BTC]
-            tbody
-              - for item in 1..10
-                tr
-                  td 16:03:45
-                  td.krw-bold.mid-align 3,234,000
-                  - if item % 2 == 0
-                    td.mid-align.red-label 0.0943
-                  - else
-                    td.mid-align.green-label 0.0123
-        / = render partial: 'recent'
+        = render partial: 'recent'
 
       
 

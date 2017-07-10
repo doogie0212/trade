@@ -1822,7 +1822,7 @@ ko:
       bid: 매수
       fade_toggle_depth: 시장깊이
     market_trades:
-      time: 체결시간
+      time: 체결시각
       price: 체결가격
       volume: 체결수량
     global:

@@ -171,13 +171,6 @@
           border: solid 1px #e1e2ea;
         }
 
-        .order-book {
-          .table {
-            margin: 0;
-          }
-        }
-
-
         .subtitle {
           width: 154px;
           height: 27px;
@@ -319,5 +312,8 @@
 
   .panel-body {
     padding: 0;
+    table {
+      margin: 0;
+    }
   }
 }

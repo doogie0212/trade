@@ -1,7 +1,7 @@
 this.WelcomeOrderBookUI = flight.component(function() {
 
   this.attributes({
-    bookLimit: 5,
+    bookLimit: 10,
     askBookSel: 'table.asks',
     bidBookSel: 'table.bids',
     seperatorSelector: 'table.seperator',

@@ -1,8 +1,8 @@
 <tr data-order='<%= @index %>' data-price='<%= @price %>' data-volume='<%= @volume %>' class='<%= @classes %>'>
-  <td class='price col-xs-12 text-down'><div>
+  <td class='price col-xs-12 text-down text-center'><div>
     <%- formatter.mask_fixed_price @price %>
   </div></td>
-  <td class='volume col-xs-12'><div>
+  <td class='volume col-xs-12 text-center'><div>
     <%- formatter.mask_fixed_volume @volume %>
   </div></td>
 </tr>

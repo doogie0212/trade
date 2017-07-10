@@ -1818,8 +1818,8 @@ ko:
       volume: 수량
       price: 가격
       amount: 합계
-      ask: 매도
-      bid: 매수
+      ask: 매도가
+      bid: 매수가
       fade_toggle_depth: 시장깊이
     market_trades:
       time: 체결시각

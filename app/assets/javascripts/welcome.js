@@ -38,7 +38,7 @@ $(function() {
     ERRORS: false
   });
   WelcomePriceUI.attachTo('#welcome_price');
-  WelcomeOrderUI.attachTo('#welcome_order');
+  WelcomeOrderBookUI.attachTo('#welcome_order');
   WelcomeMarketTradesUI.attachTo('#market_trades_wrapper');
   MarketData.attachTo(document);
   GlobalData.attachTo(document, {

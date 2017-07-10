@@ -1,9 +1,9 @@
-this.WelcomeOrderUI = flight.component(function() {
+this.WelcomeOrderBookUI = flight.component(function() {
 
   this.attributes({
     bookLimit: 5,
-    askBookSel: 'tbody.welcome-asks',
-    bidBookSel: 'tbody.welcome-bids',
+    askBookSel: 'table.asks',
+    bidBookSel: 'table.bids',
     seperatorSelector: 'table.seperator',
     fade_toggle_depth: '#fade_toggle_depth'
   });
@@ -98,7 +98,7 @@ this.WelcomeOrderUI = flight.component(function() {
   this.updateOrders = function(table, orders, bid_or_ask) {
     var book;
     book = this.select(bid_or_ask + "BookSel");
-    this.mergeUpdate(bid_or_ask, book, orders, JST["templates/welcome_order_" + bid_or_ask]);
+    this.mergeUpdate(bid_or_ask, book, orders, JST["templates/welcome_order_book_" + bid_or_ask]);
     book.find("tr.new div").slideDown('slow');
     return setTimeout((function(_this) {
       return function() {
@@ -130,14 +130,37 @@ this.WelcomeOrderUI = flight.component(function() {
   };
 
   return this.after('initialize', function() {
-    //test-case
-    console.log("(test)welcomeOrderUI component is sucessfully loaded");
     this.on(document, 'market::order_book::update', this.update);
     this.on(this.select('fade_toggle_depth'), 'click', (function(_this) {
       return function() {
         return _this.trigger('market::depth::fade_toggle');
       };
     })(this));
-
+    $('.asks').on('click', 'tr', (function(_this) {
+      return function(e) {
+        var i;
+        i = $(e.target).closest('tr').data('order');
+        _this.placeOrder($('#bid_entry'), _.extend(_this.computeDeep(e, gon.asks), {
+          type: 'ask'
+        }));
+        return _this.placeOrder($('#ask_entry'), {
+          price: BigNumber(gon.asks[i][0]),
+          volume: BigNumber(gon.asks[i][1])
+        });
+      };
+    })(this));
+    return $('.bids').on('click', 'tr', (function(_this) {
+      return function(e) {
+        var i;
+        i = $(e.target).closest('tr').data('order');
+        _this.placeOrder($('#ask_entry'), _.extend(_this.computeDeep(e, gon.bids), {
+          type: 'bid'
+        }));
+        return _this.placeOrder($('#bid_entry'), {
+          price: BigNumber(gon.bids[i][0]),
+          volume: BigNumber(gon.bids[i][1])
+        });
+      };
+    })(this));
   });
 });

@@ -10,7 +10,7 @@ window.WelcomeMarketTradesUI = flight.component(function() {
     myTableSelector: 'table.my-trades tbody',
     newMarketTradeContent: 'table.all-trades tr.new div',
     newMyTradeContent: 'table.my-trades tr.new div',
-    tradesLimit: 80
+    tradesLimit: 10
   });
   this.showAllTrades = function(event) {
     this.select('mySelector').removeClass('active');

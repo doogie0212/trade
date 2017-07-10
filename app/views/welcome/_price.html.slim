@@ -1,28 +1,37 @@
-#welcome_price.instant
+#welcome_price.instant.row
   .col-xs-8
     .price-box
       .title-region
         .title-label
           | 최고가
       .price-region
-        .price.temp-red.high
-      .unit
-        | KRW <br />거래소 기준
+        .price.temp-red
+          span.high
+          span.unit
+            | KRW
+      .desc
+        | 거래소 기준
   .col-xs-8
     .price-box
       .title-region
         .title-label
           | 최저가 
       .price-region
-        .price.temp-green.low
-      .unit
-        | KRW <br />거래소 기준
+        .price.temp-green
+          span.low
+          span.unit
+            | KRW
+      .desc
+        | 거래소 기준
   .col-xs-8
     .price-box
       .title-region
         .title-label
           | 거래소 최종
       .price-region
-        .price.last
-      .unit
-        | KRW <br />거래소 기준
+        .price
+          span.last
+          span.unit
+            | KRW
+      .desc
+        | 거래소 기준

@@ -3,7 +3,7 @@ defaults: &defaults
   # sites hosts
   # session expire seconds
   # admin role account
-  URL_HOST: dev.playbtc.com
+  URL_HOST: peatio.dev:3000
   URL_SCHEMA: http
   SESSION_EXPIRE: 60
   ADMIN:
@@ -16,17 +16,18 @@ defaults: &defaults
   # below settings only in production env
   # system notify mail settings
   # --------------------------------------------------------------
-  SMTP_PORT: YOUR_SMTP_PORT
-  SMTP_DOMAIN: YOUR_SMTP_DOMAIN
-  SMTP_ADDRESS: YOUR_SMTP_ADDRESS
-  SMTP_USERNAME: YOUR_SMTP_USERNAME
-  SMTP_PASSWORD: YOUR_SMTP_PASSWORD
+  SMTP_PORT: 465
+  SMTP_DOMAIN: gmail.com
+  SMTP_ADDRESS: smtp.gmail.com
+  SMTP_USERNAME: woog2nius
+  SMTP_PASSWORD: zxytgrycmrmblnai
   SMTP_AUTHENTICATION: plain # could be plain, login or cram_md5
 
-  SUPPORT_MAIL: support@playbtc.com
-  SYSTEM_MAIL_FROM: system@playbtc.com
-  SYSTEM_MAIL_TO: group@playbtc.com
-  OPERATE_MAIL_TO: support@playbtc.com
+  SUPPORT_MAIL: dev@foreseer.co
+  SYSTEM_MAIL_FROM: dev@foreseer.co
+  SYSTEM_MAIL_TO: dev@foreseer.co
+  OPERATE_MAIL_TO: dev@foreseer.co
+
 
   # WebSocket Streaming API settings
   # --------------------------------------------------------------
@@ -84,5 +85,18 @@ development:
 test:
   <<: *defaults
 
+staging:
+  <<: *defaults
+  URL_HOST: dev.playbtc.com
+
 production:
   <<: *defaults
+  URL_HOST: playbtc.com
+  REDIS_URL: redis://xcprod-002.440ls3.0001.apn2.cache.amazonaws.com:6379
+
+  SMTP_PORT: 587
+  SMTP_DOMAIN: amazonaws.com
+  SMTP_ADDRESS: email-smtp.us-west-2.amazonaws.com
+  SMTP_USERNAME: AKIAIMDLDJXJVHCUW75Q
+  SMTP_PASSWORD: AuojwM4Vfehcls/gALCYeDrRlwb894suTwlW0qe623bY
+  SMTP_AUTHENTICATION: login # could be plain, login or cram_md5

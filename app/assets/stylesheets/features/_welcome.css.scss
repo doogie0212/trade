@@ -171,8 +171,10 @@
           border: solid 1px #e1e2ea;
         }
 
-        .market-conditions {
-          height: 50%;
+        .order-book {
+          .table {
+            margin: 0;
+          }
         }
 
 

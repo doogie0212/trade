@@ -52,9 +52,9 @@ defaults: &defaults
   # we support development key and secret
   # uncomment below line only development or test
   #
-  PUSHER_APP: 365138
-  PUSHER_KEY: 7e50e38a9b1eeae385ef
-  PUSHER_SECRET: b70a319725b19758de38
+  PUSHER_APP: 365858
+  PUSHER_KEY: 4a7d17fc32cd4483348b
+  PUSHER_SECRET: 7c2df32bb7b7743f589f
   PUSHER_CLUSTER: ap1
 
   # PUSHER_APP: YOUR_PUSHER_APP
@@ -96,9 +96,9 @@ test:
 staging:
   <<: *defaults
   URL_HOST: dev.playbtc.com
-  PUSHER_APP: 365139
-  PUSHER_KEY: c28971d0b35926fdb442
-  PUSHER_SECRET: 5edf2d98b079e8cc88b1
+  PUSHER_APP: 365857
+  PUSHER_KEY: acd7b5cf9b3b70a0c651
+  PUSHER_SECRET: 898b304185e6bb3a2780
   PUSHER_CLUSTER: ap1
 
 production:
@@ -106,7 +106,7 @@ production:
   URL_HOST: playbtc.com
   REDIS_URL: redis://xcprod-002.440ls3.0001.apn2.cache.amazonaws.com:6379
 
-  PUSHER_APP: 365140
-  PUSHER_KEY: 5750ff46500a54b73815
-  PUSHER_SECRET: 34b58bdbf911926e270b
+  PUSHER_APP: 365854
+  PUSHER_KEY: 6ea438c54309263d25c8
+  PUSHER_SECRET: f14da9646350e5288b50
   PUSHER_CLUSTER: ap1

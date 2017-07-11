@@ -171,11 +171,6 @@
           border: solid 1px #e1e2ea;
         }
 
-        .market-conditions {
-          height: 50%;
-        }
-
-
         .subtitle {
           width: 154px;
           height: 27px;
@@ -313,5 +308,12 @@
 
   footer {
     background-color: #f7f8fb !important;
+  }
+
+  .panel-body {
+    padding: 0;
+    table {
+      margin: 0;
+    }
   }
 }

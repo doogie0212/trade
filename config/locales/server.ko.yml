@@ -53,38 +53,38 @@ ko:
         category: 출금 방식
         label: 표기
       account:
-        currency: 화폐 종류
-        currency_text: 화폐 종류
+        currency: 통화
+        currency_text: 통화
         balance_and_locked: 잔액 / 동결 금액
         balance: 잔액
         locked: 동결
       deposit:
         state: 상태
         tx_id: 거래 번호
-        member_id: 사용자 ID
-        created_at: 제출 시간
+        member_id: 아이디
+        created_at: 입금시간
         address: 주소
-        amount: 입금 금액
-        done_at: 완료 시간
+        amount: 입금액
+        done_at: 처리시간
         sn: 일련번호
       withdraw:
         id: 표기
         sn: 일련번호
         withdraw_id: 표기
-        created_at: 만든 시간
-        done_at: 완료 시간
-        sum: 총 금액
+        created_at: 출금시간
+        done_at: 처리시간
+        sum: 총금액
         fee: 수수료
         currency: 종류
-        amount: 출금 금액
+        amount: 출금액
         address: 주소
         state: 상태
         state_text: 상태
-        tx_id: 거래 번호
+        tx_id: 거래번호
         fund_source_id: 출금 주소
         detail: 내역
       account_version:
-        id: 일련 번호
+        id: 일련번호
         locked: 동결
         amount: 금액
         balance: 잔액
@@ -125,18 +125,18 @@ ko:
         at: 시간
         txid: 거래 일련번호
         amount: 금액
-        confirmations: Confirmations
+        confirmations: 확인
         state: 상태
         state_done: 완료
         state_wait: 대기
       member:
-        id: 일련번호
+        id: 아이디
         name: 이름
         display_name: 별명
         email: 이메일
         created_at: 등록 시간
         sn: 개인 일련번호
-        id_document_number: 주민등록증 번호(삭제)
+        id_document_number: 신분증번호
         tag_list: 표기
         activated: 완료
         activated?: "이메일 인증 완료"
@@ -229,22 +229,22 @@ ko:
         fund_source:
           attributes:
             address:
-              satoshi_ismine: 코인플러스거래소 지갑주소입니다. 다른 지갑주소를 사용하세요
+              satoshi_ismine: 다른 지갑주소를 사용하세요
               satoshi_invalid: 비트코인 지갑주소 오류
         withdraw:
-          account_balance_is_poor: 잔액이 부족합니다.  재확인 하세요
+          account_balance_is_poor: 잔액이 부족합니다. 다시 확인 후 이용해 주세요.
           attributes:
             password:
               match: 비밀번호가 틀렸습니다.
             amount:
               poor: 금액이 부족합니다.
-              bank_min: 입력할수 있는 최대금액이 5000.00 입니다
+              bank_min: 입력할수 있는 최대금액이 10000입니다
         withdraws/satoshi:
           attributes:
             fund_uid:
               blank: 출금주소를 입력하세요
-              invalid: 잘못된 출금 주소입니다. 재확인 하세요
-              ismine: 코인플러스거래소 지갑주소입니다, 다른 지갑주소를 입력하세요
+              invalid: 잘못된 출금 주소입니다. 다시 확인 후 이용해 주세요.
+              ismine: 다른 지갑주소를 입력하세요
         two_factor:
           attributes:
             otp:
@@ -253,8 +253,8 @@ ko:
           attributes:
             redirect_uri:
               fragment_present: cannot contain a fragment.
-              invalid_uri: must be a valid URI.
-              relative_uri: must be an absolute URI.
+              invalid_uri: 잘못된 형식의 URI 입니다
+              relative_uri: 절대 URI를 입력하세요
       messages:
         invalid_email: 이메일주소 오류
         undef: 원인을 알수 없는 오류
@@ -342,7 +342,7 @@ ko:
         txid: 거래
         amount: 금액
         fee: 수수료
-        currency_text: 화폐종류
+        currency_text: 통화
         aasm_state_text: 상태
         member_name: 사용자
     bank_deposits_grid:
@@ -367,7 +367,7 @@ ko:
       columns:
         sn: 일련번호
         name: 이름
-        currency_text: 화폐종류
+        currency_text: 통화
         amount: 실제 입금된 금액
         fee: 수수료
         created_at: 출금시간
@@ -382,7 +382,7 @@ ko:
     account_versions_grid:
       columns:
         created_at: 시간
-        currency_text: 계좌
+        currency_text: 통화
         balance: 잔액 변경
         in: 수입
         out: 지출

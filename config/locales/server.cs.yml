@@ -1369,7 +1369,7 @@ cs:
       truncate: "..."
   mailer:
     dear_user: Vážený uživateli,
-    signature: Děkujeme,<br/>Peatio Team
+    signature: Děkujeme,<br/>PlayBTC
     please_contact: Pokud to nejste vy, prosím <a href='mailto:%{contact_mail}'>kontaktujte nás</a> NEPRODLENĚ.
     footer: Toto je automaticky generovaný email, prosím neodpovídejte, pokud máte nějaký dotaz, prosím <a href="mailto:%{contact_mail}">kontaktujte nás</a>.
   comment_mailer:

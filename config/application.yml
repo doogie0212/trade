@@ -9,6 +9,15 @@ defaults: &defaults
   ADMIN:
     - 'dev@foreseer.co'
     - 'admin@playbtc.com'
+    - 'clee11@gmail.com'
+    - 'wyb3642@gmail.com'
+    - 'htn313@gmail.com'
+    - 'roycechoco@naver.com'
+    - 'j33936402@gmail.com'
+    - 'star3w@gmail.com'
+    - 'jmh1427@gmail.com'
+    - 'woog2nius@gmail.com'
+    - 'wooklym@gmail.com'
   TIMEZONE: 'Seoul'
 
   REDIS_URL: redis://127.0.0.1:6379

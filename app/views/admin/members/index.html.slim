@@ -25,7 +25,7 @@
         - t.column :created_at, class: 'col-xs-3'
         - t.column :activated?, class: 'col-xs-1' do |x|
           = yesno x.activated?
-        - t.column 'Disabled? (Web/API)', class: 'col-xs-1' do |x|
+        - t.column '비활성화? (Web/API)', class: 'col-xs-1' do |x|
           - text = x.disabled? ? 'Yes' : 'No'
           = link_to text, toggle_admin_member_path(x), remote: true, method: :post, class: 'toggle-web'
           | &nbsp;/&nbsp;
@@ -37,4 +37,3 @@
           = link_to t('actions.view'), url_for([:admin, x]), target: '_blank'
 
       = paginate @members
-

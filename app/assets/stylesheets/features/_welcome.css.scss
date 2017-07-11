@@ -75,7 +75,6 @@
 
       .left {
         .subtitle {
-          font-family: SpoqaHanSans;
           font-size: 18px;
           font-weight: bold;
           color: #24356e;
@@ -152,7 +151,7 @@
         }
 
         #candlestick {
-          height: 692px;
+          height: 751px;
           border: solid 1px #e1e2ea;
         }
 
@@ -174,7 +173,6 @@
         .subtitle {
           width: 154px;
           height: 27px;
-          font-family: SpoqaHanSans;
           font-size: 18px;
           font-weight: bold;
           text-align: left;
@@ -182,7 +180,6 @@
         }
 
         .header-label {
-          font-family: SpoqaHanSans;
           font-size: 14px;
           font-weight: bold;
           text-align: left;
@@ -323,5 +320,12 @@
 
   .text-down {
     color: #e84855;
+  }
+
+  #range_switch {
+    display: none;
+  }
+  #indicator_switch_wrapper {
+    display: none;
   }
 }

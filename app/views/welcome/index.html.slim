@@ -29,7 +29,7 @@
           = render partial: 'candlestick'
     .col-md-8.right
       .row.order-book
-        h4.subtitle
+        h4.subtitle.no-margin-top
           | 시장현황(매수/매도)
         = render partial: 'order_book'
         / .table-responsive
@@ -51,7 +51,7 @@
         /           td.krw-bold.mid-align 5,123,453
         /           td.mid-align 0.0943
       .row.recent
-        h4.subtitle
+        h4.subtitle.no-margin-top
           | 최근 체결 내역
         = render partial: 'market_trades'
 

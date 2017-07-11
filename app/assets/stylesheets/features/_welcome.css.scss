@@ -20,8 +20,8 @@
     background-position: bottom;
 
     .title-group {
-      padding: 20px 30px;
-      padding-right: 100px;
+      max-width: 400px;
+      margin: 0 auto;
     }
 
     .title {
@@ -151,7 +151,7 @@
         }
 
         #candlestick {
-          height: 751px;
+          height: 731px;
           border: solid 1px #e1e2ea;
         }
 
@@ -327,5 +327,28 @@
   }
   #indicator_switch_wrapper {
     display: none;
+  }
+
+  .no-margin-top {
+    margin-top: 0;
+  }
+
+  #order_book {
+    #order_book_header, #order_book_body {
+      margin: 0;
+      .col-xs-12 {
+        padding-left: 0;
+        padding-right: 0;
+        &.col-left {
+          border-right: 1px solid #eee;
+        }
+      }
+    }
+  }
+
+  #order_book, #market_trades {
+    g {
+      color: #9698a5;
+    }
   }
 }

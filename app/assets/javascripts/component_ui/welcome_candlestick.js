@@ -185,8 +185,6 @@ this.WelcomeCandlestickUI = flight.component(function() {
           })(this)
         },
         animation: true,
-        marginTop: 95,
-        backgroundColor: 'rgba(0,0,0, 0.0)'
       },
       credits: {
         enabled: false
@@ -197,7 +195,7 @@ this.WelcomeCandlestickUI = flight.component(function() {
           {
             width: 0.5,
             dashStyle: 'solid',
-            color: '#777'
+            color: '#9698a5'
           }, false
         ],
         valueDecimals: gon.market.bid.fixed,
@@ -317,27 +315,32 @@ this.WelcomeCandlestickUI = flight.component(function() {
         {
           labels: {
             enabled: true,
+            align: 'left',
+            format: '{value}'
           },
           gridLineColor: '#eee',
           gridLineDashStyle: 'Solid',
           top: "0%",
-          height: "70%",
-          lineColor: '#fff',
+          height: "80%",
+          lineColor: '#eee',
+          lineWidth: 1,
           minRange: gon.ticker.last ? parseFloat(gon.ticker.last) / 25 : null
         }, {
           labels: {
-            enabled: false
+            enabled: true,
+            align: 'left'
           },
-          top: "70%",
-          gridLineColor: '#eee',
-          height: "15%"
+          top: "80%",
+          gridLineColor: null,
+          height: "20%"
         }, {
+          visible: false,
           labels: {
             enabled: false
           },
-          top: "85%",
+          top: "100%",
           gridLineColor: '#eee',
-          height: "15%"
+          height: "0%"
         }
       ],
       series: [
@@ -361,7 +364,7 @@ this.WelcomeCandlestickUI = flight.component(function() {
           yAxis: 1,
           type: "column",
           data: data['volume'],
-          color: '#777',
+          color: '#9698a5',
           showInLegend: false
         }, {
           id: 'ma5',

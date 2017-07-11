@@ -40,14 +40,14 @@ ARGV.each do |id|
     x = ch.send *args
 
     case args.first
-    when 'direct'
-      queue.bind x, routing_key: AMQPConfig.routing_key(id)
-    when 'topic'
-      AMQPConfig.topics(id).each do |topic|
-        queue.bind x, routing_key: topic
-      end
-    else
-      queue.bind x
+      when 'direct'
+        queue.bind x, routing_key: AMQPConfig.routing_key(id)
+      when 'topic'
+        AMQPConfig.topics(id).each do |topic|
+          queue.bind x, routing_key: topic
+        end
+      else
+        queue.bind x
     end
   end
 

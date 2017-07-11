@@ -16,18 +16,17 @@ defaults: &defaults
   # below settings only in production env
   # system notify mail settings
   # --------------------------------------------------------------
-  SMTP_PORT: 465
-  SMTP_DOMAIN: gmail.com
-  SMTP_ADDRESS: smtp.gmail.com
-  SMTP_USERNAME: woog2nius
-  SMTP_PASSWORD: zxytgrycmrmblnai
-  SMTP_AUTHENTICATION: plain # could be plain, login or cram_md5
+  SMTP_PORT: 587
+  SMTP_DOMAIN: amazonaws.com
+  SMTP_ADDRESS: email-smtp.us-west-2.amazonaws.com
+  SMTP_USERNAME: AKIAIMDLDJXJVHCUW75Q
+  SMTP_PASSWORD: AuojwM4Vfehcls/gALCYeDrRlwb894suTwlW0qe623bY
+  SMTP_AUTHENTICATION: login # could be plain, login or cram_md5
 
-  SUPPORT_MAIL: dev@foreseer.co
-  SYSTEM_MAIL_FROM: dev@foreseer.co
-  SYSTEM_MAIL_TO: dev@foreseer.co
-  OPERATE_MAIL_TO: dev@foreseer.co
-
+  SUPPORT_MAIL: admin@playbtc.com
+  SYSTEM_MAIL_FROM: admin@playbtc.com
+  SYSTEM_MAIL_TO: admin@playbtc.com
+  OPERATE_MAIL_TO: admin@playbtc.com
 
   # WebSocket Streaming API settings
   # --------------------------------------------------------------

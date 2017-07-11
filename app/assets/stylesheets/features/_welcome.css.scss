@@ -68,7 +68,7 @@
     .chart {
       width: 100%;
       max-width: 1200px;
-      height: 948px;
+      height: 1000px;
       padding: 18px;
       border-radius: 1px;
       box-shadow: 0 9px 16px 0 rgba(28, 37, 104, 0.3);
@@ -152,7 +152,7 @@
         }
 
         #candlestick {
-          height: 440px;
+          height: 692px;
           border: solid 1px #e1e2ea;
         }
 
@@ -315,5 +315,13 @@
     table {
       margin: 0;
     }
+  }
+
+  .text-up {
+    color: #36d495;
+  }
+
+  .text-down {
+    color: #e84855;
   }
 }

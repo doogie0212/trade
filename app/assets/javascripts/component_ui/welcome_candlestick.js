@@ -33,13 +33,13 @@ RANGE_DEFAULT = {
   },
   states: {
     hover: {
-      fill: '#000',
+      fill: '#eee',
       style: {
         color: '#ccc'
       }
     },
     select: {
-      fill: '#000',
+      fill: '#eee',
       style: {
         color: '#eee'
       }
@@ -49,10 +49,10 @@ RANGE_DEFAULT = {
 
 COLOR_ON = {
   candlestick: {
-    color: '#990f0f',
-    upColor: '#000000',
-    lineColor: '#cc1414',
-    upLineColor: '#49c043'
+    color: '#e84855',
+    upColor: '#fff',
+    lineColor: '#e84855',
+    upLineColor: '#36d495'
   },
   close: {
     color: null
@@ -192,6 +192,7 @@ this.WelcomeCandlestickUI = flight.component(function() {
         enabled: false
       },
       tooltip: {
+        enabled: false,
         crosshairs: [
           {
             width: 0.5,
@@ -253,10 +254,10 @@ this.WelcomeCandlestickUI = flight.component(function() {
         candlestick: {
           turboThreshold: 0,
           followPointer: true,
-          color: '#990f0f',
+          color: '#e84855',
           upColor: '#000000',
-          lineColor: '#cc1414',
-          upLineColor: '#49c043',
+          lineColor: '#e84855',
+          upLineColor: '#36d495',
           dataGrouping: dataGrouping
         },
         column: {
@@ -274,6 +275,7 @@ this.WelcomeCandlestickUI = flight.component(function() {
         }
       },
       scrollbar: {
+        enabled: false,
         buttonArrowColor: '#333',
         barBackgroundColor: '#202020',
         buttonBackgroundColor: '#202020',
@@ -286,6 +288,7 @@ this.WelcomeCandlestickUI = flight.component(function() {
         enabled: false
       },
       navigator: {
+        enabled: false,
         maskFill: 'rgba(32, 32, 32, 0.6)',
         outlineColor: '#333',
         outlineWidth: 1,
@@ -296,8 +299,8 @@ this.WelcomeCandlestickUI = flight.component(function() {
       xAxis: {
         type: 'datetime',
         dateTimeLabelFormats: DATETIME_LABEL_FORMAT,
-        lineColor: '#333',
-        tickColor: '#333',
+        lineColor: '#eee',
+        tickColor: '#eee',
         tickWidth: 2,
         range: range,
         events: {
@@ -314,13 +317,9 @@ this.WelcomeCandlestickUI = flight.component(function() {
         {
           labels: {
             enabled: true,
-            align: 'right',
-            x: 2,
-            y: 3,
-            zIndex: -7
           },
-          gridLineColor: '#222',
-          gridLineDashStyle: 'ShortDot',
+          gridLineColor: '#eee',
+          gridLineDashStyle: 'Solid',
           top: "0%",
           height: "70%",
           lineColor: '#fff',
@@ -330,14 +329,14 @@ this.WelcomeCandlestickUI = flight.component(function() {
             enabled: false
           },
           top: "70%",
-          gridLineColor: '#000',
+          gridLineColor: '#eee',
           height: "15%"
         }, {
           labels: {
             enabled: false
           },
           top: "85%",
-          gridLineColor: '#000',
+          gridLineColor: '#eee',
           height: "15%"
         }
       ],
@@ -447,7 +446,7 @@ this.WelcomeCandlestickUI = flight.component(function() {
           yAxis: 2,
           showInLegend: true,
           type: 'histogram',
-          color: '#990f0f'
+          color: '#e84855'
         }
       ]
     });

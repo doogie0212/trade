@@ -1415,6 +1415,8 @@ ko:
     withdraw_state:
       subject: "[PlayBTC]출금 처리 상황"
       your_state: '출금 처리 상황 보기'
+  'true': 활성
+  'false': 비활성
   view_on_github: View on Github
   slogan: PlayBTC는 세계 최고의 안정적인 거래소 기술을 제공합니다.
   tags:

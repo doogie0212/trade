@@ -2,12 +2,13 @@
 <html lang="en" ng-app="funds">
   <head>
     <%- stylesheet = content_for?(:stylesheet) ? yield(:stylesheet) : "application" %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link href="/favicon.ico" rel="shortcut icon"></link>
     <%= include_gon %>
     <%= stylesheet_link_tag stylesheet, media: "all" %>
     <%= javascript_include_tag "locales/#{I18n.locale}" %>
     <%= javascript_include_tag "funds" %>
+    <%= javascript_include_tag "market" %>
     <%= yield(:scripts) if content_for?(:scripts) %>
     <%= render 'shared/html5' %>
     <%= render 'shared/meta' %>
@@ -37,4 +38,3 @@
 
   </body>
 </html>
-

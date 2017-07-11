@@ -1795,3 +1795,36 @@ ko:
       almost_done: 전송중
       canceled: 이미 취소됨
       failed: 출금 오류
+  welcome:
+    price:
+      high: 최고가
+      low: 최저가
+      last: 거래소 최종
+    range_switch:
+      switch_1: 1m
+      switch_5: 5m
+      switch_15: 15m
+      switch_30: 30m
+      switch_60: 1h
+      switch_120: 2h
+      switch_240: 4h
+      switch_360: 6h
+      switch_720: 12h
+      switch_1440: 1d
+      switch_4320: 3d
+      switch_10080: 1w
+    order_book:
+      title: 시장 실시간 주문내역
+      volume: 수량
+      price: 가격
+      amount: 합계
+      ask: 매도가
+      bid: 매수가
+      fade_toggle_depth: 시장깊이
+    market_trades:
+      time: 체결시각
+      price: 체결가격
+      volume: 체결수량
+    global:
+      global_orders_title: 주문
+      global_trades_title: 체결내역

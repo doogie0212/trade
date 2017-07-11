@@ -59,9 +59,172 @@
   }
 
   .container.second {
+
+    .shadow {
+      box-shadow: -60px 0px 100px -90px #000000,
+        60px 0px 100px -90px #000000;
+    }
+
     .chart {
       width: 100%;
       max-width: 1200px;
+      height: 948px;
+      padding: 18px;
+      border-radius: 1px;
+      box-shadow: 0 9px 16px 0 rgba(28, 37, 104, 0.3);
+
+      .left {
+        .subtitle {
+          font-family: SpoqaHanSans;
+          font-size: 18px;
+          font-weight: bold;
+          color: #24356e;
+          padding-bottom: 12px;
+        }
+
+        .top-padd {
+          padding-top: 32px
+        }
+
+        .little-padd {
+          padding-top: 12px
+        }
+
+        .instant {
+          height: 100px;
+          padding-right: 9px;
+
+
+
+          .price-box {
+            position: relative;
+            height: 100px;
+            border: solid 1px #e1e2ea;
+
+            .temp-green {
+              color: #36d495;
+            }
+
+            .temp-red {
+              color: #e84855;
+            }
+
+            .title-region {
+              width: max;
+              height: 36px;
+              line-height: 36px;
+              background-color: #f7f8fb;
+
+              .title-label {
+                padding: 0 14px;
+                font-size: 14px;
+                text-align: left;
+              }
+            }
+
+            .price-region {
+              margin-top: 10px;
+              height: 24px;
+              line-height: 24px;
+              text-align: center;
+              .price {
+                font-size: 24px;
+                font-weight: bold;
+                .unit {
+                  float: right;
+                  margin-right: 14px;
+                  font-weight: normal;
+                  font-size: 12px;
+                  line-height: 34px;
+                  color: #bbbfde;
+                }
+              }
+            }
+            .desc {
+              position: absolute;
+              right: 14px;
+              bottom: 7px;
+              font-size: 12px;
+              color: #9698a5;
+            }
+
+          }
+        }
+
+        #candlestick {
+          height: 440px;
+          border: solid 1px #e1e2ea;
+        }
+
+        .volume {
+          height: 220px;
+          border: solid 1px #e1e2ea;
+        }
+      }
+
+      .right {
+        max-height: 918px;
+
+        .table-size {
+          width: 380px;
+          height: 395px;
+          border: solid 1px #e1e2ea;
+        }
+
+        .subtitle {
+          width: 154px;
+          height: 27px;
+          font-family: SpoqaHanSans;
+          font-size: 18px;
+          font-weight: bold;
+          text-align: left;
+          color: #24356e;
+        }
+
+        .header-label {
+          font-family: SpoqaHanSans;
+          font-size: 14px;
+          font-weight: bold;
+          text-align: left;
+          color: #24356e;
+        }
+
+        .krw-bold {
+          font-weight: bold;
+        }
+
+        .mid-align {
+          text-align: center;
+        }
+
+        .right-align {
+          text-align: right;
+        }
+
+        .green-label {
+          font-size: 12px;
+          color: #36d495;
+        }
+
+        .red-label {
+          font-size: 12px;
+          color: #e84855;
+        }
+
+        .fixed-table1-height {
+          min-height: 395px !important;
+        }
+
+        .recent {
+          height: 50%;
+        }
+      }
+
+
+
+
+
+
     }
   }
 
@@ -116,18 +279,13 @@
   }
 
   .container.forth {
-    margin: 0;
+    padding: 80px 0 0 0;
     width: 100%;
     overflow-x: hidden;
     background-color: #f7f8fb;
     background-image: url("/images/coin-background.png");
     background-repeat: no-repeat;
     background-position: right bottom;
-
-    .row {
-      padding: 80px;
-      padding-bottom: 0;
-    }
 
     .left {
       padding-top: 30px;
@@ -150,5 +308,12 @@
 
   footer {
     background-color: #f7f8fb !important;
+  }
+
+  .panel-body {
+    padding: 0;
+    table {
+      margin: 0;
+    }
   }
 }

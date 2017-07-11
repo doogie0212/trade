@@ -152,7 +152,7 @@
         }
 
         #candlestick {
-          height: 692px;
+          height: 751px;
           border: solid 1px #e1e2ea;
         }
 
@@ -323,5 +323,12 @@
 
   .text-down {
     color: #e84855;
+  }
+
+  #range_switch {
+    display: none;
+  }
+  #indicator_switch_wrapper {
+    display: none;
   }
 }

@@ -1,0 +1,12 @@
+#market_trades_wrapper.has-right-dropdown
+  #market_trades
+    .panel.panel-default
+      .panel-body.panel-body-head
+        table.table
+          thead.header-label: tr
+            th.at.col-xs-5.text-center #{t('.time')}
+            th.price.col-xs-5.text-center #{t('.price')}
+            th.volume.col-xs-5.text-center #{t('.volume')}
+      .panel-body.panel-body-content
+        table.table.table.table-striped.all-trades
+          tbody

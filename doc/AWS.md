@@ -52,7 +52,7 @@ Insert the following lines into the bitcoin.conf, and replce with your username 
     rpcuser=INVENT_A_UNIQUE_USERNAME
     rpcpassword=INVENT_A_UNIQUE_PASSWORD
     rpcport=8333
-    rpcallowip=PEATIO_SERVER_IP_HERE              
+    rpcallowip=PLAYBTC_SERVER_IP_HERE              
     # Notify when receiving coins
     ayload='{"txid":"%s", "channel_key":"satoshi"}'
     walletnotify=/usr/bin/curl -X POST https://yourwebsite.tld/webhooks/tx

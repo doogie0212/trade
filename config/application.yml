@@ -19,8 +19,8 @@ defaults: &defaults
   SMTP_PORT: 587
   SMTP_DOMAIN: amazonaws.com
   SMTP_ADDRESS: email-smtp.us-west-2.amazonaws.com
-  SMTP_USERNAME: AKIAIMDLDJXJVHCUW75Q
-  SMTP_PASSWORD: AuojwM4Vfehcls/gALCYeDrRlwb894suTwlW0qe623bY
+  SMTP_USERNAME: AKIAIFM524ZMLMVWSAHQ
+  SMTP_PASSWORD: AguaGv2sWJV1vKttTxzNvOnDCwaOjcMDFgV8WEnfpHKV
   SMTP_AUTHENTICATION: login # could be plain, login or cram_md5
 
   SUPPORT_MAIL: admin@playbtc.com

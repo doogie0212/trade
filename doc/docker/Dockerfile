@@ -1,5 +1,5 @@
 FROM phusion/passenger-full
-MAINTAINER PEATIO community@peatio.com
+MAINTAINER PLAYBTC community@peatio.com
 
 # Set correct environment variables.
 ENV HOME /root

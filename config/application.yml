@@ -96,18 +96,8 @@ production:
   <<: *defaults
   URL_HOST: playbtc.com
   REDIS_URL: redis://xcprod-002.440ls3.0001.apn2.cache.amazonaws.com:6379
-<<<<<<< HEAD
 
   PUSHER_APP: 365140
   PUSHER_KEY: 5750ff46500a54b73815
   PUSHER_SECRET: 34b58bdbf911926e270b
   PUSHER_CLUSTER: ap1
-
-  SMTP_PORT: 587
-  SMTP_DOMAIN: amazonaws.com
-  SMTP_ADDRESS: email-smtp.us-west-2.amazonaws.com
-  SMTP_USERNAME: AKIAIMDLDJXJVHCUW75Q
-  SMTP_PASSWORD: AuojwM4Vfehcls/gALCYeDrRlwb894suTwlW0qe623bY
-  SMTP_AUTHENTICATION: login # could be plain, login or cram_md5
-=======
->>>>>>> master

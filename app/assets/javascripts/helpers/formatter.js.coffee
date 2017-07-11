@@ -1,13 +1,16 @@
 class Formatter
+  roundCurrency: (str, fixed) ->
+    BigNumber(str).toFormat(fixed)
+
   round: (str, fixed) ->
-    BigNumber(str).round(fixed, BigNumber.ROUND_HALF_UP).toF(fixed)
+    BigNumber(str).round(fixed, BigNumber.ROUND_HALF_UP).toFixed(2)
 
   fix: (type, str) ->
     str = '0' unless $.isNumeric(str)
     if type is 'ask'
-      @.round(str, gon.market.ask.fixed)
+      @.roundCurrency(str, gon.market.ask.fixed)
     else if type is 'bid'
-      @.round(str, gon.market.bid.fixed)
+      @.roundCurrency(str, gon.market.bid.fixed)
 
   fixAsk: (str) ->
     @.fix('ask', str)
@@ -18,7 +21,7 @@ class Formatter
   fixPriceGroup: (str) ->
     if gon.market.price_group_fixed
       str = '0' unless $.isNumeric(str)
-      @.round(str, gon.market.price_group_fixed)
+      @.roundCurrency(str, gon.market.price_group_fixed)
     else
       @fixBid(str)
 

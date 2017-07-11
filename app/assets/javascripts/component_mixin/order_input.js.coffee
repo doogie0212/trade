@@ -34,7 +34,7 @@
         true
 
   @roundValueToText = (v) ->
-    v.round(@attr.precision, BigNumber.ROUND_DOWN).toF(@attr.precision)
+    v.round(@attr.precision, BigNumber.ROUND_DOWN).toFixed(@attr.precision)
 
   @setInputValue = (v) ->
     if v?

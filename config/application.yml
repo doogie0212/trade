@@ -16,18 +16,17 @@ defaults: &defaults
   # below settings only in production env
   # system notify mail settings
   # --------------------------------------------------------------
-  SMTP_PORT: 465
-  SMTP_DOMAIN: gmail.com
-  SMTP_ADDRESS: smtp.gmail.com
-  SMTP_USERNAME: woog2nius
-  SMTP_PASSWORD: zxytgrycmrmblnai
-  SMTP_AUTHENTICATION: plain # could be plain, login or cram_md5
+  SMTP_PORT: 587
+  SMTP_DOMAIN: amazonaws.com
+  SMTP_ADDRESS: email-smtp.us-west-2.amazonaws.com
+  SMTP_USERNAME: AKIAIMDLDJXJVHCUW75Q
+  SMTP_PASSWORD: AuojwM4Vfehcls/gALCYeDrRlwb894suTwlW0qe623bY
+  SMTP_AUTHENTICATION: login # could be plain, login or cram_md5
 
-  SUPPORT_MAIL: dev@foreseer.co
-  SYSTEM_MAIL_FROM: dev@foreseer.co
-  SYSTEM_MAIL_TO: dev@foreseer.co
-  OPERATE_MAIL_TO: dev@foreseer.co
-
+  SUPPORT_MAIL: admin@playbtc.com
+  SYSTEM_MAIL_FROM: admin@playbtc.com
+  SYSTEM_MAIL_TO: admin@playbtc.com
+  OPERATE_MAIL_TO: admin@playbtc.com
 
   # WebSocket Streaming API settings
   # --------------------------------------------------------------
@@ -44,10 +43,10 @@ defaults: &defaults
   # we support development key and secret
   # uncomment below line only development or test
   #
-  PUSHER_APP: 354878
-  PUSHER_KEY: 8e11db9fd4b3c0a005a5
-  PUSHER_SECRET: 75c23d2b4861184d3838
-  PUSHER_CLUSTER: 'ap1'
+  PUSHER_APP: 365138
+  PUSHER_KEY: 7e50e38a9b1eeae385ef
+  PUSHER_SECRET: b70a319725b19758de38
+  PUSHER_CLUSTER: ap1
 
   # PUSHER_APP: YOUR_PUSHER_APP
   # PUSHER_KEY: YOUR_PUSHER_KEY
@@ -61,9 +60,9 @@ defaults: &defaults
   # --------------------------------------------------------------
   # https://github.com/twilio/twilio-ruby
   #
-  TWILIO_NUMBER: YOUR_TWILIO_NUMBER
-  TWILIO_SID: YOUR_TWILIO_SID
-  TWILIO_TOKEN: YOUR_TWILIO_TOKEN
+  TWILIO_NUMBER: +12088060986
+  TWILIO_SID: AC9691e5923619ac3d712e7c99c1fabfdc
+  TWILIO_TOKEN: 8d9f67e079463964493a8ec064b2c2ab
 
 
   # Third party auth
@@ -88,15 +87,17 @@ test:
 staging:
   <<: *defaults
   URL_HOST: dev.playbtc.com
+  PUSHER_APP: 365139
+  PUSHER_KEY: c28971d0b35926fdb442
+  PUSHER_SECRET: 5edf2d98b079e8cc88b1
+  PUSHER_CLUSTER: ap1
 
 production:
   <<: *defaults
   URL_HOST: playbtc.com
   REDIS_URL: redis://xcprod-002.440ls3.0001.apn2.cache.amazonaws.com:6379
 
-  SMTP_PORT: 587
-  SMTP_DOMAIN: amazonaws.com
-  SMTP_ADDRESS: email-smtp.us-west-2.amazonaws.com
-  SMTP_USERNAME: AKIAIMDLDJXJVHCUW75Q
-  SMTP_PASSWORD: AuojwM4Vfehcls/gALCYeDrRlwb894suTwlW0qe623bY
-  SMTP_AUTHENTICATION: login # could be plain, login or cram_md5
+  PUSHER_APP: 365140
+  PUSHER_KEY: 5750ff46500a54b73815
+  PUSHER_SECRET: 34b58bdbf911926e270b
+  PUSHER_CLUSTER: ap1

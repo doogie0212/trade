@@ -73,6 +73,7 @@ class Currency < ActiveYamlBase
       key: key,
       code: code,
       coin: coin,
+      precision: precision,
       blockchain: blockchain
     }
   end

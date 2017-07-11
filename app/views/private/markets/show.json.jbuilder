@@ -6,3 +6,4 @@ if @member
   json.my_trades @trades_done.map(&:for_notify)
   json.my_orders *([@orders_wait] + Order::ATTRIBUTES)
 end
+

@@ -824,6 +824,9 @@ ko:
         ask: 매도
         bid: 매수
         fade_toggle_depth: 시장깊이
+      trade_state:
+        new: 신규
+        partial: 부분
       market_trades:
         time: 체결시간
         price: 체결가격

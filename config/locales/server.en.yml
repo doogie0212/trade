@@ -126,8 +126,8 @@ en:
         state_wait: Wait
       member:
         id: ID
-        name: Real Name
-        display_name: Display Name
+        name: Name
+        display_name: Alias
         email: Email
         created_at: Register At
         sn: SN

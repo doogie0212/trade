@@ -1355,44 +1355,44 @@ ko:
     dear_user: 안녕하세요
     signature: 감사합니다. PlayBTC
     please_contact: '본인이 직접 로그인하시지 않은경우 <a href=''mailto:%{contact_mail}''>바로 고객센터로 연락하세요.</a> '
-    footer: 자동으로 전송된 이메일 입니다, 회신하지마세요.문의사항 있을경우<a href="mailto:%{contact_mail}"> 연락하세요.
+    footer: 자동으로 전송된 이메일 입니다. 문의사항이 있으실 경우<a href="mailto:%{contact_mail}">로 연락하세요.
   comment_mailer:
     admin_notification:
-      subject: "[PlayBTC] User reply a ticket"
+      subject: "[PlayBTC] User %{email} reply a ticket"
       notification_content: User %{email} reply a ticket, please follow the link below to see the detail
     user_notification:
-      subject: "[PlayBTC] Your ticket got a new reply"
-      notification_content: 'Your ticket got a new reply, please follow the link below to see the detail:'
+      subject: "[PlayBTC] 문의에 대한 답변이 도착했습니다"
+      notification_content: '안녕하세요, 고객님의 문의에 대한 답변이 도착했습니다. 링크를 통해 확인하세요:'
   member_mailer:
     notify_signin:
-      subject: "[PlayBTC] 거래소를 성공적으로 로그인 하였습니다"
-      just_signed_in: 거래소를 성공적으로 로그인 하였습니다.
+      subject: "[PlayBTC] 로그인 알림"
+      just_signed_in: PlayBTC에 로그인하셨습니다
     google_auth_activated:
       subject: "[PlayBTC] 구글 이중인증"
-      google_auth_activated: 구글 이중인증이 성공적으로 받아습니다.
+      google_auth_activated: 구글 이중인증이 성공하였습니다.
     google_auth_deactivated:
       subject: "[PlayBTC] 구글 인중인증 재설정"
       google_auth_deactivated: 구글 인중인증 재설정이 완료되었습니다.
     sms_auth_activated:
-      subject: "[PlayBTC]핸드폰SMS 인증"
-      sms_auth_activated: 핸드폰SMS인증이 완료되었습니다.
+      subject: "[PlayBTC] SMS 인증"
+      sms_auth_activated: SMS 인증이 완료되었습니다.
     sms_auth_deactivated:
-      subject: "[PlayBTC] 핸드폰SMS인증을 재설정"
-      sms_auth_deactivated: 핸드폰SMS인증이 완료되었습니다.
+      subject: "[PlayBTC] SMS 인증 재설정"
+      sms_auth_deactivated: SMS 인증이 완료되었습니다.
     reset_password_done:
       subject: "[PlayBTC] 비밀번호 수정 완료"
       successful: 회원님이 비밀번호가 성공적으로 수정되었습니다.
     phone_number_verified:
       subject: "[PlayBTC] 핸드폰 인증 완료"
-      verified: '핸드폰 인증 완료 되었습니다. 핸드폰 번호:%{phone_number}'
+      verified: '핸드폰 인증 완료 되었습니다. 번호:%{phone_number}'
   system_mailer:
     daily_stats:
-      member_stats: 새 사용자
+      member_stats: 신규 사용자
       signup: 가입
       activation: 확인
       asset_stats: 자금변동
       trade_stats: 거래변동
-      asset_value_change_total: 디지털 화폐 금액 변동 합계
+      asset_value_change_total: 디지털 자산 금액 변동 합계
       trades_change_total: 거래수량 변동 합계
   ticket_mailer:
     admin_notification:
@@ -1403,22 +1403,22 @@ ko:
       thanks_for_submit_ticket: 소중한 의견을 주셔서 감사합니다. 빠른 시간 안에 연락드리겠습니다.
   token_mailer:
     activation:
-      subject: "[PlayBTC]계정 활성화"
+      subject: "[PlayBTC] 계정 활성화"
       click_to_verify: 'PlayBTC에 가입하신것을 환영합니다. 아래 링크 클릭하신후 이메일 인증 받으세요'
       unable_to_click: 링크가 클릭이 안될경우 브라우저 주소창에 주소를 복사해서 방문하세요.
       link_expire: 링크 유효기간 30분 입니다.
     reset_password:
-      subject: "[PlayBTC]비밀번호를 재설정"
+      subject: "[PlayBTC] 비밀번호 재설정"
       hi: 안녕하세요.
       follow_the_link: '아래 링크 클릭하신후, 30분안에 비밀번호를 재설정하세요.'
   withdraw_mailer:
     withdraw_state:
-      subject: "[PlayBTC]출금 처리 상황"
+      subject: "[PlayBTC] 출금 처리 상황"
       your_state: '출금 처리 상황 보기'
   'true': 활성
   'false': 비활성
   view_on_github: View on Github
-  slogan: PlayBTC는 세계 최고의 안정적인 거래소 기술을 제공합니다.
+  slogan: PlayBTC는 가장 빠르고 안전한 디지털 자산 거래소입니다.
   tags:
     vip: VIP
     hero: 히어로 맴버
@@ -1444,17 +1444,17 @@ ko:
     formats:
       date-short: "%m-%d"
       short: "%m-%d %H:%M"
-      default: "%m/%d/%Y %H:%M"
+      default: "%Y/%m/%d %H:%M"
   time:
     formats:
       date-short: "%m-%d"
       short: "%m-%d %H:%M"
-      default: "%m/%d/%Y %H:%M"
+      default: "%Y/%m/%d %H:%M"
   sms:
-    verification_code: '인증번호:%{code}.유효 기간 30분 입니다. (인증번호를 안전하게 관리하세요.)[PlayBTC]'
-    password_changed: Hi %{email}, 회원님 비밀번호가 성공적으로 수정 되었습니다.
-    deposit_done: Hi %{email}, 회원님이 입금신청 처리 되여습니다.
-    withdraw_done: Hi %{email}, 회원님 출금신청이 처리되었습니다.
+    verification_code: '[PlayBTC] 인증번호: %{code}. 유효 기간 30분 입니다. (타인에게 절대 인증번호를 알려주지 마세요!)'
+    password_changed: 안녕하세요 %{email}, 비밀번호가 성공적으로 수정되었습니다.
+    deposit_done: 안녕하세요 %{email}, 입금신청이 처리되여습니다.
+    withdraw_done: 안녕하세요 %{email}, 출금신청이 처리되었습니다.
   header:
     home: 홈
     dashboard: 대시보드
@@ -1501,7 +1501,7 @@ ko:
     back: 뒤로
     block: 블럭에서 보기
     destroy: 삭제
-    destroy_confirm: '이것을 삭제 하시겟습니까? '
+    destroy_confirm: '삭제 하시겟습니까? '
     detail: 상세
     publish: 공지
     edit: 편집
@@ -1513,7 +1513,7 @@ ko:
     transact: 처리중
     reject: 거부
     clipboard:
-      click: 클릭하면 복사 됩니다
+      click: 클릭하면 복사됩니다
       done: 복사됨
   chart:
     open: 열림
@@ -1522,8 +1522,8 @@ ko:
     close: 닫기
     price: 가격
     volume: 볼륨
-    candlestick: 'Candlestick'
-    line: 'Line'
+    candlestick: '캔들스틱'
+    line: '라인'
     minute: 분
     hour: 시간
     day: 일
@@ -1536,7 +1536,7 @@ ko:
     depth: 누적수량
     depth_title: 시장깊이
   'yes': '예'
-  'no': '아니'
+  'no': '아니오'
   simple_captcha:
     label: 대문자 소문자 구분하지 않습니다. 잘 보이지 않을경우 새로고침 클릭하세요
     placeholder: 그림에 보이는 문자를 입력하세요
@@ -1581,20 +1581,20 @@ ko:
         create: 확인
   activations:
     new:
-      notice: 인증이메일이 전송되었습니다. 이메일을 확인 후 인증받으세요. 이메일 못 받은경우 재전송 버튼을 클릭하세요
-      verified: 이메일인증이 완료되었습니다.
-      login_required: 로그인하신후 작업하세요
-      tip: 인증링크가 이미 %{email}로 전송되었습니다.
-      spam: 이메일이 오지않은경우 스팸메일확인하세요.
+      notice: 인증 이메일이 전송되었습니다. 확인 후 인증하세요. 이메일 못 받은경우 재전송 버튼을 클릭하세요.
+      verified: 이메일 인증이 완료되었습니다.
+      login_required: 로그인이 필요합니다.
+      tip: 인증 링크가 이미 %{email}로 전송되었습니다.
+      spam: 이메일이 오지않은경우 스팸메일함을 확인하세요.
     edit:
-      notice: 이메일인증이 완료되었습니다. 기타 보안설정을 계속하세요.
+      notice: 이메일 인증이 완료되었습니다. 기타 보안설정을 계속하세요.
       alert: 인증링크 사용기간이 초과되었습니다
   authentications:
     emails:
       new:
         title: 이메일 설정
-        setup_email: 이메일주소를 입력하세요. 이메일을 입력 안하신경우 다음 작업 진행할수없습니다.
-        warning: 이메일주소 저장 후 이메일인증 받으세요.
+        setup_email: 이메일 주소를 입력하세요. 이메일을 입력 안하신경우 다음 작업 진행할 수 없습니다.
+        warning: 이메일 주소 저장 후 이메일 인증 받으세요.
         email_address: 이메일주소
         save: 저장하기
     weibo:
@@ -1610,12 +1610,12 @@ ko:
   forum:
     index:
       notice:
-        display_name: 포럼에서 사용할 닉네임 만들세요.
+        display_name: 사용하실 별명을 만들세요.
   identities:
     new:
       title: 가입하기
       signin: 로그인 바로가기
-      password: 비밀번호는 6자리이상,영문 대/소문자 ,숫자를 포함해야합니다
+      password: 비밀번호는 6자리이상, 영문 대/소문자, 숫자를 포함해야합니다
     update:
       auth-error: 비밀번호가 일치하지 않습니다, 다시 입력하세요
       auth-same: 입력하신 새비밀번호가 이전비밀번호와 같습니다. 다시 입력하세요.
@@ -1645,13 +1645,13 @@ ko:
       page_keywords: PlayBTC, 비트코인, 거래소, 플레이비티씨, 마이비티씨
   members:
     edit:
-      name: 자산을 안전하게 관리하기위해 이름과 개인정보를 정확히 입력하세요.
+      name: 고객님의 자산을 안전하게 관리하기 위해 이름과 개인정보를 정확히 입력하세요.
   reset_passwords:
     create:
-      success: '이메일이  전송 되었습니다. 이메일 확인 후 안내에 따라입력하세요.이메일을 못 받은경우 고객센터로 연락하세요. 팁: 스팸 이메일을 확인하세요'
+      success: '이메일이 전송 되었습니다. 이메일 확인 후 안내에 따라 입력하세요. 이메일을 못받으신 경우 고객센터로 연락하세요.'
     edit:
-      password: 비밀번호는 6자리이상,영문 대/소문자 ,숫자를 포함해야합니다
-      invalid: 신청 오류
+      password: 비밀번호는 6자리이상, 영문 대/소문자, 숫자를 포함해야합니다
+      invalid: 비밀번호가 일치하지 않습니다
       submit: 비밀번호 재설정
       alert: 비밀번호 재설정 링크 오류
     update:
@@ -1662,13 +1662,13 @@ ko:
       reset_password: 비밀번호 찾기
     new_with_two_factor_auth:
       title: 2차인증
-      reset_two_factor: 2차인증 분실됨
+      reset_two_factor: 2차인증 분실
     create_with_two_factor_auth:
       session_expired: 시간 초과, 다시 시도하세요
     create:
       error: 이메일 또는 비밀번호가 틀렸습니다. 다시 입력하세요
     failure:
-      account_locked: 비밀번호 입력오류 횟수가 너무 많아 , 계정 보호를 위해 계정잠긴상태가 되었습니다. 비밀번호찾기 통해 비밀번호를 재설정하세요.
+      account_locked: 비밀번호 입력오류 횟수가 너무 많아, 계정 보호를 위해 계정잠김 상태가 되었습니다. 비밀번호찾기 통해 비밀번호를 재설정하세요.
       error: 이메일 또는 비밀번호가 틀렸습니다. 다시 입력하세요
   shared:
     admin:
@@ -1735,10 +1735,10 @@ ko:
         blackbery: 블랙베리
         notice:
           already_activated: 구글 이중인증이 성공적으로 설정되었습니다.
-          not_activated_yet: 구글이중인증을 설정하지 못했습니다.
+          not_activated_yet: 구글 이중인증을 설정하지 못했습니다.
       update:
         alert: 인증번호 오류, 다시 입력하세요
-        notice: 구글이중인증을 성공적입력되었습니다.
+        notice: 구글 이중인증이 성공적으로 입력되었습니다.
         sms_two_factor_error: 인증문자 오류, 다시 입력하세요.
       destroy:
         alert: 인증번호 오류, 다시 입력하세요
@@ -1746,8 +1746,8 @@ ko:
     sms_auths:
       show:
         title: 핸드폰 인증 받기
-        description: 핸드폰인증을 받으세요.개인정보 보호와 비밀번호 재설정 출금요청시 필요합니다.
-        warning: 핸드폰인증을 받지않아 출금신청 및 비밀번호 찾기를 할수없습니다.
+        description: 핸드폰인증을 받으세요. 개인정보 보호와 비밀번호 재설정 출금요청시 필요합니다.
+        warning: 핸드폰인증을 받지않아 출금신청 및 비밀번호 찾기를 할 수 없습니다.
         phone_number: 핸드폰번호
         send_code: 인증번호 요청하기
         send_code_alt: COUNT초후 재전송 합니다.
@@ -1762,20 +1762,20 @@ ko:
   withdraw_channel:
     bank:
       key: 은행 송금
-      title: ' 은행계좌로 출금'
-      intro: 은행계좌 사용해서 입출금 하세요.
+      title: ' 은행 계좌로 출금'
+      intro: 은행 계좌를 사용해 입출금 하세요.
       latency: 30분내에 입금 처리 됩니다.
       transfer: 수동처리
       go: 출금
     satoshi:
-      key: 블럭 첸
+      key: 블럭체인
       title: 비트코인 출금
-      intro: 거래소에 있는 비트코인을 회원님이 개인지갑주소로  전송됩니다.
+      intro: 거래소에 있는 비트코인을 회원님이 개인지갑주소로 전송됩니다.
       latency: 30분내에 출금신청 처리됩니다.
       transfer: 수동 처리
       go: 출금
   withdraws:
-    invalid_address: 오류 발생하였습니다, 출금할 수 없습니다.
+    invalid_address: 오류 발생하여 출금할 수 없습니다.
   withdraws/bank:
     aasm_state:
       submitting: 확인 대기
@@ -1825,7 +1825,7 @@ ko:
       amount: 합계
       ask: 매도가
       bid: 매수가
-      fade_toggle_depth: 시장깊이
+      fade_toggle_depth: 깊이
     market_trades:
       time: 체결시각
       price: 체결가격

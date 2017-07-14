@@ -12,6 +12,7 @@ app.controller 'FundSourcesController', ['$scope', '$gon', 'fundSourceService', 
   $scope.add = ->
     uid   = $scope.uid.trim()   if angular.isString($scope.uid)
     extra = $scope.extra.trim() if angular.isString($scope.extra)
+    extra = $scope.extra if angular.isNumber($scope.extra)
 
     return if not uid
     return if not extra

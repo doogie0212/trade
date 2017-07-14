@@ -47,3 +47,5 @@ tags
 .ruby-version
 .DS_Store
 .agignore
+
+*.log

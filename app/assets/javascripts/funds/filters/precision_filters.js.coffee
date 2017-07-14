@@ -1,6 +1,8 @@
 angular.module('precisionFilters', []).filter 'round_down', ->
   (number, currency) ->
-    precision = gon.currencies.find((a) -> a.code == currency).precision
+    precision = gon.currencies[currency].precision
     precision = if typeof precision == 'number' then precision else 5
 
-    BigNumber(number).round(precision, BigNumber.ROUND_DOWN).toFixed(precision)
+    bigNumber = new BigNumber(number)
+
+    bigNumber.round(precision, BigNumber.ROUND_DOWN).toFormat(precision)

@@ -29,6 +29,10 @@ class Currency < ActiveYamlBase
     self[:precision]
   end
 
+  def symbol
+    self[:symbol]
+  end
+
   def api
     raise unless coin?
     CoinRPC[code]

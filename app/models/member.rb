@@ -116,7 +116,6 @@ class Member < ActiveRecord::Base
   end
 
   def admin?
-    puts self.class.admins
     @is_admin ||= self.class.admins.include?(self.email)
   end
 

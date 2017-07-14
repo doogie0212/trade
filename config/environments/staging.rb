@@ -55,10 +55,6 @@ Peatio::Application.configure do
       authentication: ENV["SMTP_AUTHENTICATION"]
   }
 
-  puts ENV["SMTP_USERNAME"]
-  puts ENV["SMTP_PASSWORD"]
-  puts ENV["SMTP_PORT"]
-
   require 'middleware/i18n_js'
   require 'middleware/security'
   config.middleware.insert_before ActionDispatch::Static, Middleware::I18nJs

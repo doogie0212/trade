@@ -6,11 +6,11 @@
   max_confirm: 3
 - id: 400
   key: bank
-  currency: cny
+  currency: krw
   sort_order: 2
   bank_accounts:
     -
-      bank: 'Your Bank Name'
-      branch: 'Your Bank Branch'
-      holder: 'Your Account Holder'
-      account: 'Your Account Number'
+      bank: '우리은행'
+      branch: '강남본점'
+      holder: '(주)마이비티씨'
+      account: '1005-703-004784'

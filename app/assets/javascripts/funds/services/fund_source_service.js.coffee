@@ -14,7 +14,7 @@ app.service 'fundSourceService', ['$filter', '$gon', '$resource', 'accountServic
   defaultFundSource: (filter) ->
     account = accountService.findBy filter
     return null if not account
-    @findBy id: account.default_withdraw_fund_source
+    @findBy id: account.default_withdraw_fund_source_id
 
   create: (data, afterCreate) ->
     resource.save data, (fund_source) =>
@@ -26,7 +26,7 @@ app.service 'fundSourceService', ['$filter', '$gon', '$resource', 'accountServic
     # Do not wait for server side response
     account = accountService.findBy currency:fund_source.currency
     return null if not account
-    account.default_withdraw_fund_source = fund_source.id
+    account.default_withdraw_fund_source_id = fund_source.id
 
     resource.update id: fund_source.id, =>
       afterUpdate() if afterUpdate

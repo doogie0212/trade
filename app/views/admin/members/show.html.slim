@@ -11,7 +11,9 @@
       .panel-body
         = table_for(@account_versions, class: 'table table-condensed table-hover', model: AccountVersion) do |t|
           - t.column :created_at, class: 'col-xs-6'
-          - t.column :currency_text, class: 'col-xs-1'
+          - t.column :currency_text, class: 'col-xs-1' do |x|
+            - if x.currency_text
+              span = x.currency_text.upcase
           - t.column :modifiable_type, class: 'col-xs-2' do |x|
             - if x.modifiable_type
               span = x.modifiable_type.constantize.model_name.human

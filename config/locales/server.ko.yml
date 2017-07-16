@@ -55,9 +55,9 @@ ko:
       account:
         currency: 통화
         currency_text: 통화
-        balance_and_locked: 잔액 / 동결 금액
+        balance_and_locked: 잔액 / 사용중인 금액
         balance: 잔액
-        locked: 동결
+        locked: 사용중인 금액
       deposit:
         state: 상태
         tx_id: 거래 번호
@@ -85,7 +85,7 @@ ko:
         detail: 내역
       account_version:
         id: 일련번호
-        locked: 동결
+        locked: 사용중인 금액
         amount: 금액
         balance: 잔액
         reason: 원인
@@ -230,7 +230,7 @@ ko:
           attributes:
             address:
               satoshi_ismine: 다른 지갑주소를 사용하세요
-              satoshi_invalid: 비트코인 지갑주소 오류
+              satoshi_invalid: BTC 지갑주소 오류
         withdraw:
           account_balance_is_poor: 잔액이 부족합니다. 다시 확인 후 이용해 주세요.
           attributes:
@@ -296,7 +296,7 @@ ko:
     satoshi:
       key: BTC
       code: BTC
-      name: 비트코인
+      name: BTC
       format: '0,0.0000'
     bitsharesx:
       key: BTS
@@ -462,9 +462,9 @@ ko:
       transfer: 수동 처리
       go: 바로 입금
     satoshi:
-      key: 블록 첸
-      title: 비트코인 입금
-      intro: 고객님 코인주소에서 거래소 주소로 입금
+      key: 블록체인
+      title: BTC 입금
+      intro: 고객님의 개인지갑에서 거래소로 입금
       latency: 1 confirmation
       transfer: 수동
       go: 바로입금
@@ -516,9 +516,9 @@ ko:
         selector: 은행
         uid: 계좌
         label: 표기
-        label_placeholder: 아무것도
+        label_placeholder:
         address: 주소
-        extra_hint: 사용하시는 은행명이 리스트에 없는경우, 고객센터로 연락하세요
+        extra_hint: 사용하시는 은행이 리스트에 없는 경우, 고객센터로 연락하세요
     history:
       transaction:
         Deposit: 입금
@@ -602,12 +602,12 @@ ko:
           submit: 확인
           allin: 전액 출금
         create:
-          notice: 회원님 출금 신청완료, 지시에 따라 은행출금 작업을 완료하세요.
+          notice: 출금 신청완료, 안내에 따라 은행 출금 작업을 완료하세요.
       satoshis:
         destroy:
           notice: 출금신청이 취소되었습니다. 취소된 금액는 회원님 계정으로 이동되었습니다
         update:
-          notice: 출금신청 완료 , 빠른 시간내에 처리하겠습니다.
+          notice: 출금신청이 완료되었습니다. 빠른 시간내에 처리하겠습니다.
           alert_two_factor: 이중인증 오류
         new:
           submit: '확인 '
@@ -615,33 +615,33 @@ ko:
           fund_source_label: 표기
           manage_fund_source: 출금주소 관리
         create:
-          notice: 회원님 출금신청이 완료되었습니다, 지시에 따라 출금 작업을 완료하세요.
+          notice: 출금신청이 완료되었습니다, 안내에 따라 출금 작업을 완료하세요.
     tickets:
       index:
-        new_ticket: 새 티켓
+        new_ticket: 새 1:1문의
       new:
         intro: 거래소 이용에 불편 사항이나 개선할 사항 있으시면 메세지를 남겨주세요. 최대한 빠른시간내에 처리해 드리겠습니다.
-      ticket_create_succ: 티켓이 성공적으로 만들어졌습니다.
-      ticket_create_fail: 티켓 등록이 실패했습니다. 다시 시도해주세요.
-      comment_succ: 커맨트가 등록되었습니다
-      cooment_fail: 커맨트 등록이 실패했습니다. 다시 시도해주세요.
+      ticket_create_succ: 1:1문의이 성공적으로 만들어졌습니다.
+      ticket_create_fail: 1:1문의 등록이 실패했습니다. 다시 시도해주세요.
+      comment_succ: 댓글이 등록되었습니다
+      cooment_fail: 댓글 등록이 실패했습니다. 다시 시도해주세요.
       me: 나
       supporter: 고객센터
-      close: 티켓닫기
-      close_succ: 티켓을 성공적으로 닫았습니다
-      close_confirm: 티켓을 닫으시겠습니까?
-      title_content_both_blank: 제목과 내용은 꼭 기재 해주세요.
-      from: from
-      view_closed_tickets: 완료된  Ticket를 검색하기
-      view_open_tickets: 처리중인 Ticket를 검색하기
+      close: 1:1문의닫기
+      close_succ: 1:1문의를 성공적으로 닫았습니다
+      close_confirm: 1:1문의를 닫으시겠습니까?
+      title_content_both_blank: 제목과 내용을 꼭 기재 해주세요.
+      from: 보내는 사람
+      view_closed_tickets: 완료된 1:1문의 검색하기
+      view_open_tickets: 처리중인 1:1문의 검색하기
     account_versions:
       index:
         description: PlayBTC 거래소의 모든 거래내역와 입출금내역을 검색할수있습니다.
     api_tokens:
       user_tokens:
-        no_token: You have no API token.
-        edit: Edit
-        destroy: Destroy
+        no_token: API 토큰이 없습니다
+        edit: 수정
+        destroy: 삭제
         destroy-confirm: Are you sure?
         create: Create New Token
         http: HTTP API Document
@@ -697,17 +697,17 @@ ko:
         how-to-verify: 어떤 방식으로 거래소 지불능력을 확인 합니까?
         how-to-verify-uri: https://PlayBTC.com/documents/liability_proof
       liability_data:
-        liability-proof-generating: 나의 자산정보 전송중,30분있다 다시 확인하세요
+        liability-proof-generating: 나의 자산정보 전송중, 30분후 다시 확인하세요
         root-json: 거래소 총 자산 인증코드
         partial-tree: '나의 %{currency} 자산: '
         get-partial-tree: 나의 자산 확인코드 받기
-        timestamp: 회원님의  %{time}에 자산 데이터를  확인 할수있습니다.
+        timestamp: 회원님의  %{time}에 자산 데이터를 확인 할수있습니다.
         go-verify: 확인하기
       btc_assets:
         title: BTC자산
         intro: 거래소 모든 BTC 내역 확인하기
         total: 'BTC 총액: '
-        address: 비트코인 주소
+        address: BTC 주소
         balance: 잔액
       cny_assets:
         title: CNY자산 확인
@@ -715,7 +715,7 @@ ko:
         total: CNY총액
         description: "<p>계좌 잔액을 통해 감시할수있습니다:</p> <p>은행: %{bank}</p> <p>계좌:%{address}</p> <p>문의 비밀번호:%{password}</p> <p>문의 전화:  %{tel}</p>"
       partial_tree:
-        success: '완료!데이터 확인 시간은:%{timestamp}'
+        success: '완료! 데이터 확인 시간은:%{timestamp}'
     funds:
       show:
         account_history: 계좌 내역
@@ -812,10 +812,10 @@ ko:
         amount: 수량
         total: 금액
       place_order:
-        price_high: 높다
-        price_low: 낮다
-        full_bid: 초과
-        full_ask: 비어있다
+        price_high: 가격이 너무 높습니다
+        price_low: 가격이 너무 낮습니다
+        full_bid: FULL
+        full_ask: EMPTY
       order_book:
         title: 시장 실시간 주문내역
         volume: 수량
@@ -838,22 +838,22 @@ ko:
         low: 최저
         change: 전일대비
       settings:
-        sound: 소리 효과
-        notification: 바탕화면 실시간 통지
+        sound: 소리
+        notification: 알림
       account_summary:
         title: 총자산
         account: 계정
         amount: 합계
-        locked: 동결
+        locked: 사용중인 금액
         view_all_accounts: "[모든 계정 보기]"
         hide_all_accounts: "[기타 계정 숨기기]"
       my_orders:
         orders_wait: 주문내역
         orders_done: 체결내역
         orders_cancel: 최근 취소된 주문
-        confirm_clear_all: 모든 【주문】취소 하시겠습니까?
-        confirm_clear_bids: 【구매주문】취소 하시겠습니까?
-        confirm_clear_asks: 【판매주문】취소 하시겠습니까?
+        confirm_clear_all: 모든 주문을 취소 하시겠습니까?
+        confirm_clear_bids: 구매 주문을 취소 하시겠습니까?
+        confirm_clear_asks: 판매 주문을】 취소 하시겠습니까?
         price: 주문가격
         volume: 주문수량
         time: 주문시간
@@ -929,9 +929,9 @@ ko:
         enter_passcode: 핸드폰에 있는 인증번호를 입력하신후 이중인증 받으세요.
     shared:
       balances:
-        locked: 동결
+        locked: 사용중인 금액
         balance: 잔액
-        available: 사용가능한
+        available: 사용가능한 금액
         title: "%{icon} %{c}계정"
         cny_format: '0.00'
         btc_format: '0.00000000'
@@ -993,15 +993,15 @@ ko:
       panel: 로그인
       new:
         title: 로그인
-        intro: 로그인하신후 거래소를 이용하십시오
+        intro: 로그인 하신 후 거래소를 이용하십시오
       failure:
         title: 로그인
-        intro: 로그인하신후 거래소를 이용하십시오.
+        intro: 로그인 하신 후 거래소를 이용하십시오.
     identities:
       panel: 계정 만들기
       new:
         title: 회원가입하기
-        intro: 이 계정는 PlayBTC거래소에서 제공하는 모든 서비스에 사용할 계정입니다, 안전하게 관리하세요.
+        intro: 이 계정는 PlayBTC에서 제공하는 모든 서비스에 사용 되는 계정입니다, 안전하게 관리하세요.
       edit:
         panel: 나의 계정
         title: 비밀번호 수정
@@ -1136,11 +1136,11 @@ ko:
           accept_confirm: 입금신청을 확인하시겠습니까?
     tickets:
       view: 검색
-      close: Close Ticket
+      close: 1:1문의 닫기
       comments_count: 답장수량
       replies: 답장하기
-      open_tickets: Open Tickets
-      closed_tickets: Closed Tickets
+      open_tickets: 미답변 1:1문의
+      closed_tickets: 답변완료된 1:1문의
     members:
       index:
         search: 검색
@@ -1218,7 +1218,7 @@ ko:
           reject: 거부
           succeed_confirm: 출금신청을 처리하시겠습니까?
           reject_confirm: 출금신청을 거부하시겠습니까?
-          withdraw: 비트코인 출금
+          withdraw: BTC 출금
   deposits/satoshi:
     aasm_state:
       submitted: 처리중
@@ -1227,16 +1227,16 @@ ko:
       warning: 상태 이상
   doorkeeper:
     scopes:
-      profile: 고객님 기본정보(예:이름,이메일주소)와 계정잔액을  읽습니다.
+      profile: 기본 정보(예:이름, 이메일주소)와 계정잔액을 읽습니다.
       history: 거래내역을 보고있습니다.
-      trade: PlayBTC거래소 이용하고있는것을 표시합니다
+      trade: 거래소 이용내역을 표시합니다
     authorizations:
       new:
-        title: PlayBTC Application Authorization
-        authorize_html: Authorize <strong class='text-info'>%{name}</strong> to use your account?
-        scopes: 'This application will be able to:'
-        authorize: Authorize
-        deny: Deny
+        title: PlayBTC 서비스 권한 설정
+        authorize_html: <strong class='text-info'>%{name}</strong>가 계정정보를 사용할 수 있도록 권한 설정을 하시겠습니까?
+        scopes: '이 서비스는 다음과 같은 권한을 사용합니다:'
+        authorize: 권한부여
+        deny: 권한취소
     errors:
       messages:
         invalid_request: The request is missing a required parameter, includes an unsupported parameter value, or is otherwise malformed.
@@ -1272,7 +1272,7 @@ ko:
     satoshi:
       amount: 금액
       txid: 거래번호
-      created_at: 만든시간
+      created_at: 생성시간
       confirmations: Confirmations
       member_name: 사용자
       state_and_actions: 상태 / 확인
@@ -1280,7 +1280,7 @@ ko:
     bank:
       sn: 일련번호
       amount: 금액
-      created_at: 만든시간
+      created_at: 생성시간
       fund_source: 계정
       memo: 메모
       member_name: 사용자
@@ -1290,17 +1290,17 @@ ko:
     account_version:
       reason:
         fix: 픽스
-        unknown: 알수없는원인
+        unknown: 알수없는 원인
         strike_add: 체결수량 증가
-        strike_sub: TRADE SUB
+        strike_sub: 체결수량 감소
         strike_fee: 수수료
-        strike_unlock: 거래완료 동결 해지
+        strike_unlock: 거래완료 사용가능
         order_cancel: 취소
         order_submit: 주문
         deposit: 입금
         withdraw: 출금
-        withdraw_lock: 출금동결
-        withdraw_unlock: 출금거부
+        withdraw_lock: 출금 불가능
+        withdraw_unlock: 출금 가능
     state:
       done: 완료
       wait: 대기
@@ -1334,7 +1334,7 @@ ko:
         canceled: 취소된
     fund_source:
       category:
-        satoshi: 비트코인 인터넷 전송
+        satoshi: BTC 송금
         bank: KRW 은행송금
     id_document:
       id_document_type:
@@ -1346,8 +1346,8 @@ ko:
         tax_bill: 세금명세서
   views:
     pagination:
-      first: "&laquo; First"
-      last: Last &raquo;
+      first: "&laquo; 처음"
+      last: 끝 &raquo;
       previous: "이전페이지"
       next: 다음 페이지
       truncate: "..."
@@ -1358,15 +1358,15 @@ ko:
     footer: 자동으로 전송된 이메일 입니다. 문의사항이 있으실 경우<a href="mailto:%{contact_mail}">로 연락하세요.
   comment_mailer:
     admin_notification:
-      subject: "[PlayBTC] User %{email} reply a ticket"
-      notification_content: User %{email} reply a ticket, please follow the link below to see the detail
+      subject: "[PlayBTC] 사용자 %{email} 가 문의에 답변했습니다"
+      notification_content: 사용자 %{email} 가 문의에 답변했습니다. 링크를 통해 확인하세요.
     user_notification:
-      subject: "[PlayBTC] 문의에 대한 답변이 도착했습니다"
+      subject: "[PlayBTC] 1:1 문의에 대한 답변이 도착했습니다"
       notification_content: '안녕하세요, 고객님의 문의에 대한 답변이 도착했습니다. 링크를 통해 확인하세요:'
   member_mailer:
     notify_signin:
       subject: "[PlayBTC] 로그인 알림"
-      just_signed_in: PlayBTC에 로그인하셨습니다
+      just_signed_in: PlayBTC에 로그인 하셨습니다
     google_auth_activated:
       subject: "[PlayBTC] 구글 이중인증"
       google_auth_activated: 구글 이중인증이 성공하였습니다.
@@ -1381,7 +1381,7 @@ ko:
       sms_auth_deactivated: SMS 인증이 완료되었습니다.
     reset_password_done:
       subject: "[PlayBTC] 비밀번호 수정 완료"
-      successful: 회원님이 비밀번호가 성공적으로 수정되었습니다.
+      successful: 비밀번호가 성공적으로 수정되었습니다.
     phone_number_verified:
       subject: "[PlayBTC] 핸드폰 인증 완료"
       verified: '핸드폰 인증 완료 되었습니다. 번호:%{phone_number}'
@@ -1396,17 +1396,17 @@ ko:
       trades_change_total: 거래수량 변동 합계
   ticket_mailer:
     admin_notification:
-      subject: "[PlayBTC] User created a new ticket"
-      admin_notification_content: User %{email} created a new ticket, please follow the link below to see the detail
+      subject: "[PlayBTC] 새로운 문의가 있습니다"
+      admin_notification_content: 사용자 %{email} 로부터 새로운 문의가 도착했습니다. 링크를 통해 확인해 주세요
     author_notification:
-      subject: "[PlayBTC] Thank you for submit ticket"
-      thanks_for_submit_ticket: 소중한 의견을 주셔서 감사합니다. 빠른 시간 안에 연락드리겠습니다.
+      subject: "[PlayBTC] 1:1문의가 접수되었습니다"
+      thanks_for_submit_ticket: 1:1문의가 접수되었습니다. 빠른 시간안에 답변드리겠습니다. 감사합니다.
   token_mailer:
     activation:
       subject: "[PlayBTC] 계정 활성화"
       click_to_verify: 'PlayBTC에 가입하신것을 환영합니다. 아래 링크 클릭하신후 이메일 인증 받으세요'
       unable_to_click: 링크가 클릭이 안될경우 브라우저 주소창에 주소를 복사해서 방문하세요.
-      link_expire: 링크 유효기간 30분 입니다.
+      link_expire: 링크 유효기간은 30분 입니다.
     reset_password:
       subject: "[PlayBTC] 비밀번호 재설정"
       hi: 안녕하세요.
@@ -1451,10 +1451,10 @@ ko:
       short: "%m-%d %H:%M"
       default: "%Y/%m/%d %H:%M"
   sms:
-    verification_code: '[PlayBTC] 인증번호: %{code}. 유효 기간 30분 입니다. (타인에게 절대 인증번호를 알려주지 마세요!)'
-    password_changed: 안녕하세요 %{email}, 비밀번호가 성공적으로 수정되었습니다.
-    deposit_done: 안녕하세요 %{email}, 입금신청이 처리되여습니다.
-    withdraw_done: 안녕하세요 %{email}, 출금신청이 처리되었습니다.
+    verification_code: '[PlayBTC] 인증번호: %{code}. 유효 기간 3분 입니다. (타인에게 절대 인증번호를 알려주지 마세요!)'
+    password_changed: 안녕하세요 %{email} 님, 비밀번호가 성공적으로 수정되었습니다.
+    deposit_done: 안녕하세요 %{email} 님, 입금신청이 처리되여습니다.
+    withdraw_done: 안녕하세요 %{email} 님, 출금신청이 처리되었습니다.
   header:
     home: 홈
     dashboard: 대시보드
@@ -1473,7 +1473,7 @@ ko:
     trade_history: 거래내역
     account_history: 계정내역
     my_profile: 나의 설정
-    tickets: 티켓
+    tickets: 1:1문의
     account_balance: 총자산
     back: 뒤로
     total: 합계
@@ -1501,7 +1501,7 @@ ko:
     back: 뒤로
     block: 블럭에서 보기
     destroy: 삭제
-    destroy_confirm: '삭제 하시겟습니까? '
+    destroy_confirm: '삭제 하시겠습니까? '
     detail: 상세
     publish: 공지
     edit: 편집
@@ -1634,7 +1634,7 @@ ko:
             deposits: 입금관리
             documents: 문서관리
             withdraws: 출금관리
-            tickets: 티켓
+            tickets: 1:1문의
           deposits:
             currency: 입금
     application:
@@ -1650,7 +1650,7 @@ ko:
     create:
       success: '이메일이 전송 되었습니다. 이메일 확인 후 안내에 따라 입력하세요. 이메일을 못받으신 경우 고객센터로 연락하세요.'
     edit:
-      password: 비밀번호는 6자리이상, 영문 대/소문자, 숫자를 포함해야합니다
+      password: 비밀번호는 8자리 이상, 대/소문자, 숫자, 특수문자를 포함해야합니다
       invalid: 비밀번호가 일치하지 않습니다
       submit: 비밀번호 재설정
       alert: 비밀번호 재설정 링크 오류
@@ -1664,11 +1664,11 @@ ko:
       title: 2차인증
       reset_two_factor: 2차인증 분실
     create_with_two_factor_auth:
-      session_expired: 시간 초과, 다시 시도하세요
+      session_expired: 시간이 초과 되었습니다, 다시 시도하세요
     create:
       error: 이메일 또는 비밀번호가 틀렸습니다. 다시 입력하세요
     failure:
-      account_locked: 비밀번호 입력오류 횟수가 너무 많아, 계정 보호를 위해 계정잠김 상태가 되었습니다. 비밀번호찾기 통해 비밀번호를 재설정하세요.
+      account_locked: 비밀번호 입력 오류 횟수가 너무 많아, 계정 보호를 위해 계정 잠김 상태가 되었습니다. 비밀번호찾기 통해 비밀번호를 재설정하세요.
       error: 이메일 또는 비밀번호가 틀렸습니다. 다시 입력하세요
   shared:
     admin:
@@ -1747,7 +1747,7 @@ ko:
       show:
         title: 핸드폰 인증 받기
         description: 핸드폰인증을 받으세요. 개인정보 보호와 비밀번호 재설정 출금요청시 필요합니다.
-        warning: 핸드폰인증을 받지않아 출금신청 및 비밀번호 찾기를 할 수 없습니다.
+        warning: 핸드폰인증을 받지 않아 출금신청 및 비밀번호 찾기를 할 수 없습니다.
         phone_number: 핸드폰번호
         send_code: 인증번호 요청하기
         send_code_alt: COUNT초후 재전송 합니다.
@@ -1761,21 +1761,21 @@ ko:
           phone_number_error: 핸드폰 번호 오류
   withdraw_channel:
     bank:
-      key: 은행 송금
-      title: ' 은행 계좌로 출금'
-      intro: 은행 계좌를 사용해 입출금 하세요.
+      key: KRW 송금
+      title: ' KRW 계좌로 출금'
+      intro: 등록된 은행계좌로 출금합니다.
       latency: 30분내에 입금 처리 됩니다.
-      transfer: 수동처리
+      transfer: 이체
       go: 출금
     satoshi:
-      key: 블럭체인
-      title: 비트코인 출금
-      intro: 거래소에 있는 비트코인을 회원님이 개인지갑주소로 전송됩니다.
-      latency: 30분내에 출금신청 처리됩니다.
-      transfer: 수동 처리
+      key: 블록체인
+      title: BTC 출금
+      intro: 거래소에 있는 BTC를 회원님의 개인지갑주소로 출금합니다
+      latency: 30분내에 출금신청이 처리됩니다.
+      transfer: 이체
       go: 출금
   withdraws:
-    invalid_address: 오류 발생하여 출금할 수 없습니다.
+    invalid_address: 오류가 발생해 출금할 수 없습니다.
   withdraws/bank:
     aasm_state:
       submitting: 확인 대기
@@ -1798,8 +1798,8 @@ ko:
       processing: 처리중
       done: 완료
       almost_done: 전송중
-      canceled: 이미 취소됨
-      failed: 출금 오류
+      canceled: 취소
+      failed: 출금 실패
   welcome:
     price:
       high: 최고가

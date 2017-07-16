@@ -1711,7 +1711,7 @@ ko:
       google_app: 구글이중인증
       sms: 핸드폰 문자 인증
       send_code: 인증번호 요청하기
-      send_code_alt: COUNT 초 후 재전송
+      send_code_alt: COUNT 초 후 다시 보내기
       hints:
         app: 구글이중인증번호는 30초 마다 갱신되며, 시간내에 입력하세요.
         sms: '"인증번호" 버튼을 클릭하면, 인증문자가 핸드폰으로 전송됩니다. '
@@ -1721,9 +1721,9 @@ ko:
         submit: 해지
         warning: '특별한 사유로 이중인증을 인증받지 못한경우, 고객센터로 연락하세요'
       show:
-        step-1: Step 1
-        step-2: Step 2
-        step-3: Step 3
+        step-1: 하나,
+        step-2: 둘,
+        step-3: 셋,
         or: 또는
         download-app: 핸드폰 운영체계를 선택하신후, Google Authenticator를 다운받으세요
         guide-link: "구체적인 사용방법은 <a href='https://support.google.com/accounts/answer/1066447' target='_blank'> 클릭 후 참고하세요"
@@ -1750,7 +1750,7 @@ ko:
         warning: 핸드폰인증을 받지 않아 출금신청 및 비밀번호 찾기를 할 수 없습니다.
         phone_number: 핸드폰번호
         send_code: 인증번호 요청하기
-        send_code_alt: COUNT초후 재전송 합니다.
+        send_code_alt: COUNT 초 후 다시 보내기
         input_otp: 6자리 인증번호를 입력하세요
         submit: 확인
         notice:

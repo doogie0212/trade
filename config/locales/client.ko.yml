@@ -126,9 +126,9 @@ ko:
         suspect: Suspect
       withdraw_cny:
         title: CNY출금
-        intro: 계좌정보를 작성후 출금금액을 입력하시고 출금신청하세요
+        intro: 계좌를 선택 후 출금액을 입력하고 출금신청을 하세요
         intro_2: 예금주와 회원이름이 동일해야합니다.
-        attention: "업무시간: 09:00 - 18:00"
+        attention: "은행 점검 시간에는 출금이 제한될 수 있습니다"
         account_name: 예금주
         withdraw_address: 계좌번호
         balance: 잔액
@@ -140,9 +140,9 @@ ko:
 
       withdraw_krw:
         title: KRW 출금
-        intro: 계좌정보를 작성후 출금금액을 입력하시고 출금신청하세요
-        intro_2: 예금주와 회원이름이 동일해야합니다.
-        attention: "업무시간: 9:00 - 18:00"
+        intro: 계좌를 선택 후 출금액을 입력하고 출금신청을 하세요
+        intro_2: 예금주와 회원 이름이 동일해야합니다.
+        attention: "은행 점검 시간에는 출금이 제한될 수 있습니다"
         account_name: 예금주
         withdraw_address: 계좌번호
         balance: 잔액
@@ -155,7 +155,7 @@ ko:
       withdraw_btc:
         title: BTC출금
       withdraw_coin:
-        intro: 지갑주소를 선택하고 출금수량을 입력 후 출금신청하세요. 출금확인시간은 30분정도 소요됩니다.
+        intro: 지갑주소를 선택하고 수량을 입력 후 출금신청하세요. 출금시간은 30분정도 소요됩니다.
         label: 출금지갑
         balance: 잔액
         amount: 출금수량
@@ -170,7 +170,7 @@ ko:
         withdraw_account: 출금계좌
         withdraw_address: 출금주소
         withdraw_amount: 출금금액
-        actual_amount: 실 수령액(수수료 제외 금액)
+        actual_amount: 실제출금액(수수료 제외)
         fee: 수수료
         miner_fee: 이동 수수료
         state_and_action: "상태/확인"

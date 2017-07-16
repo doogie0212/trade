@@ -6,7 +6,7 @@
 ko:
   activerecord:
     models:
-      api_tokens: API Token
+      api_tokens: API 토큰
       trade: 거래
       order: 주문
       order_bid: 매수
@@ -177,7 +177,7 @@ ko:
         created_at: 시간
         txid: 확인시간
         amount: 입금 수량
-        confirmations: Confirmation
+        confirmations: 확인
         aasm_state_text: 상태
       withdraws/satoshi:
         id: 출금 일련번호
@@ -216,7 +216,7 @@ ko:
             base:
               too_soon: 반복된 요청이 너무많습니다. 잠시후 다시 시도해주세요.
             email:
-              not-member: 이메일주소를 올바르게 입력하세요.
+              not-member: 이메일 주소를 올바르게 입력하세요.
               match: 이메일주소 오류
             password:
               invalid: 비밀번호가 틀렸습니다.
@@ -232,13 +232,13 @@ ko:
               satoshi_ismine: 다른 지갑주소를 사용하세요
               satoshi_invalid: BTC 지갑주소 오류
         withdraw:
-          account_balance_is_poor: 잔액이 부족합니다. 다시 확인 후 이용해 주세요.
+          account_balance_is_poor: 잔액이 부족합니다. 확인 후 이용해 주세요.
           attributes:
             password:
               match: 비밀번호가 틀렸습니다.
             amount:
               poor: 금액이 부족합니다.
-              bank_min: 입력할수 있는 최대금액이 10000입니다
+              bank_min: 입력할 수 있는 최대금액이 10000원 입니다
         withdraws/satoshi:
           attributes:
             fund_uid:
@@ -306,7 +306,7 @@ ko:
     renminbi:
       key: CNY
       code: CNY
-      name: WON
+      name: CNY
       format: '0,0.00'
     won:
       key: KRW
@@ -499,7 +499,7 @@ ko:
           account: 계좌
     fund_sources:
       index:
-        manage_coin_address: '%{name}지갑관리'
+        manage_coin_address: '%{name} 지갑관리'
         manage_bank_account: 은행계좌 관리
         guide_intro_coin: 간편한 출금신청을 위해 %{name} 지갑주소를 추가하세요.
         guide_intro_bank: 입출금 편리성을 위해 입출금계좌를 입력하세요
@@ -575,7 +575,7 @@ ko:
         index:
           done: 완료
           cancel: 취소
-          confirm: '#%{id}주문을 취소하시겠습니까?'
+          confirm: '#%{id} 주문을 취소하시겠습니까?'
         destroy:
           'true': "#%{id} 주문 취소 완료"
           'false': "#%{id} 주문 취소 실패"
@@ -693,11 +693,11 @@ ko:
         krw-assets-total: '거래소 KRW 총자산: '
       liability_proof:
         title: 자산 증명
-        intro: 우리는 은행계좌,코인주소 등 모든 자산정보를 100%공개합니다. 회원님들은 실시간으로 우리 거래소의 자산 정보를 볼수있습니다.디지털 인증 방식으로 우리가 제공하는 모든 자산정보를 증명할수있습니다. 최고의 기술로 고객님의 자산을 안전하게 보장합니다.
+        intro: PlayBTC는 모든 자산정보를 100%공개합니다. 실시간으로 우리 거래소의 자산 정보를 볼수있습니다. 디지털 인증 방식으로 우리가 제공하는 모든 자산정보를 증명할수있습니다. 최고의 기술로 고객님의 자산을 안전하게 보장합니다.
         how-to-verify: 어떤 방식으로 거래소 지불능력을 확인 합니까?
         how-to-verify-uri: https://PlayBTC.com/documents/liability_proof
       liability_data:
-        liability-proof-generating: 나의 자산정보 전송중, 30분후 다시 확인하세요
+        liability-proof-generating: 나의 자산정보 전송중, 30분 후 다시 확인하세요
         root-json: 거래소 총 자산 인증코드
         partial-tree: '나의 %{currency} 자산: '
         get-partial-tree: 나의 자산 확인코드 받기
@@ -764,7 +764,7 @@ ko:
         help_panel: 도움말
         done: 체결
         cancel: 취소
-        cancel_confirm: 취소하시겠습니까?
+        cancel_confirm: 취소 하시겠습니까?
         confirm: 확인
         ask_order: '판매 ##sn#'
         bid_order: '구매 ##sn#'
@@ -812,8 +812,8 @@ ko:
         amount: 수량
         total: 금액
       place_order:
-        price_high: 가격이 너무 높습니다
-        price_low: 가격이 너무 낮습니다
+        price_high: 너무 높습니다
+        price_low: 너무 낮습니다
         full_bid: FULL
         full_ask: EMPTY
       order_book:
@@ -853,7 +853,7 @@ ko:
         orders_cancel: 최근 취소된 주문
         confirm_clear_all: 모든 주문을 취소 하시겠습니까?
         confirm_clear_bids: 구매 주문을 취소 하시겠습니까?
-        confirm_clear_asks: 판매 주문을】 취소 하시겠습니까?
+        confirm_clear_asks: 판매 주문을 취소 하시겠습니까?
         price: 주문가격
         volume: 주문수량
         time: 주문시간
@@ -919,9 +919,9 @@ ko:
           unbind: 인증 해지
     otps:
       new:
-        step_1: Step 1
-        step_2: Step 2
-        step_3: Step 3
+        step_1: 하나,
+        step_2: 둘,
+        step_3: 셋,
         or: 또는
         download_app: 구글Authenticator를 핸드폰으로 다운 받으세요.
         scan_qr_code: QR코드 스캔 하거나
@@ -960,7 +960,7 @@ ko:
       fund_sources:
         panel: 입출금 계좌 관리
         index:
-          title: 출금주소 관리1
+          title: 출금주소 관리
           intro: 더욱 빠르고 편리한 입출금을 위해 입출금계좌 추가
       id_documents:
         panel: 실명인증
@@ -1022,7 +1022,7 @@ ko:
         edit:
           password: 새 비밀번호 설정
       document:
-        key: 문장 링크 URL key
+        key: 문장 링크 URL Key
         title: 문장 제목
       fund_source:
         label: 이름
@@ -1038,19 +1038,19 @@ ko:
         password: 로그인 비밀번호 설정하세요
       withdraw:
         bank:
-          sum: 최저금액1000원, 최고금액 10,000,000원
+          sum: 최저금액 1000원, 최고금액 10,000,000원
         satoshi:
-          sum: 최저수량0.001
-          fund_extra: 지금주소 메모(선택사항)
+          sum: 최저수량 0.001
+          fund_extra: 주소 메모 (선택사항)
     hints:
       deposit:
         bank:
           sum: "<a target='_balance' href='#'>수수료 설명</a>"
-          member_name: "<span class='text-danger'>은행계좌이름과 회원님 이름이 일치해야합니다<span class='text-danger'>"
-          sn: "<span class='text-danger'>더욱 빠른처리를 위해 은행송금시 비고창에 꼭 숫자정보 입력하세요."
+          member_name: "<span class='text-danger'>예금주와 회원 이름이 일치해야합니다<span class='text-danger'>"
+          sn: "<span class='text-danger'>더욱 빠른처리를 위해 은행 송금시 비고창에 꼭 숫자정보 입력하세요."
       two_factor:
         otp_secret: 이중인증QR코드 또는 문자정보 꼭 백업하세요. 핸드폰 분실시 사용해야합니다.
-        otp: 구글이중인증 코드는 30초마다 갱신되며,제한된 시간내에 입력하세요
+        otp: 구글이중인증 코드는 30초마다 갱신됩니다. 제한된 시간내에 입력하세요
       identity:
         password: 비밀번호는 8자리 이상, 대/소문자, 숫자, 특수문자를 포함해야합니다
       reset_password:
@@ -1064,8 +1064,8 @@ ko:
           fund_extra: 사용하시는 은행계좌가 없으면 고객센터로 연락하세요
         satoshi:
           sum: "<a target='_balance' href='#'>수수료설명</a>"
-    creating: Creating..
-    updating: Updating...
+    creating: 생성중
+    updating: 업데이트중
     buttons:
       or: 또는
       cancel: 취소
@@ -1684,7 +1684,7 @@ ko:
         payment_address: 입금주소
     alert:
       modern: <a target='_blank' href='https://www.google.com/#q=google+chrome'>Google Chrome</a> 추천합니다.
-      pusher_unavailable: 서버통신에러.<a href='#' class='alert-link'>다시 시도하세요
+      pusher_unavailable: 서버통신에러. <a href='#' class='alert-link'>다시 시도하세요
     header:
       balance: 잔액
     header_account_balance:
@@ -1727,7 +1727,7 @@ ko:
         or: 또는
         download-app: 핸드폰 운영체계를 선택하신후, Google Authenticator를 다운받으세요
         guide-link: "구체적인 사용방법은 <a href='https://support.google.com/accounts/answer/1066447' target='_blank'> 클릭 후 참고하세요"
-        scan-qr-code: Google Authenticator다운받으시고 아래 QR코드를 스캔하세요.스캔이 되지않으면 아래 문자정보를 입력하시기 바랍니다.
+        scan-qr-code: Google Authenticator를 설치하고 아래 QR코드를 스캔하세요. 스캔이 되지않을 시 아래 문자정보를 입력하시기 바랍니다.
         enter-passcode: 구글 Authenticator 인증코드를 입력하세요.
         submit: 확인
         ios: 애플 IOS

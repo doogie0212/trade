@@ -96,6 +96,7 @@ ko:
         in: 수익
         out: 지출
         fee: 수수료
+        currency_text: 통화
       token/reset_password:
         email: 이메일 주소
         member: 회원

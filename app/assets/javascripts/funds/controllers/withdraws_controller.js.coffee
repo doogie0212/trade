@@ -6,12 +6,15 @@ app.controller 'WithdrawsController', ['$scope', '$stateParams', '$http', '$gon'
       return true if fs.id is _selectedFundSourceId
     return false
 
+  default_fund_source_id = $gon.accounts.find((a) -> a.currency == $stateParams.currency).default_withdraw_fund_source_id || $gon.fund_sources[0].id
+
   $scope.currency = currency = $stateParams.currency
   $scope.current_user = current_user = $gon.current_user
   $scope.name = current_user.name
   $scope.account = Account.findBy('currency', $scope.currency)
   $scope.balance = $scope.account.balance
   $scope.withdraw_channel = WithdrawChannel.findBy('currency', $scope.currency)
+  $scope.selected_fund_source_id = default_fund_source_id
 
   $scope.selected_fund_source = (newId) ->
     if angular.isDefined(newId)

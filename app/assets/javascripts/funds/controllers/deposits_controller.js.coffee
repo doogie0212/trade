@@ -1,11 +1,11 @@
 app.controller 'DepositsController', ['$scope', '$stateParams', '$http', '$filter', '$gon', 'ngDialog', ($scope, $stateParams, $http, $filter, $gon, ngDialog) ->
   @deposit = {}
-  default_fund_source = $gon.accounts.find((a) -> a.currency == $stateParams.currency).default_withdraw_fund_source_id || $gon.fund_sources[0].id
+  default_fund_source_id = $gon.accounts.find((a) -> a.currency == $stateParams.currency).default_withdraw_fund_source_id || $gon.fund_sources[0].id
   $scope.currency = $stateParams.currency
   $scope.current_user = current_user = $gon.current_user
   $scope.name = current_user.name
   $scope.fund_sources = $gon.fund_sources
-  @deposit.fund_source = default_fund_source
+  @deposit.fund_source = default_fund_source_id
 
   $scope.account = Account.findBy('currency', $scope.currency)
   $scope.deposit_channel = DepositChannel.findBy('currency', $scope.currency)
@@ -23,7 +23,7 @@ app.controller 'DepositsController', ['$scope', '$stateParams', '$http', '$filte
       .error (responseText) ->
         $.publish 'flash', {message: responseText }
       .finally ->
-        depositCtrl.deposit = { fund_source: default_fund_source }
+        depositCtrl.deposit = { fund_source: default_fund_source_id }
         $('.form-submit > input').removeAttr('disabled')
 
   $scope.openFundSourceManagerPanel = ->

@@ -1,6 +1,6 @@
 app.controller 'DepositsController', ['$scope', '$stateParams', '$http', '$filter', '$gon', 'ngDialog', ($scope, $stateParams, $http, $filter, $gon, ngDialog) ->
   @deposit = {}
-  default_fund_source_id = $gon.accounts.find((a) -> a.currency == $stateParams.currency).default_withdraw_fund_source_id || $gon.fund_sources[0].id
+  default_fund_source_id = $gon.accounts.find((a) -> a.currency == $stateParams.currency).default_withdraw_fund_source_id || ($gon.fund_sources.length && $gon.fund_sources[0].id)
   $scope.currency = $stateParams.currency
   $scope.current_user = current_user = $gon.current_user
   $scope.name = current_user.name

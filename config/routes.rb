@@ -52,7 +52,6 @@ Peatio::Application.routes.draw do
     resources :settings, only: [:index] do
       collection do
         post 'nice_cert_success'
-        get 'nice_cert_success'
         post 'nice_cert_fail'
       end
     end

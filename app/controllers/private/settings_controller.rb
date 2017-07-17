@@ -1,6 +1,6 @@
 module Private
   class SettingsController < BaseController
-    skip_before_filter :verify_authenticity_token, :only => [:nice_cert_success]
+    skip_before_filter :verify_authenticity_token, :only => [:nice_cert_success, :nice_cert_fail]
 
     layout :resolve_layout
 
@@ -24,10 +24,10 @@ module Private
       decode_url = "https://dgzv48s23a.execute-api.ap-northeast-2.amazonaws.com/test/decode"
       body = RestClient.get decode_url, {params: {EncodeData: encode_data}}
       json = JSON.parse(body)
-      @decode_data = json['decodeData']
+      decode_data = json['decodeData']
 
 
-      request_no = @decode_data['REQ_SEQ']
+      request_no = decode_data['REQ_SEQ']
       @message = "인증에 성공하였습니다."
       @error = false
 
@@ -35,15 +35,15 @@ module Private
         @message = "세션값이 다릅니다. 올바른 경로로 접근하시기 바랍니다."
         @error = true
       else
-        di = @decode_data['DI']
-        ci = @decode_data['CI']
-        auth_type = @decode_data['AUTH_TYPE']
-        name = @decode_data['NAMW']
-        utf8_name = @decode_data['UTF8_NAME']
-        gender = @decode_data['GENDER']
-        nationalinfo = @decode_data['NATIONALINFO']
-        mobile_no = @decode_data['MOBILE_NO']
-        mobile_co = @decode_data['MOBILE_CO']
+        di = decode_data['DI']
+        ci = decode_data['CI']
+        auth_type = decode_data['AUTH_TYPE']
+        name = decode_data['NAMW']
+        utf8_name = decode_data['UTF8_NAME']
+        gender = decode_data['GENDER']
+        nationalinfo = decode_data['NATIONALINFO']
+        mobile_no = decode_data['MOBILE_NO']
+        mobile_co = decode_data['MOBILE_CO']
 
         cert = NiceCert.find_by_di(di)
 
@@ -86,6 +86,8 @@ module Private
     def resolve_layout
       case action_name
         when "nice_cert_success"
+          false
+        when 'nice_cert_fail'
           false
       end
     end

@@ -18,6 +18,8 @@ class Member < ActiveRecord::Base
 
   has_many :authentications, dependent: :destroy
 
+  has_one :nice_cert
+
   scope :enabled, -> { where(disabled: false) }
 
   delegate :activated?, to: :two_factors, prefix: true, allow_nil: true

@@ -17,10 +17,10 @@
   symbol: "฿"
   coin: true
   quick_withdraw_max: 0
-  rpc: http://playbtc:p1ayBtc$$@13.124.135.31:18332
+  rpc: http://foreseer:4xB72amZpmYqdHzc@localhost:19332
   blockchain: https://blockchain.info/tx/#{txid}
   address_url: https://blockchain.info/address/#{address}
   assets:
     accounts:
       -
-        address: mkp6JnudYy6M4byzmW4T9pqUBFKcBmB1dj
+        address: 2N4FR6i4gfH2AknqC5kdLBeQ37g7SqZcfLX

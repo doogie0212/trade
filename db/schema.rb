@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150405053726) do
+ActiveRecord::Schema.define(version: 20170717155338) do
 
   create_table "account_versions", force: true do |t|
     t.integer  "member_id"
@@ -210,6 +210,23 @@ ActiveRecord::Schema.define(version: 20150405053726) do
     t.boolean  "api_disabled", default: false
     t.string   "nickname"
   end
+
+  create_table "nice_certs", force: true do |t|
+    t.integer  "member_id"
+    t.string   "di"
+    t.string   "ci"
+    t.string   "auth_type"
+    t.string   "name"
+    t.string   "utf8_name"
+    t.string   "gender"
+    t.string   "nationalinfo"
+    t.string   "mobile_no"
+    t.string   "mobile_co"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "nice_certs", ["di"], name: "index_nice_certs_on_di", using: :btree
 
   create_table "oauth_access_grants", force: true do |t|
     t.integer  "resource_owner_id", null: false

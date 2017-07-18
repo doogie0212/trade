@@ -1,0 +1,7 @@
+javascript:
+    window.onload = function() {
+        window.close();
+    };
+    window.onunload = function() {
+        window.opener.location.href = '/settings?#{@type}=#{@message}';
+    };

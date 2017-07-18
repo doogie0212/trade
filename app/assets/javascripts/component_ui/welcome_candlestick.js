@@ -321,7 +321,7 @@ this.WelcomeCandlestickUI = flight.component(function() {
           gridLineColor: '#eee',
           gridLineDashStyle: 'Solid',
           top: "0%",
-          height: "80%",
+          height: "100%",
           lineColor: '#eee',
           lineWidth: 1,
           minRange: gon.ticker.last ? parseFloat(gon.ticker.last) / 25 : null
@@ -330,9 +330,9 @@ this.WelcomeCandlestickUI = flight.component(function() {
             enabled: true,
             align: 'left'
           },
-          top: "80%",
+          top: "100%",
           gridLineColor: null,
-          height: "20%"
+          height: "0%"
         }, {
           visible: false,
           labels: {
@@ -345,112 +345,14 @@ this.WelcomeCandlestickUI = flight.component(function() {
       ],
       series: [
         _.extend({
-          id: 'welcome_candlestick',
+          id: 'candlestick',
           name: gon.i18n.chart.candlestick,
-          type: "candlestick",
+          type: "line",
           data: data['candlestick'],
-          showInLegend: false
-        }, COLOR['candlestick']), _.extend({
-          id: 'close',
-          type: 'spline',
-          data: data['close'],
           showInLegend: false,
-          marker: {
-            radius: 0
-          }
-        }, COLOR['close']), {
-          id: 'volume',
-          name: gon.i18n.chart.volume,
-          yAxis: 1,
-          type: "column",
-          data: data['volume'],
-          color: '#9698a5',
-          showInLegend: false
-        }, {
-          id: 'ma5',
-          name: 'MA5',
-          linkedTo: 'close',
-          showInLegend: true,
-          type: 'trendline',
-          algorithm: 'MA',
-          periods: 5,
-          color: '#7c9aaa',
-          visible: INDICATOR['MA'],
-          marker: {
-            radius: 0
-          }
-        }, {
-          id: 'ma10',
-          name: 'MA10',
-          linkedTo: 'close',
-          showInLegend: true,
-          type: 'trendline',
-          algorithm: 'MA',
-          periods: 10,
-          color: '#be8f53',
-          visible: INDICATOR['MA'],
-          marker: {
-            radius: 0
-          }
-        }, {
-          id: 'ema7',
-          name: 'EMA7',
-          linkedTo: 'close',
-          showInLegend: true,
-          type: 'trendline',
-          algorithm: 'EMA',
-          periods: 7,
-          color: '#7c9aaa',
-          visible: INDICATOR['EMA'],
-          marker: {
-            radius: 0
-          }
-        }, {
-          id: 'ema30',
-          name: 'EMA30',
-          linkedTo: 'close',
-          showInLegend: true,
-          type: 'trendline',
-          algorithm: 'EMA',
-          periods: 30,
-          color: '#be8f53',
-          visible: INDICATOR['EMA'],
-          marker: {
-            radius: 0
-          }
-        }, {
-          id: 'macd',
-          name: 'MACD',
-          linkedTo: 'close',
-          yAxis: 2,
-          showInLegend: true,
-          type: 'trendline',
-          algorithm: 'MACD',
-          color: '#7c9aaa',
-          marker: {
-            radius: 0
-          }
-        }, {
-          id: 'sig',
-          name: 'SIG',
-          linkedTo: 'close',
-          yAxis: 2,
-          showInLegend: true,
-          type: 'trendline',
-          algorithm: 'signalLine',
-          color: '#be8f53',
-          marker: {
-            radius: 0
-          }
-        }, {
-          id: 'hist',
-          name: 'HIST',
-          linkedTo: 'close',
-          yAxis: 2,
-          showInLegend: true,
-          type: 'histogram',
-          color: '#e84855'
-        }
+          lineWidth: 3,
+          color: '#24356e'
+        })
       ]
     });
   };

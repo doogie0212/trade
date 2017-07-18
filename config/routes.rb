@@ -51,8 +51,9 @@ Peatio::Application.routes.draw do
 
     resources :settings, only: [:index] do
       collection do
-        post 'nice_cert_success'
-        post 'nice_cert_fail'
+        get 'nice_cert_request'
+        post 'nice_cert_callback'
+        get 'nice_cert_callback'
       end
     end
     resources :api_tokens do

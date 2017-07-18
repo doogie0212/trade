@@ -96,9 +96,7 @@ module Private
       case action_name
         when "nice_cert_request"
           false
-        when "nice_cert_success"
-          false
-        when 'nice_cert_fail'
+        when "nice_cert_callback"
           false
       end
     end

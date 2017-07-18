@@ -1,0 +1,7 @@
+= form_tag 'https://nice.checkplus.co.kr/CheckPlusSafeModel/checkplus.cb', method: :post, name: 'form_chk' do |f|
+  = hidden_field_tag :m, 'checkplusSerivce'
+  = hidden_field_tag :EncodeData, @encode_data
+javascript:
+    window.onload = () => {
+        document.form_chk.submit();
+    };

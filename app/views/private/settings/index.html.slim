@@ -27,10 +27,7 @@ table#setting_list.table
           i.fa.fa-check-circle
           span = t('.verification.verified')
       - else
-        = form_tag 'https://nice.checkplus.co.kr/CheckPlusSafeModel/checkplus.cb', method: :post, name: 'form_chk' do |f|
-          = hidden_field_tag :m, 'checkplusSerivce'
-          = hidden_field_tag :EncodeData, @encode_data
-          = link_to t('.verification.go'), 'javascript:fnPopup();', class: 'btn btn-default btn-block'
+        = link_to t('.verification.go'), 'javascript:fnPopup();', class: 'btn btn-default btn-block'
   tr
     td.col-xs-2.text-center.vertical-center: i.fa.fa-mobile.fa-4x
     td.col-xs-15
@@ -107,8 +104,7 @@ table#setting_list.table
 
 javascript:
     function fnPopup() {
-        window.open('', 'popupChk', 'width=500, height=550, top=100, left=100, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no');
-        document.form_chk.action = "https://nice.checkplus.co.kr/CheckPlusSafeModel/checkplus.cb";
+        window.open('/settings/nice_cert_request', 'popupChk', 'width=500, height=550, top=100, left=100, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no');
         document.form_chk.target = "popupChk";
         document.form_chk.submit();
     }

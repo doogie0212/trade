@@ -7,6 +7,7 @@ module Withdraws
     end
 
     def create
+      puts "ASDF", withdraw_params
       @withdraw = model_kls.new(withdraw_params)
 
       if two_factor_auth_verified?
@@ -42,7 +43,8 @@ module Withdraws
     def withdraw_params
       params[:withdraw][:currency] = channel.currency
       params[:withdraw][:member_id] = current_user.id
-      params.require(:withdraw).permit(:fund_source_id, :member_id, :currency, :sum)
+      params[:withdraw][:account_id] = @account.id
+      params.require(:withdraw).permit(:fund_source, :member_id, :currency, :sum, :account_id)
     end
 
   end

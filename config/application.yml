@@ -55,15 +55,16 @@ defaults: &defaults
   PUSHER_APP: 365858
   PUSHER_KEY: 4a7d17fc32cd4483348b
   PUSHER_SECRET: 7c2df32bb7b7743f589f
+  PUSHER_HOST: pusher.korbex.co
   PUSHER_CLUSTER: ap1
 
   # PUSHER_APP: YOUR_PUSHER_APP
   # PUSHER_KEY: YOUR_PUSHER_KEY
   # PUSHER_SECRET: YOUR_PUSHER_SECRET
-  PUSHER_PORT: 80
-  PUSHER_WS_PORT: 80
-  PUSHER_WSS_PORT: 443
-  PUSHER_ENCRYPTED: true
+  PUSHER_PORT: 4567
+  PUSHER_WS_PORT: 8080
+  PUSHER_WSS_PORT: 8080
+  PUSHER_ENCRYPTED: false
 
   # twilio setting
   # --------------------------------------------------------------

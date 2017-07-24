@@ -29,14 +29,6 @@ app.controller 'WithdrawsController', ['$scope', '$stateParams', '$http', '$gon'
       $scope.selected_fund_source fund_sources[0].id if fund_sources.length
     fund_sources
 
-  # set defaultFundSource as selected
-  defaultFundSource = fundSourceService.defaultFundSource currency:currency
-  if defaultFundSource
-    _selectedFundSourceId = defaultFundSource.id
-  else
-    fund_sources = $scope.fund_sources()
-    _selectedFundSourceId = fund_sources[0].id if fund_sources.length
-
   # set current default fundSource as selected
   $scope.$watch ->
     fundSourceService.defaultFundSource currency:currency
@@ -47,7 +39,9 @@ app.controller 'WithdrawsController', ['$scope', '$stateParams', '$http', '$gon'
   @createWithdraw = (currency) ->
     withdraw_channel = WithdrawChannel.findBy('currency', currency)
     account = withdraw_channel.account()
-    data = { withdraw: { member_id: current_user.id, currency: currency, sum: @withdraw.sum, fund_source: _selectedFundSourceId } }
+    data = { withdraw: { account_id: account.id, member_id: current_user.id, currency: currency, sum: @withdraw.sum, fund_source: $scope.selected_fund_source_id } }
+
+    debugger
 
     if current_user.app_activated or current_user.sms_activated
       type = $('.two_factor_auth_type').val()

@@ -124,9 +124,10 @@ class ApplicationController < ActionController::Base
       wsPort:    ENV['PUSHER_WS_PORT']   || '80',
       wssPort:   ENV['PUSHER_WSS_PORT']  || '443',
       encrypted: ENV['PUSHER_ENCRYPTED'] == 'true',
-      cluster:   ENV['PUSHER_CLUSTER']   || 'ap1'
+      cluster:   ENV['PUSHER_CLUSTER']   || 'ap1',
+      host:   ENV['PUSHER_HOST']   || ''
     }
-
+    
     gon.clipboard = {
       :click => I18n.t('actions.clipboard.click'),
       :done => I18n.t('actions.clipboard.done')

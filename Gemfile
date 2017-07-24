@@ -100,3 +100,9 @@ group :test do
   # but test-unit has been removed from ruby core since 2.2.0
   gem 'test-unit'
 end
+
+# Added at 2017-07-24 12:34:53 +0900 by woogenius:
+gem "execjs", "~> 2.5"
+
+# Added at 2017-07-24 12:36:44 +0900 by woogenius:
+gem "react_on_rails", "~> 8.0"

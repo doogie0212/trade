@@ -97,10 +97,11 @@ test:
 staging:
   <<: *defaults
   URL_HOST: dev.playbtc.com
-#  PUSHER_APP: 365857
-#  PUSHER_KEY: acd7b5cf9b3b70a0c651
-#  PUSHER_SECRET: 898b304185e6bb3a2780
+  PUSHER_APP: 365857
+  PUSHER_KEY: acd7b5cf9b3b70a0c651
+  PUSHER_SECRET: 898b304185e6bb3a2780
 #  PUSHER_CLUSTER: ap1
+  PUSHER_HOST: pusher.korbex.co
 
 production:
   <<: *defaults

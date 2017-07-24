@@ -49,7 +49,13 @@ Peatio::Application.routes.draw do
   scope module: :private do
     resource  :id_document, only: [:edit, :update]
 
-    resources :settings, only: [:index]
+    resources :settings, only: [:index] do
+      collection do
+        get 'nice_cert_request'
+        post 'nice_cert_callback'
+        get 'nice_cert_callback'
+      end
+    end
     resources :api_tokens do
       member do
         delete :unbind

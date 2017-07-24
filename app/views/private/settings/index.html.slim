@@ -27,7 +27,7 @@ table#setting_list.table
           i.fa.fa-check-circle
           span = t('.verification.verified')
       - else
-        = link_to t('.verification.go'), edit_id_document_path, class: 'btn btn-default btn-block'
+        = link_to t('.verification.go'), 'javascript:fnPopup();', class: 'btn btn-default btn-block'
   tr
     td.col-xs-2.text-center.vertical-center: i.fa.fa-mobile.fa-4x
     td.col-xs-15
@@ -101,3 +101,10 @@ table#setting_list.table
         = member_tag(key)
   p.text-warning
     == t('.safety_instruction')
+
+javascript:
+    function fnPopup() {
+        window.open('/settings/nice_cert_request', 'popupChk', 'width=500, height=550, top=100, left=100, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no');
+        document.form_chk.target = "popupChk";
+        document.form_chk.submit();
+    }
